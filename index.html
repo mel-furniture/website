@@ -44,21 +44,29 @@
   word-wrap: break-word; /* Break long words if needed */
 }
 
-    /* Mobile adjustments */
-   @media (max-width: 768px) {
+    /* Mobile portrait */
+@media (max-width: 768px) and (orientation: portrait) {
   #overlayText {
     bottom: 15%;
     left: 5%;
     right: 5%;
-    font-size: 5vw;
-    text-align: right;
-    padding: 0.75em 1em;
-    border-radius: 0.5em;
-    display: inline-block;
+    font-size: 1.1rem;
+    text-align: center;
     max-width: none; /* Allow bubble to fill width */
-    white-space: normal; /* Allow wrapping on mobile */
-    background-color: rgba(126, 75, 60, 0.95); /* Same color with near full opacity */
   }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+  #overlayText {
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: none;
+  }
+}
       
 
       #image {
