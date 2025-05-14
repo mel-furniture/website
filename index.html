@@ -40,7 +40,8 @@
   z-index: 10;
   max-width: 300px; /* Text bubble max width */
   display: inline-block;
-  white-space: nowrap; /* Prevents wrapping unless it's too narrow */
+  white-space: normal; /* Allow wrapping */
+  word-wrap: break-word; /* Break long words if needed */
 }
 
     /* Mobile adjustments */
