@@ -30,14 +30,16 @@
       }
 
       #overlayText {
+        position: absolute;
         left: 50%; /* Center horizontally */
-        bottom: 20px; /* Position near the bottom */
-        transform: translateX(-50%); /* Center it precisely */
+        bottom: 20px; /* Position at the bottom */
+        transform: translateX(-50%); /* Center it exactly */
         text-align: center;
-        font-size: 1.2em; /* Adjust text size for mobile */
-        background-color: rgba(255, 255, 255, 0.6);
+        font-size: 1.2em;
+        background-color: rgba(255, 255, 255, 0.7);
         padding: 0.5em;
         border-radius: 0.5em;
+        width: 80%; /* Ensure text doesn't overflow */
       }
     }
 
@@ -49,7 +51,7 @@
       color: #000;
       font-family: sans-serif;
       font-size: 1.5em;
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 1em;
       border-radius: 0.5em;
       max-width: 200px;
