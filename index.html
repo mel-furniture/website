@@ -18,15 +18,18 @@
       width: 100vw;
       height: 100vh;
       background-color: #D3D3D3;
-      background-size: cover; /* Ensures the image fills the screen without zooming */
+      background-size: contain; /* Ensures the image fits within the screen without zooming */
       background-position: left center; /* Aligns the image to the left side of the screen */
       background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; /* Ensures the text aligns properly at the bottom */
     }
 
     #overlayText {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
+      bottom: 10%;
+      right: 10%;
       color: #000;
       font-family: sans-serif;
       font-size: 1.5em;
@@ -34,18 +37,17 @@
       padding: 1em;
       border-radius: 0.5em;
       max-width: 80%;
-      z-index: 10;
       text-align: right;
+      z-index: 10;
     }
 
     /* Mobile adjustments */
     @media (max-width: 768px) {
       #overlayText {
-        font-size: 4vw; /* Adjust font size on mobile */
-        bottom: 5vw; /* Adjust bottom margin for mobile */
-        left: 0; /* Center the text horizontally on mobile */
-        right: 0; /* Allow it to stretch across the screen */
-        max-width: 90%; /* Adjust width on mobile */
+        font-size: 5vw; /* Adjust font size on mobile */
+        bottom: 10%; /* Adjust bottom margin for mobile */
+        left: 5%; /* Ensure text is centered horizontally on mobile */
+        right: 5%; /* Allow it to stretch across the screen */
         text-align: center; /* Center the text horizontally on mobile */
       }
 
@@ -57,7 +59,7 @@
 </head>
 <body>
   <div id="image">
-    <div id="overlayText">Welcome to MEL</div>
+    <div id="overlayText">Click anywhere to advance</div>
   </div>
 
   <script>
