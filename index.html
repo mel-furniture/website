@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Full-Screen Image Viewer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Slideshow</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: black;
+      background-color: #D3D3D3;
       overflow: hidden;
       cursor: pointer;
     }
+
     #image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  background-color: #D3D3D3;
-}
+      width: 100vw;
+      height: 100vh;
+      background-color: #D3D3D3;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+
+    @media (max-width: 768px) {
+      #image {
+        background-position: center center;
+      }
+    }
   </style>
 </head>
 <body>
-  <img id="image" src="images/photo1.jpg" alt="Slideshow image">
+  <div id="image"></div>
 
   <script>
     const images = [
-      "images/photo1.jpg",
-      "images/photo2.jpg",
-      "images/photo3.jpg"
+      'images/photo1.jpg',
+      'images/photo2.jpg',
+      'images/photo3.jpg'
     ];
 
     let index = 0;
-    const img = document.getElementById("image");
+    const imageDiv = document.getElementById('image');
 
-    document.body.addEventListener("click", () => {
+    function updateImage() {
+      imageDiv.style.backgroundImage = `url('${images[index]}')`;
+    }
+
+    document.body.addEventListener('click', () => {
       index = (index + 1) % images.length;
-      img.src = images[index];
+      updateImage();
     });
+
+    updateImage();
   </script>
 </body>
 </html>
