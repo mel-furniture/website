@@ -18,9 +18,9 @@
       width: 100vw;
       height: 100vh;
       background-color: #D3D3D3;
-      background-size: contain; /* Ensures image scales without zooming in or cropping */
+      background-size: cover; /* Ensures the image fills the screen without zooming */
+      background-position: left center; /* Aligns the image to the left side of the screen */
       background-repeat: no-repeat;
-      background-position: center center;
     }
 
     #overlayText {
@@ -42,19 +42,22 @@
     @media (max-width: 768px) {
       #overlayText {
         font-size: 4vw; /* Adjust font size on mobile */
-        bottom: 5vw; /* Adjust bottom margin */
-        right: 5vw; /* Adjust right margin */
-        max-width: 90%; /* Adjust width on mobile */
-        text-align: center; /* Center the text */
-        left: 0; /* Ensure the text is centered horizontally */
+        bottom: 5vw; /* Adjust bottom margin for mobile */
+        left: 0; /* Center the text horizontally on mobile */
         right: 0; /* Allow it to stretch across the screen */
+        max-width: 90%; /* Adjust width on mobile */
+        text-align: center; /* Center the text horizontally on mobile */
+      }
+
+      #image {
+        background-position: center center; /* Ensure the image is centered on mobile */
       }
     }
   </style>
 </head>
 <body>
   <div id="image">
-    <div id="overlayText">Click anywhere to advance</div>
+    <div id="overlayText">Welcome to MEL</div>
   </div>
 
   <script>
