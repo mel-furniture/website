@@ -37,9 +37,11 @@
       padding: 1em;
       border-radius: 0.5em;
       max-width: 300px; /* limits width to force wrapping */
-      text-align: center;
+      text-align: right;
       z-index: 10;
       word-wrap: break-word;
+      display: flex;                 /* use flex to center the bubble content */
+      justify-content: flex-end;    /* push text to the right */
     }
 
     /* Mobile adjustments */
@@ -50,6 +52,9 @@
         left: 5%; /* Ensure text is centered horizontally on mobile */
         right: 5%; /* Allow it to stretch across the screen */
         text-align: right; /* positions the text horizontally on mobile */
+        display: flex;
+        justify-content: flex-end;     /* push text to the right inside the bubble */
+        padding: 1em;
       }
 
       #image {
