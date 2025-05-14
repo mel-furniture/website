@@ -32,15 +32,16 @@
       #overlayText {
         position: absolute;
         left: 50%; /* Center horizontally */
-        bottom: 20px; /* Position near the bottom */
+        bottom: 10vw; /* Position near the bottom */
         transform: translateX(-50%); /* Center it exactly */
         text-align: center;
-        font-size: 1.2em;
+        font-size: 4vw; /* Use viewport width for better scaling */
         background-color: rgba(255, 255, 255, 0.7);
-        padding: 0.5em;
+        padding: 2vw;
         border-radius: 0.5em;
-        width: 80%; /* Ensure text doesn't overflow */
-        max-width: 300px; /* Limit width to prevent overflow */
+        width: 80vw; /* Make text box width flexible */
+        max-width: 80%; /* Limit width to prevent overflow */
+        z-index: 10; /* Ensure it's on top */
       }
     }
 
@@ -56,6 +57,7 @@
       padding: 1em;
       border-radius: 0.5em;
       max-width: 200px;
+      z-index: 10; /* Ensure it's on top */
     }
   </style>
 </head>
