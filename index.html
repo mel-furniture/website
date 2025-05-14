@@ -37,22 +37,25 @@
   padding: 0.75em 1em;
   border-radius: 0.5em;
   text-align: right;
-  max-width: 300px;
   z-index: 10;
+  max-width: 300px; /* Text bubble max width */
   display: inline-block;
+  white-space: nowrap; /* Prevents wrapping unless it's too narrow */
 }
 
     /* Mobile adjustments */
    @media (max-width: 768px) {
   #overlayText {
     bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 5%;
+    right: 5%;
     font-size: 5vw;
     text-align: right;
     padding: 0.75em 1em;
     border-radius: 0.5em;
     display: inline-block;
+    max-width: none; /* Allow bubble to fill width */
+    white-space: normal; /* Allow wrapping on mobile */
   }
       
 
