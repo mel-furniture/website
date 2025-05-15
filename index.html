@@ -14,15 +14,17 @@
     }
 
     #image {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #D3D3D3;
-  background-size: contain;
-  background-position: left center;
-  background-repeat: no-repeat;
-  display: block; /* Not flex — just a block container */
-}
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-color: #D3D3D3;
+      background-size: contain; /* Ensures the image fits within the screen without zooming */
+      background-position: left center; /* Aligns the image to the left side of the screen */
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; /* Ensures the text aligns properly at the bottom */
+    }
 
     #overlayText {
   position: absolute;
