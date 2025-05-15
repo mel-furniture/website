@@ -52,15 +52,20 @@
 
     /* Mobile portrait */
     @media (max-width: 768px) and (orientation: portrait) {
-      #overlayText {
-        bottom: 15%;
-        left: 5%;
-        right: 5%;
-        font-size: 1.1rem;
-        text-align: right;
-        max-width: none; /* Allow bubble to fill width */
-      }
-    }
+  #overlayText {
+    bottom: 15%;
+    left: 5%;
+    right: 5%;
+    font-size: 1.1rem;
+    text-align: right;
+    max-width: none; /* Allow bubble to fill width */
+  }
+
+  #image {
+    background-size: contain;
+    background-position: left center;
+  }
+}
 
     /* Mobile landscape */
     @media (max-width: 768px) and (orientation: landscape) {
