@@ -50,15 +50,7 @@
       word-wrap: break-word; /* Break long words if needed */
     }
 
-    /* Mobile portrait */
-@media (max-width: 768px) and (orientation: portrait) {
-  #image img {
-    width: 100vw;
-    height: auto;
-    object-fit: contain;
-  }
-
-  #overlayText {
+    #overlayText {
     bottom: 5%;
     left: 5%;
     right: 5%;
@@ -67,19 +59,34 @@
     max-width: none;
     word-wrap: break-word;
   }
-}
+
+    #overlayText a {
+      color: inherit;           /* Inherit the color from the parent (e.g., #D3D3D3) */
+      text-decoration: none;    /* Removes the underline */
+    }
+
+  /* Mobile portrait */
+    @media (max-width: 768px) and (orientation: portrait) {
+    #image img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+    }
+  }
     
-    /* Mobile landscape */
+  /* Mobile landscape */
     @media (max-width: 768px) and (orientation: landscape) {
-      #overlayText {
-        bottom: 5%;
-        left: 80%;      /* Move start to center */
-        right: auto;    /* Remove right constraint */
-        font-size: 1.1rem;
-        text-align: right;
-        max-width: 360px;
+    #overlayText {
+    bottom: 5%;
+    left: 80%;      /* Move start to center */
+    right: auto;    /* Remove right constraint */
+    font-size: 1.1rem;
+    text-align: right;
+    max-width: 360px;
       }
     }
+
+    
   </style>
 </head>
 <body>
