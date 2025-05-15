@@ -52,10 +52,10 @@
 
     /* Mobile portrait */
 @media (max-width: 768px) and (orientation: portrait) {
-  #image {
-    background-size: contain;
-    background-position: center center; /* Center for portrait */
-    background-repeat: no-repeat;
+  #image img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
   }
 
   #overlayText {
