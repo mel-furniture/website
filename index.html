@@ -51,24 +51,20 @@
     }
 
     /* Mobile portrait */
-    @media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) and (orientation: portrait) {
+  #image {
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
   #overlayText {
     bottom: 15%;
     left: 5%;
     right: 5%;
-    font-size: 1.1rem;
-    text-align: right;
+    font-size: 4.5vw;
     max-width: none;
-  }
-
-  #image {
-    background-size: contain !important;
-    background-position: left center !important;
-    background-repeat: no-repeat !important;
-  }
-
-  html, body {
-    overflow: hidden;
+    text-align: right;
   }
 }
     
