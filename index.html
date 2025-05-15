@@ -13,69 +13,71 @@
       overflow: hidden;
     }
 
-   #image {
+    #image {
       position: relative;
       width: 100vw;
       height: 100vh;
       background-color: #D3D3D3;
-      background-size: contain; /* Ensures the image fits within the screen without zooming */
-      background-position: left center; /* Aligns the image to the left side of the screen */
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end; /* Ensures the text aligns properly at the bottom */
+      overflow: hidden;
+    }
+
+    #image img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: auto;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     #overlayText {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  color: #D3D3D3;
-  font-family: serif;
-  font-size: 1.5em;
-  background-color: rgba(126, 75, 60, 0.95); /* RAL8014 Sepia brown with near full opacity */
-  padding: 0.75em 1em;
-  border-radius: 0.5em;
-  text-align: right;
-  z-index: 10;
-  max-width: 300px; /* Text bubble max width */
-  display: inline-block;
-  white-space: normal; /* Allow wrapping */
-  word-wrap: break-word; /* Break long words if needed */
-}
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      color: #D3D3D3;
+      font-family: serif;
+      font-size: 1.5em;
+      background-color: rgba(126, 75, 60, 0.95); /* RAL8014 Sepia brown with near full opacity */
+      padding: 0.75em 1em;
+      border-radius: 0.5em;
+      text-align: right;
+      z-index: 10;
+      max-width: 300px; /* Text bubble max width */
+      display: inline-block;
+      white-space: normal; /* Allow wrapping */
+      word-wrap: break-word; /* Break long words if needed */
+    }
 
     /* Mobile portrait */
-@media (max-width: 768px) and (orientation: portrait) {
-  #overlayText {
-    bottom: 15%;
-    left: 5%;
-    right: 5%;
-    font-size: 1.1rem;
-    text-align: right;
-    max-width: none; /* Allow bubble to fill width */
-  }
-}
+    @media (max-width: 768px) and (orientation: portrait) {
+      #overlayText {
+        bottom: 15%;
+        left: 5%;
+        right: 5%;
+        font-size: 1.1rem;
+        text-align: right;
+        max-width: none; /* Allow bubble to fill width */
+      }
+    }
 
-/* Mobile landscape */
-@media (max-width: 768px) and (orientation: landscape) {
-  #overlayText {
-    bottom: 20%;
-    left: 40%;      /* Move start to center */
-    right: auto;    /* Remove right constraint */
-    font-size: 1.1rem;
-    text-align: right;
-    max-width: 360px;
-  }
-}
-      
-      #image {
-        background-position: center center; /* Ensure the image is centered on mobile */
+    /* Mobile landscape */
+    @media (max-width: 768px) and (orientation: landscape) {
+      #overlayText {
+        bottom: 20%;
+        left: 40%;      /* Move start to center */
+        right: auto;    /* Remove right constraint */
+        font-size: 1.1rem;
+        text-align: right;
+        max-width: 360px;
       }
     }
   </style>
 </head>
 <body>
   <div id="image">
+    <img id="mainImage" src="" alt="Slideshow Image" />
     <div id="overlayText">MEL</div>
   </div>
 
@@ -87,10 +89,10 @@
     ];
 
     let index = 0;
-    const imageDiv = document.getElementById('image');
+    const mainImage = document.getElementById('mainImage');
 
     function updateImage() {
-      imageDiv.style.backgroundImage = `url('${images[index]}')`;
+      mainImage.src = images[index];
     }
 
     document.body.addEventListener('click', () => {
