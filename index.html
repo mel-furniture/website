@@ -11,6 +11,7 @@
       height: 100%;
       background-color: #dedede;
       overflow: hidden;
+      box-sizing: border-box;
     }
 
     #image {
@@ -38,63 +39,51 @@
       right: 5%;
       color: #dedede;
       font-family: serif;
-      font-size: 1.5em;
+      font-size: 1.1rem;
       background-color: rgba(255, 255, 255, 1);
       padding: 0.75em 1em;
       border-radius: 0.75em;
       text-align: right;
       z-index: 10;
-      max-width: 300px; /* Text bubble max width */
+      max-width: 300px;
       display: inline-block;
-      white-space: normal; /* Allow wrapping */
-      word-wrap: break-word; /* Break long words if needed */
+      white-space: normal;
+      word-wrap: break-word;
+      box-sizing: border-box;
     }
-
-    #overlayText {
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
-    font-size: 1.1rem;
-    text-align: right;
-    max-width: none;
-    word-wrap: break-word;
-  }
 
     #overlayText a {
-      color: #d0d0d0;           /* Inherit the color from the parent (e.g., #dedede) */
-      text-decoration: none;    /* Removes the underline */
+      color: #d0d0d0;
+      text-decoration: none;
     }
 
-  /* Mobile portrait */
+    /* Mobile portrait */
     @media (max-width: 768px) and (orientation: portrait) {
-    #image img {
-    width: 100vw;
-    height: auto;
-    object-fit: contain;
-    }
-  }
-    
-  /* Mobile landscape */
-    @media (max-width: 768px) and (orientation: landscape) {
-    #overlayText {
-    bottom: 5%;
-    left: 80%;      /* Move start to center */
-    right: auto;    /* Remove right constraint */
-    font-size: 1.1rem;
-    text-align: right;
-    max-width: 360px;
+      #image img {
+        width: 100vw;
+        height: auto;
+        object-fit: contain;
       }
     }
 
-    
+    /* Mobile landscape */
+    @media (max-width: 768px) and (orientation: landscape) {
+      #overlayText {
+        bottom: 5%;
+        right: 5%;
+        left: auto;
+        max-width: 360px;
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div id="image">
     <img id="mainImage" src="" alt="Slideshow Image" />
     <div id="overlayText">
-  <a href="mailto:office@mel.furniture">MEL</a>
-</div>
+      <a href="mailto:office@mel.furniture">MEL</a>
+    </div>
   </div>
 
   <script>
