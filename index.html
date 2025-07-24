@@ -36,16 +36,16 @@
 
     #overlayText {
       position: absolute;
-      bottom: 5%;
+      bottom: 0;
       right: 5%;
       color: #dedede;
-      font-family: serif;
+      font-family: sans-serif;
       font-size: 1.1rem;
       background-color: rgba(255, 255, 255, 1);
       padding: 0.75em 1em 0.75em 5em;
       border-radius: 0.75em;
       text-align: right;
-      z-index: 10;
+      z-index: 9999;
       max-width: 350px;
       display: inline-block;
       white-space: normal;
@@ -57,13 +57,35 @@
       color: #d0d0d0;
       text-decoration: none;
     }
+
+    #overlayText2 {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      color: #222;
+      font-family: serif;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 0.5em 1em;
+      border-radius: 0.5em;
+      z-index: 10;
+      max-width: 300px;
+      display: inline-block;
+      white-space: normal;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
   <div id="image">
     <img id="mainImage" src="" alt="Slideshow Image" />
+
     <div id="overlayText">
       <a href="mailto:office@mel.furniture">INQUIRE FOR PURCHASE</a>
+    </div>
+
+    <div id="overlayText2">
+      LIMITED SERIES · 2025
     </div>
   </div>
 
