@@ -89,12 +89,6 @@
   let index = 0;
   const mainImage = document.getElementById('mainImage');
 
-  // Preload images
-  images.forEach(({ src }) => {
-    const img = new Image();
-    img.src = src;
-  });
-
   function updateImage() {
     mainImage.src = images[index].src;
     mainImage.alt = images[index].alt;
@@ -104,6 +98,7 @@
     index = (index + 1) % images.length;
     updateImage();
   });
-</script>
+
+ </script>
 </body>
 </html>
