@@ -94,23 +94,27 @@
 
   <script>
   const images = [
-    { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
-    { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
+    { src: 'images/photo1.jpg?v=9', alt: 'Alternate view' },
+    { src: 'images/photo2.jpg?v=9', alt: 'Alternate view' }
   ];
 
   let index = 0;
-  const mainImage = document.getElementById('mainImage');
+  const mainImage = document.getElementById('main-image');
 
-  function updateImage() {
+  // Preload first image and only display after load
+  const preload = new Image();
+  preload.src = images[0].src;
+  preload.onload = () => {
+    mainImage.src = images[0].src;
+    mainImage.alt = images[0].alt;
+    mainImage.style.opacity = '1'; // ensure it's visible
+  };
+
+  document.getElementById('image').addEventListener('click', () => {
+    index = (index + 1) % images.length;
     mainImage.src = images[index].src;
     mainImage.alt = images[index].alt;
-  }
-
-  document.body.addEventListener('click', () => {
-    index = (index + 1) % images.length;
-    updateImage();
   });
-
- </script>
+</script>
 </body>
 </html>
