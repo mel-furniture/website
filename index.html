@@ -64,11 +64,24 @@
   white-space: normal;
   box-sizing: border-box;
 }
+
+  @media (max-width: 600px) {
+  #overlayText,
+  #overlayText2 {
+    font-size: 1rem;
+    left: 1em;
+    right: 1em;
+  }
+
+  #overlayText {
+    padding: 0.5em 0.75em;
+  }
+}
   </style>
 </head>
 <body>
   <div id="image">
-    <img id="mainImage" src="" alt="Slideshow Image" />
+    <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
 
     <div id="overlayText">
   Inquiries and purchase information: <a href="mailto:office@mel.furniture">office@mel.furniture</a>
@@ -80,24 +93,25 @@
   </div>
 
   <script>
-    const images = [
-      'images/photo1.jpg?v=9',
-      'images/photo2.jpg?v=9'
-    ];
+  const images = [
+    { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
+    { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
+  ];
 
-    let index = 0;
-    const mainImage = document.getElementById('mainImage');
+  let index = 0;
+  const mainImage = document.getElementById('mainImage');
 
-    function updateImage() {
-      mainImage.src = images[index];
-    }
+  function updateImage() {
+    mainImage.src = images[index].src;
+    mainImage.alt = images[index].alt;
+  }
 
-    document.body.addEventListener('click', () => {
-      index = (index + 1) % images.length;
-      updateImage();
-    });
-
+  document.body.addEventListener('click', () => {
+    index = (index + 1) % images.length;
     updateImage();
-  </script>
+  });
+
+  updateImage();
+ </script>
 </body>
 </html>
