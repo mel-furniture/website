@@ -94,11 +94,19 @@
     mainImage.alt = images[index].alt;
   }
 
-  document.body.addEventListener('click', () => {
+  function nextImage() {
     index = (index + 1) % images.length;
     updateImage();
-  });
+  }
 
- </script>
+  document.body.addEventListener('click', nextImage);
+
+  // Automatically change image every 5 seconds
+  setInterval(nextImage, 5000);
+
+  // Initialize with the first image
+  updateImage();
+</script>
+  
 </body>
 </html>
