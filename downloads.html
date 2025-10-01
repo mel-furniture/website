@@ -19,25 +19,30 @@
   }
 
   .product-card {
-    color: #bbb
+    color: #bbb; /* all text in #bbb */
     background-color: #fff;
-    border: 1px solid #dedede;
-    border-radius: 8px;       /* standard curved corners */
-    padding: 1em 1.25em;      /* same spacing as site */
+    border: 1px solid #dedede; /* border color */
+    border-radius: 8px;
+    padding: 1em 1.25em;
     margin-bottom: 1em;
-    font-size: 1.125rem;      /* same size as overlayText/footer */
+    font-size: 1.125rem;
   }
 
   .product-card div {
-    margin-bottom: 0.5em;     /* small spacing between lines */
+    margin-bottom: 0.5em;
   }
 
   .product-card a {
-    color: #0077cc;
-    text-decoration: underline;
+    color: #bbb; /* link color same as text */
+    text-decoration: underline; /* underline always visible */
   }
 
-  /* Optional: make the card slightly responsive for mobile */
+  .product-card a:hover,
+  .product-card a:focus {
+    color: #bbb; /* prevent color change on hover/focus */
+    text-decoration: underline; /* underline stays the same */
+  }
+
   @media (max-width: 480px) {
     .product-card {
       padding: 0.75em 1em;
