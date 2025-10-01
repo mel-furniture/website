@@ -33,14 +33,13 @@
   }
 
   .product-card a {
-    color: #bbb; /* link color same as text */
-    text-decoration: underline; /* underline always visible */
+    color: #bbb;           /* same as text */
+    text-decoration: none; /* no underline by default */
   }
 
   .product-card a:hover,
   .product-card a:focus {
-    color: #bbb; /* prevent color change on hover/focus */
-    text-decoration: underline; /* underline stays the same */
+    text-decoration: underline; /* underline on hover/focus */
   }
 
   @media (max-width: 480px) {
