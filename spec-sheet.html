@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEL Furniture Table</title>
+<title>MEL Furniture Product</title>
 <style>
   html, body {
     margin: 0;
@@ -15,69 +15,42 @@
   }
 
   body {
-    padding: 1.25em; /* same as overlayText padding */
+    padding: 1.25em; /* same padding as overlayText/footer */
   }
 
-  .table-container {
-    overflow-x: auto; /* enables horizontal scroll on small screens */
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px; /* ensures table doesn’t shrink too much */
+  .product-card {
     background-color: #dedede;
-  }
-
-  th, td {
     border: 1px solid #bbb;
-    padding: 0.75em 1em; /* same spacing as overlay/footer */
-    text-align: left;
-    font-size: 1.125rem; /* same size as overlayText */
+    padding: 1em 1.25em; /* same spacing as site */
+    margin-bottom: 1em;
+    font-size: 1.125rem; /* same size as overlayText/footer */
   }
 
-  th {
-    background-color: #ccc; /* visually distinguish header */
-    font-weight: bold;
+  .product-card div {
+    margin-bottom: 0.5em; /* small spacing between lines */
   }
 
-  a {
+  .product-card a {
     color: #0077cc;
     text-decoration: underline;
   }
 
+  /* Optional: make the card slightly responsive for mobile */
+  @media (max-width: 480px) {
+    .product-card {
+      padding: 0.75em 1em;
+      font-size: 1rem;
+    }
+  }
 </style>
 </head>
 <body>
 
-<div class="table-container">
-  <table>
-    <tr>
-      <th>Product</th>
-      <th>Dimensions</th>
-      <th>Information Sheet</th>
-      <th>Spec Sheet</th>
-    </tr>
-    <tr>
-      <td>Radius Table</td>
-      <td>36" x 36" x 30"</td>
-      <td><a href="#">Info PDF</a></td>
-      <td><a href="#">Spec PDF</a></td>
-    </tr>
-    <tr>
-      <td>Square Stool</td>
-      <td>18" x 18" x 24"</td>
-      <td><a href="#">Info PDF</a></td>
-      <td><a href="#">Spec PDF</a></td>
-    </tr>
-    <tr>
-      <td>Console Table</td>
-      <td>48" x 14" x 30"</td>
-      <td><a href="#">Info PDF</a></td>
-      <td><a href="#">Spec PDF</a></td>
-    </tr>
-  </table>
+<div class="product-card">
+  <div><strong>Product:</strong> Radius Table</div>
+  <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
+  <div><strong>Information Sheet:</strong> <a href="#">Info PDF</a></div>
+  <div><strong>Spec Sheet:</strong> <a href="#">Spec PDF</a></div>
 </div>
 
 </body>
