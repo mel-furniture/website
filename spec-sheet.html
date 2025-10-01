@@ -1,128 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEL Furniture</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #dedede;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEL Furniture Table</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #dedede;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
 
-    #image {
-      position: relative;
-      width: 100vw;
-      height: 100svh;
-      background-color: #dedede;
-      overflow: hidden;
-    }
+  body {
+    padding: 1.25em; /* same as overlayText padding */
+  }
 
-    #image img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100svh;
-      object-fit: cover;
-      object-position: center;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
+  .table-container {
+    overflow-x: auto; /* enables horizontal scroll on small screens */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  }
 
-    #overlayText {
-  position: absolute;
-  bottom: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* ensures table doesn’t shrink too much */
+    background-color: #dedede;
+  }
 
-    #overlayText a {
-      color: white;
-      text-decoration: underline;
-    }
+  th, td {
+    border: 1px solid #bbb;
+    padding: 0.75em 1em; /* same spacing as overlay/footer */
+    text-align: left;
+    font-size: 1.125rem; /* same size as overlayText */
+  }
 
-    #overlayText2 {
-  position: absolute;
-  top: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: serif;
-  font-size: 1.125rem;
-  font-weight: bold;
-  letter-spacing: 0.075em; 
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
+  th {
+    background-color: #ccc; /* visually distinguish header */
+    font-weight: bold;
+  }
 
-  </style>
+  a {
+    color: #0077cc;
+    text-decoration: underline;
+  }
+
+</style>
 </head>
 <body>
-  <div id="image">
-    <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
 
-    <div id="overlayText">
-  Inquiries and purchase information: <a href="mailto:office@mel.furniture">office@mel.furniture</a>
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Dimensions</th>
+      <th>Information Sheet</th>
+      <th>Spec Sheet</th>
+    </tr>
+    <tr>
+      <td>Radius Table</td>
+      <td>36" x 36" x 30"</td>
+      <td><a href="#">Info PDF</a></td>
+      <td><a href="#">Spec PDF</a></td>
+    </tr>
+    <tr>
+      <td>Square Stool</td>
+      <td>18" x 18" x 24"</td>
+      <td><a href="#">Info PDF</a></td>
+      <td><a href="#">Spec PDF</a></td>
+    </tr>
+    <tr>
+      <td>Console Table</td>
+      <td>48" x 14" x 30"</td>
+      <td><a href="#">Info PDF</a></td>
+      <td><a href="#">Spec PDF</a></td>
+    </tr>
+  </table>
 </div>
 
-    <div id="overlayText2">
-      MEL
-    </div>
-  </div>
-
-   <script>
-  const images = [
-    { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
-    { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
-  ];
-
-  let index = 0;
-  const mainImage = document.getElementById('mainImage');
-
-  function updateImage() {
-    mainImage.src = images[index].src;
-    mainImage.alt = images[index].alt;
-  }
-
-  function nextImage() {
-    index = (index + 1) % images.length;
-    updateImage();
-  }
-
-  // Start the slideshow
-  let slideshowInterval = setInterval(nextImage, 5000);
-  let idleTimeout = null;
-
-  document.body.addEventListener('click', () => {
-    // Advance immediately on click
-    nextImage();
-
-    // Stop the slideshow
-    clearInterval(slideshowInterval);
-    slideshowInterval = null;
-
-    // Clear any previous idle timer
-    clearTimeout(idleTimeout);
-
-    // Resume slideshow after 20 seconds of no interaction
-    idleTimeout = setTimeout(() => {
-      slideshowInterval = setInterval(nextImage, 5000);
-    }, 15000);
-  });
-
-  // Initialize with the first image
-  updateImage();
-</script>
-  
 </body>
 </html>
