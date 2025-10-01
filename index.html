@@ -73,19 +73,27 @@ footer {
   background: #dedede;
   color: #fff;
   padding: 30px 20px;
-  text-align: center;
-  flex-shrink: 0;   /* prevents shrinking when scrolling */
+  text-align: left;       /* left-align links like overlayText */
+  flex-shrink: 0;
+  margin-top: 10vh;       /* space above footer for scroll */
+  margin-bottom: 10vh;    /* equal space below footer */
+  box-sizing: border-box;
 }
 
 footer .footer-links {
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.125rem;    /* match overlayText */
+  display: inline;         /* inline so links flow like text */
 }
 
 footer .footer-links a {
   color: #bbb;
   text-decoration: none;
-  margin: 0 15px;
+  margin-left: 15px;       /* spacing between links */
+}
+
+footer .footer-links a:first-child {
+  margin-left: 0;           /* no extra margin on first link */
 }
 
 footer .footer-links a:hover {
