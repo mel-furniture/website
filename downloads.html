@@ -32,12 +32,12 @@
   /* Main content wrapper */
   .content {
     flex: 1;
-    padding: 6em 1.25em 2em; /* spacing inside, leaves room for MEL logo */
+    padding: 6em 1.25em 2em;
   }
 
   /* Product section */
   .product-card {
-    color: #555;
+    color: #bbb; /* all text inside card is #bbb */
     background-color: #fff;
     padding: 1.25em 0;
     font-size: 1.125rem;
@@ -52,7 +52,6 @@
 
   .product-dimensions {
     margin-bottom: 1em;
-    color: #555;
   }
 
   /* Links styled */
@@ -66,15 +65,16 @@
     border-radius: 4px;
     text-decoration: none;
     margin-right: 0.5em;
-    color: #555;
+    color: #bbb; /* links same color as text */
     transition: background-color 0.2s ease;
   }
 
   .product-links a:hover {
     background-color: #dedede;
+    text-decoration: none;
   }
 
-  /* Divider line */
+  /* Divider line (lighter than text) */
   .divider {
     border-bottom: 1px solid #dedede;
     margin: 1.25em 0;
