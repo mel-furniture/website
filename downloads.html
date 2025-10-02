@@ -46,6 +46,11 @@
       border-radius: 8px;
       padding: 1em 1.25em;
       font-size: 1.125rem;
+      transition: background-color 0.3s ease; /* smooth hover effect */
+    }
+
+    .product-card:hover {
+      background-color: #dedede; /* fill with gray on hover */
     }
 
     .product-card div {
@@ -102,31 +107,6 @@
         font-size: 1rem;
       }
     }
-
-.product-card {
-  color: #bbb;
-  background-color: #fff;
-  border: 1px solid #dedede;
-  border-radius: 8px;
-  padding: 1em 1.25em;
-  margin-bottom: 1em;
-  font-size: 1.125rem;
-}
-
-.product-links a {
-  border: 1px solid #dedede;
-  padding: 0.4em 0.75em;
-  border-radius: 4px;
-  text-decoration: none;
-  margin-right: 0.5em;
-  color: #bbb;
-  transition: background-color 0.2s ease;
-}
-
-.product-links a:hover {
-  background-color: #dedede;
-  text-decoration: none; /* no underline on hover */
-}
   </style>
 </head>
 <body>
@@ -136,16 +116,13 @@
 
   <div class="content">
     <!-- Product card -->
-  <div class="product-card">
-  <div style="font-size:1.25rem; font-weight:bold; margin-bottom:0.5em;">Radius Table</div>
-  <div style="margin-bottom:1em;">Dimensions: 36" x 36" x 30"</div>
-  <div class="product-links">
-    <a href="#">Info Sheet</a>
-    <a href="#">Spec Sheet</a>
+    <div class="product-card">
+      <div><strong>Product:</strong> Radius Table</div>
+      <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
+      <div><strong>Information Sheet:</strong> <a href="#">Info PDF</a></div>
+      <div><strong>Spec Sheet:</strong> <a href="#">Spec PDF</a></div>
+    </div>
   </div>
-</div>
-
-</div>
 
   <!-- Footer (homepage style) -->
   <footer>
