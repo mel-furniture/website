@@ -1,63 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEL Furniture Product</title>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #fff;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-
-  body {
-    padding: 1.25em; /* same as overlayText/footer */
-  }
-
-  .product-card {
-    color: #bbb; /* all text in #bbb */
-    background-color: #fff;
-    border: 1px solid #dedede; /* border color */
-    border-radius: 8px;
-    padding: 1em 1.25em;
-    margin-bottom: 1em;
-    font-size: 1.125rem;
-  }
-
-  .product-card div {
-    margin-bottom: 0.5em;
-  }
-
-  .product-card a {
-    color: #bbb;           /* same as text */
-    text-decoration: none; /* no underline by default */
-  }
-
-  .product-card a:hover,
-  .product-card a:focus {
-    text-decoration: underline; /* underline on hover/focus */
-  }
-
-  @media (max-width: 480px) {
-    .product-card {
-      padding: 0.75em 1em;
-      font-size: 1rem;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEL Furniture Product</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #fff;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
     }
-  }
-</style>
+
+    body {
+      position: relative;
+      padding: 1.25em; /* same as site spacing */
+    }
+
+    /* MEL logo top-left */
+    #overlayText2 {
+      position: absolute;
+      top: 1.25em;
+      left: 1.25em;
+      color: #dedede;
+      font-family: serif;
+      font-size: 1.125rem;
+      font-weight: bold;
+      letter-spacing: 0.075em; 
+      z-index: 10;
+      white-space: normal;
+      box-sizing: border-box;
+    }
+
+    /* Product card */
+    .product-card {
+      color: #bbb;
+      background-color: #fff;
+      border: 1px solid #dedede;
+      border-radius: 8px;
+      padding: 1em 1.25em;
+      margin: 6em 0 2em; /* push down so MEL doesn’t overlap */
+      font-size: 1.125rem;
+    }
+
+    .product-card div {
+      margin-bottom: 0.5em;
+    }
+
+    .product-card a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .product-card a:hover,
+    .product-card a:focus {
+      text-decoration: underline;
+      text-decoration-color: #bbb;
+    }
+
+    /* Footer styling (same as homepage) */
+    footer {
+      background: #dedede;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: left;
+      flex-shrink: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    footer .footer-links {
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      display: inline;
+    }
+
+    footer .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    footer .footer-links a:first-child {
+      margin-left: 0;
+    }
+
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* Tiny spacer so footer scrolls into view */
+    body::after {
+      content: "";
+      display: block;
+      height: 1px;
+    }
+
+    @media (max-width: 480px) {
+      .product-card {
+        padding: 0.75em 1em;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="product-card">
-  <div><strong>Product:</strong> Radius Table</div>
-  <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
-  <div><strong>Information Sheet:</strong> <a href="#">Info PDF</a></div>
-  <div><strong>Spec Sheet:</strong> <a href="#">Spec PDF</a></div>
-</div>
+  <!-- MEL logo -->
+  <div id="overlayText2">MEL</div>
+
+  <!-- Product card -->
+  <div class="product-card">
+    <div><strong>Product:</strong> Radius Table</div>
+    <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
+    <div><strong>Information Sheet:</strong> <a href="#">Info PDF</a></div>
+    <div><strong>Spec Sheet:</strong> <a href="#">Spec PDF</a></div>
+  </div>
+
+  <!-- Footer copied from homepage -->
+  <footer>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/terms-and-conditions.html">Privacy Policy</a>
+      <a href="/something.html">Something</a>
+      <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+      <a href="assets/mel2025radius_table_spec_sheet_care_guide.pdf" target="_blank">Spec Sheet</a>
+    </div>
+  </footer>
 
 </body>
 </html>
