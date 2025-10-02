@@ -34,7 +34,9 @@
   /* Main content wrapper */
   .content {
     flex: 1;  /* pushes footer to bottom */
-    padding: 6em 1.25em 2em; /* spacing inside, leaves room for MEL logo */
+    padding: 6em 1.5em 2em; /* top spacing for MEL logo, sides slightly larger */
+    display: flex;
+    justify-content: center; /* center card horizontally */
   }
 
   /* Product card */
@@ -43,24 +45,28 @@
     background-color: #fff;
     border: 1px solid #dedede;
     border-radius: 8px;
-    padding: 1em 1.25em;
-    margin-bottom: 1em;
+    padding: 2em;  /* increase padding for breathing room */
+    width: 100%;
+    max-width: 400px; /* keeps card a nice readable width */
+    font-size: 1.125rem;
+    line-height: 1.6; /* increase line spacing for readability */
+    box-sizing: border-box;
   }
 
   .product-card .product-title {
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 
   .product-card .product-dimensions {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
 
   /* Download links styled as hoverable boxes */
   .product-links a {
     border: 1px solid #dedede;
-    padding: 0.4em 0.75em;
+    padding: 0.5em 0.75em;
     border-radius: 4px;
     text-decoration: none;
     margin-right: 0.5em;
@@ -70,7 +76,7 @@
 
   .product-links a:hover {
     background-color: #dedede;
-    text-decoration: none; /* no underline */
+    text-decoration: none;
   }
 
   /* Footer matches homepage */
@@ -108,7 +114,7 @@
 
   @media (max-width: 480px) {
     .product-card {
-      padding: 0.75em 1em;
+      padding: 1.5em;
       font-size: 1rem;
     }
   }
