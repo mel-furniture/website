@@ -12,6 +12,7 @@
       background-color: #fff;
       box-sizing: border-box;
       font-family: sans-serif;
+
       display: flex;
       flex-direction: column;
     }
@@ -62,14 +63,21 @@
       text-decoration-color: #bbb;
     }
 
-    /* Footer styling (same as homepage) */
+    /* Spacer pushes footer down */
+    .content {
+      flex: 1;
+    }
+
+    /* Divider line above footer */
+    .footer-divider {
+      border-top: 1px solid #bbb;
+      width: 100%;
+      margin: 2em 0 0;
+    }
+
     footer {
-      background: #dedede;
-      color: #fff;
-      padding: 30px 20px;
+      padding: 20px;
       text-align: left;
-      flex-shrink: 0;
-      margin: 0;
       box-sizing: border-box;
     }
 
@@ -90,14 +98,9 @@
     }
 
     footer .footer-links a:hover {
-      color: #fff;
-    }
-
-    /* Tiny spacer so footer scrolls into view */
-    body::after {
-      content: "";
-      display: block;
-      height: 1px;
+      text-decoration: underline;
+      text-decoration-color: #bbb;
+      color: #bbb; /* no color change */
     }
 
     @media (max-width: 480px) {
@@ -113,15 +116,20 @@
   <!-- MEL logo -->
   <div id="overlayText2">MEL</div>
 
-  <!-- Product card -->
-  <div class="product-card">
-    <div><strong>Product:</strong> Radius Table</div>
-    <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
-    <div><strong>Information Sheet:</strong> <a href="#">Info PDF</a></div>
-    <div><strong>Spec Sheet:</strong> <a href="#">Spec PDF</a></div>
+  <div class="content">
+    <!-- Product card -->
+    <div class="product-card">
+      <div><strong>Product:</strong> Radius Table</div>
+      <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
+      <div><strong>Information Sheet:</strong> <a href="#">Info PDF</a></div>
+      <div><strong>Spec Sheet:</strong> <a href="#">Spec PDF</a></div>
+    </div>
   </div>
 
-  <!-- Footer copied from homepage -->
+  <!-- Divider line -->
+  <div class="footer-divider"></div>
+
+  <!-- Footer -->
   <footer>
     <div class="footer-links">
       <a href="/about.html">About</a>
