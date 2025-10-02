@@ -19,10 +19,10 @@
 
     body {
       position: relative;
-      padding: 1.25em; /* same as site spacing */
+      padding: 1.25em; /* site spacing */
     }
 
-    /* MEL logo top-left */
+    /* MEL logo */
     #overlayText2 {
       position: absolute;
       top: 1.25em;
@@ -68,16 +68,14 @@
       flex: 1;
     }
 
-    /* Divider line above footer */
-    .footer-divider {
-      border-top: 1px solid #bbb;
-      width: 100%;
-      margin: 2em 0 0;
-    }
-
+    /* Footer matches homepage */
     footer {
-      padding: 20px;
+      background: #dedede;
+      color: #fff;
+      padding: 30px 20px;
       text-align: left;
+      flex-shrink: 0;
+      margin: 0;
       box-sizing: border-box;
     }
 
@@ -98,9 +96,8 @@
     }
 
     footer .footer-links a:hover {
+      color: #fff;
       text-decoration: underline;
-      text-decoration-color: #bbb;
-      color: #bbb; /* no color change */
     }
 
     @media (max-width: 480px) {
@@ -126,10 +123,7 @@
     </div>
   </div>
 
-  <!-- Divider line -->
-  <div class="footer-divider"></div>
-
-  <!-- Footer -->
+  <!-- Footer (homepage style) -->
   <footer>
     <div class="footer-links">
       <a href="/about.html">About</a>
