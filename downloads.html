@@ -1,112 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEL Furniture Product</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #fff;
-      box-sizing: border-box;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MEL Furniture Product</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
 
-    /* MEL logo */
-    #overlayText2 {
-      position: absolute;
-      top: 1.25em;
-      left: 1.25em;
-      color: #dedede;
-      font-family: serif;
-      font-size: 1.125rem;
-      font-weight: bold;
-      letter-spacing: 0.075em; 
-      z-index: 10;
-      white-space: normal;
-      box-sizing: border-box;
-    }
+  /* MEL logo */
+  #overlayText2 {
+    position: absolute;
+    top: 1.25em;
+    left: 1.25em;
+    color: #dedede;
+    font-family: serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: 0.075em; 
+    z-index: 10;
+    white-space: normal;
+    box-sizing: border-box;
+  }
 
-    /* Main content wrapper */
-    .content {
-      flex: 1;  /* pushes footer to bottom */
-      padding: 6em 1.25em 2em; /* spacing inside, leaves room for MEL logo */
-    }
+  /* Main content wrapper */
+  .content {
+    flex: 1;  /* pushes footer to bottom */
+    padding: 6em 1.25em 2em; /* spacing inside, leaves room for MEL logo */
+  }
 
-    /* Product card */
+  /* Product card */
+  .product-card {
+    color: #bbb;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    padding: 1em 1.25em;
+    margin-bottom: 1em;
+  }
+
+  .product-card .product-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .product-card .product-dimensions {
+    margin-bottom: 1em;
+  }
+
+  /* Download links styled as hoverable boxes */
+  .product-links a {
+    border: 1px solid #dedede;
+    padding: 0.4em 0.75em;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 0.5em;
+    color: #bbb;
+    transition: background-color 0.2s ease;
+  }
+
+  .product-links a:hover {
+    background-color: #dedede;
+    text-decoration: none; /* no underline */
+  }
+
+  /* Footer matches homepage */
+  footer {
+    background: #dedede;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: left;
+    flex-shrink: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  footer .footer-links {
+    font-family: sans-serif;
+    font-size: 1.125rem;
+    display: inline;
+  }
+
+  footer .footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+
+  footer .footer-links a:first-child {
+    margin-left: 0;
+  }
+
+  footer .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
     .product-card {
-      color: #bbb;
-      background-color: #fff;
-      border: 1px solid #dedede;
-      border-radius: 8px;
-      padding: 1em 1.25em;
-      font-size: 1.125rem;
+      padding: 0.75em 1em;
+      font-size: 1rem;
     }
-
-    .product-card div {
-      margin-bottom: 0.5em;
-    }
-
-    /* Download links styled as buttons */
-    .product-card .product-links a {
-      border: 1px solid #dedede;
-      padding: 0.4em 0.75em;
-      border-radius: 4px;
-      text-decoration: none;
-      margin-right: 0.5em;
-      color: #bbb;
-      transition: background-color 0.2s ease;
-    }
-
-    .product-card .product-links a:hover {
-      background-color: #dedede;
-      text-decoration: none;
-    }
-
-    /* Footer matches homepage */
-    footer {
-      background: #dedede;
-      color: #fff;
-      padding: 30px 20px;
-      text-align: left;
-      flex-shrink: 0;
-      margin: 0;
-      box-sizing: border-box;
-      width: 100%; /* ensures full width */
-    }
-
-    footer .footer-links {
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      display: inline;
-    }
-
-    footer .footer-links a {
-      color: #bbb;
-      text-decoration: none;
-      margin-left: 15px;
-    }
-
-    footer .footer-links a:first-child {
-      margin-left: 0;
-    }
-
-    footer .footer-links a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 480px) {
-      .product-card {
-        padding: 0.75em 1em;
-        font-size: 1rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
@@ -116,10 +122,10 @@
   <div class="content">
     <!-- Product card -->
     <div class="product-card">
-      <div><strong>Product:</strong> Radius Table</div>
-      <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
+      <div class="product-title">Radius Table</div>
+      <div class="product-dimensions">Dimensions: 36" x 36" x 30"</div>
       <div class="product-links">
-        <a href="#">Information Sheet</a>
+        <a href="#">Info Sheet</a>
         <a href="#">Spec Sheet</a>
       </div>
     </div>
