@@ -17,11 +17,6 @@
       flex-direction: column;
     }
 
-    body {
-      position: relative;
-      padding: 1.25em; /* site spacing */
-    }
-
     /* MEL logo */
     #overlayText2 {
       position: absolute;
@@ -37,6 +32,12 @@
       box-sizing: border-box;
     }
 
+    /* Main content wrapper */
+    .content {
+      flex: 1;  /* pushes footer to bottom */
+      padding: 6em 1.25em 2em; /* spacing inside, leaves room for MEL logo */
+    }
+
     /* Product card */
     .product-card {
       color: #bbb;
@@ -44,7 +45,6 @@
       border: 1px solid #dedede;
       border-radius: 8px;
       padding: 1em 1.25em;
-      margin: 6em 0 2em; /* push down so MEL doesn’t overlap */
       font-size: 1.125rem;
     }
 
@@ -63,11 +63,6 @@
       text-decoration-color: #bbb;
     }
 
-    /* Spacer pushes footer down */
-    .content {
-      flex: 1;
-    }
-
     /* Footer matches homepage */
     footer {
       background: #dedede;
@@ -77,6 +72,7 @@
       flex-shrink: 0;
       margin: 0;
       box-sizing: border-box;
+      width: 100%; /* ensures full width */
     }
 
     footer .footer-links {
