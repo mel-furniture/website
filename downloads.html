@@ -12,7 +12,6 @@
       background-color: #fff;
       box-sizing: border-box;
       font-family: sans-serif;
-
       display: flex;
       flex-direction: column;
     }
@@ -46,26 +45,26 @@
       border-radius: 8px;
       padding: 1em 1.25em;
       font-size: 1.125rem;
-      transition: background-color 0.3s ease; /* smooth hover effect */
-    }
-
-    .product-card:hover {
-      background-color: #dedede; /* fill with gray on hover */
     }
 
     .product-card div {
       margin-bottom: 0.5em;
     }
 
-    .product-card a {
-      color: #bbb;
+    /* Download links styled as buttons */
+    .product-card .product-links a {
+      border: 1px solid #dedede;
+      padding: 0.4em 0.75em;
+      border-radius: 4px;
       text-decoration: none;
+      margin-right: 0.5em;
+      color: #bbb;
+      transition: background-color 0.2s ease;
     }
 
-    .product-card a:hover,
-    .product-card a:focus {
-      text-decoration: underline;
-      text-decoration-color: #bbb;
+    .product-card .product-links a:hover {
+      background-color: #dedede;
+      text-decoration: none;
     }
 
     /* Footer matches homepage */
@@ -119,8 +118,10 @@
     <div class="product-card">
       <div><strong>Product:</strong> Radius Table</div>
       <div><strong>Dimensions:</strong> 36" x 36" x 30"</div>
-      <div><strong>Information Sheet:</strong> <a href="#">Info PDF</a></div>
-      <div><strong>Spec Sheet:</strong> <a href="#">Spec PDF</a></div>
+      <div class="product-links">
+        <a href="#">Information Sheet</a>
+        <a href="#">Spec Sheet</a>
+      </div>
     </div>
   </div>
 
