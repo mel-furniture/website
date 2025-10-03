@@ -8,7 +8,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #dedede;
+      background-color: #fff;    /* white background */
       font-family: sans-serif;
       font-size: 1rem;
       color: #000;
@@ -19,7 +19,7 @@
       position: fixed;
       top: 1.25em;
       left: 1.25em;
-      color: #dedede;         /* MEL in gray */
+      color: #dedede;          /* MEL in gray */
       font-family: serif;
       font-size: 1.125rem;
       font-weight: bold;
@@ -28,10 +28,11 @@
     }
 
     .content {
-      max-width: 700px;
-      margin: 5em auto 4em auto;   /* pushes text below “MEL” */
+      max-width: 1100px;
+      margin: 5em auto 4em auto;   /* keeps spacing from top/footer */
       padding: 0 1.25em;
-      background-color: #dedede;
+      column-count: 2;             /* two columns */
+      column-gap: 3em;
     }
 
     .content h1,
@@ -40,6 +41,7 @@
       font-weight: bold;
       margin-top: 2em;
       margin-bottom: 0.5em;
+      break-after: avoid; /* keep headings with content */
     }
 
     .content p,
@@ -52,8 +54,15 @@
       margin: 0.5em 0;
     }
 
+    /* On small screens → collapse to one column */
+    @media (max-width: 768px) {
+      .content {
+        column-count: 1;
+      }
+    }
+
     footer {
-      background: #dedede;
+      background: #fff;   /* footer background white now */
       color: #fff;
       padding: 30px 20px;
       text-align: left;
@@ -78,7 +87,7 @@
     }
 
     footer .footer-links a:hover {
-      color: #fff;
+      color: #000;
     }
   </style>
 </head>
