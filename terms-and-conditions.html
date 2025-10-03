@@ -3,177 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEL Furniture</title>
+  <title>MEL Furniture — Terms & Conditions</title>
   <style>
-    
     html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: #dedede;
-  box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: #dedede;
+      font-family: sans-serif;
+      font-size: 1rem;
+      color: #000;
+      line-height: 1.5;
+    }
 
-  display: flex;
-  flex-direction: column;
-}
+    #overlayText2 {
+      position: fixed;
+      top: 1.25em;
+      left: 1.25em;
+      color: #dedede;         /* MEL in gray */
+      font-family: serif;
+      font-size: 1.125rem;
+      font-weight: bold;
+      letter-spacing: 0.075em;
+      z-index: 10;
+    }
 
-#image {
-  position: relative;
-  width: 100vw;
-  height: 100vh;       /* exactly one screen tall */
-  background-color: #dedede;
-  overflow: hidden;
-  flex-shrink: 0;
-}
+    .content {
+      max-width: 700px;
+      margin: 5em auto 4em auto;   /* pushes text below “MEL” */
+      padding: 0 1.25em;
+      background-color: #dedede;
+    }
 
-#image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-  user-select: none;
-  -webkit-user-drag: none;
-}
+    .content h1,
+    .content h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+    }
 
-#overlayText {
-  position: absolute;
-  bottom: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
+    .content p,
+    .content li {
+      margin: 0.5em 0;
+    }
 
-#overlayText a {
-  color: white;
-  text-decoration: underline;
-}
+    .content ul {
+      padding-left: 1.2em;
+      margin: 0.5em 0;
+    }
 
-#overlayText2 {
-  position: absolute;
-  top: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: serif;
-  font-size: 1.125rem;
-  font-weight: bold;
-  letter-spacing: 0.075em; 
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
+    footer {
+      background: #dedede;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: left;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
 
-footer {
-  background: #dedede;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: left;       /* left-align links like overlayText */
-  flex-shrink: 0;
-  margin: 0;          /* remove extra space above/below */
-  box-sizing: border-box;
-}
+    footer .footer-links {
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      display: inline;
+    }
 
-footer .footer-links {
-  font-family: sans-serif;
-  font-size: 1.125rem;    /* match overlayText */
-  display: inline;         /* inline so links flow like text */
-}
+    footer .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin-left: 15px;
+    }
 
-footer .footer-links a {
-  color: #bbb;
-  text-decoration: none;
-  margin-left: 15px;       /* spacing between links */
-}
+    footer .footer-links a:first-child {
+      margin-left: 0;
+    }
 
-footer .footer-links a:first-child {
-  margin-left: 0;           /* no extra margin on first link */
-}
-
-footer .footer-links a:hover {
-  color: #fff;
-}
-
-/* Tiny spacer to push footer just below the fold */
-body::after {
-  content: "";
-  display: block;
-  height: 1px;  /* adjust if you want slightly more/less scroll */
-}
-    
+    footer .footer-links a:hover {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
-  <div id="image">
-    <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
 
-    <div id="overlayText">
-  Inquiries and purchase information: <a href="mailto:office@mel.furniture">office@mel.furniture</a>
-</div>
-
-    <div id="overlayText2">
-      MEL
-    </div>
+  <div id="overlayText2">
+    MEL
   </div>
 
-   <script>
-  const images = [
-    { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
-    { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
-  ];
+  <div class="content">
+    <h1>Terms and Conditions</h1>
+    <p>All orders placed with MEL Studio are subject to the following terms and conditions. By purchasing from us, you agree to these terms.</p>
 
-  let index = 0;
-  const mainImage = document.getElementById('mainImage');
+    <h2>Orders</h2>
+    <p>Orders are not processed directly through our website. Your order will either be placed via email exchange or by phone. Once your order is placed, you will receive an email confirmation, and again when your order is dispatched.</p>
+    <p>Orders are typically processed within 5 business days and shipped with tracking within the contiguous 48 states of the U.S. On some occasions, it may take longer and we apologize for any inconvenience caused. Delivery dates are estimates only and MEL is not liable for delays outside our control.</p>
+    <p>If you would like to place an order from outside the U.S., please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a> and we will do our best to help you.</p>
+    <p>If your order is missing, or shows as successfully delivered but you have not received the goods, please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a>. Please note that MEL does not accept responsibility for orders that show as successfully delivered.</p>
 
-  function updateImage() {
-    mainImage.src = images[index].src;
-    mainImage.alt = images[index].alt;
-  }
+    <h2>Returns & Refunds</h2>
+    <p>If you are unhappy with your product, please notify us within 3 days of receiving your order. In the event of receiving damaged or faulty goods, please contact us at <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</p>
+    <p>You will receive a refund if:</p>
+    <ul>
+      <li>Goods are returned to us within 14 days of receipt of delivery.</li>
+      <li>Goods are returned in saleable condition with their original packaging.</li>
+    </ul>
+    <p>We will not accept returns if the item indicates signs of use. In such cases, the item will be returned to the purchaser. For accepted returns, refunds will be made as soon as possible to the debited account, excluding delivery costs.</p>
+    <p>Please note, we cannot refund postage costs and the cost of returned goods is at your expense. Please make sure the items are securely packed, as the parcel is your responsibility until the goods reach us. We are not responsible for goods being lost or damaged in transit.</p>
 
-  function nextImage() {
-    index = (index + 1) % images.length;
-    updateImage();
-  }
+    <h2>Warranty</h2>
+    <p>MEL Studio provides a limited warranty against defects in materials and workmanship for a period of 1 year from the date of delivery.</p>
+    <p>Before submitting a claim, please carefully review the terms and conditions below:</p>
+    <ul>
+      <li>If MEL deems a product defective in materials or workmanship, we will repair or replace the product at no cost to you.</li>
+      <li>Original purchasers must notify MEL in writing of any claims within the warranty period.</li>
+      <li>Claims should be submitted by email to <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</li>
+    </ul>
+    <p>MEL warranties do not apply to:</p>
+    <ul>
+      <li>Normal wear and tear</li>
+      <li>Customer’s own or third-party materials</li>
+      <li>Effects of extreme temperature or unusual environmental conditions</li>
+      <li>Changes in surface finishes due to aging or light exposure</li>
+      <li>Furniture intended for outdoor use exposed to temperatures below 32°F</li>
+      <li>Misuse, inadequate maintenance, or mistreatment of products</li>
+    </ul>
+    <p>MEL is not responsible for direct or indirect damage resulting from misuse, mistreatment, or insufficient care.</p>
 
-  // Start the slideshow
-  let slideshowInterval = setInterval(nextImage, 5000);
-  let idleTimeout = null;
+    <h2>Privacy Policy</h2>
+    <p>MEL respects your privacy rights. When you purchase items from our shop, you may be asked to provide contact details and payment information. This information is used solely to process and fulfill your order, communicate with you about your purchase, and manage customer service inquiries. MEL does not sell, rent, or trade your personal information to third parties. We take appropriate measures to keep your data secure and confidential.</p>
 
-  document.body.addEventListener('click', () => {
-    // Advance immediately on click
-    nextImage();
+    <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of the State of Minnesota, USA.</p>
 
-    // Stop the slideshow
-    clearInterval(slideshowInterval);
-    slideshowInterval = null;
-
-    // Clear any previous idle timer
-    clearTimeout(idleTimeout);
-
-    // Resume slideshow after 20 seconds of no interaction
-    idleTimeout = setTimeout(() => {
-      slideshowInterval = setInterval(nextImage, 5000);
-    }, 15000);
-  });
-
-  // Initialize with the first image
-  updateImage();
-</script>
+    <h2>Changes to Terms</h2>
+    <p>We may update these Terms and Conditions from time to time. Continued use of our website or purchase of our products constitutes acceptance of any revised terms.</p>
+  </div>
 
   <footer>
-  <div class="footer-links">
-    <a href="/about.html">About</a>
-    <a href="/terms-and-conditions.html">Privacy Policy</a>
-    <a href="/something.html">Something</a>
-    <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
-    <a href="assets/mel2025radius_table_spec_sheet_care_guide.pdf" target="_blank">Spec Sheet</a>
-  </div>
-</footer>
-  
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/terms-and-conditions.html">Privacy Policy</a>
+      <a href="/something.html">Something</a>
+      <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+      <a href="assets/mel2025radius_table_spec_sheet_care_guide.pdf" target="_blank">Spec Sheet</a>
+    </div>
+  </footer>
+
 </body>
 </html>
