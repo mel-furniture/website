@@ -9,7 +9,7 @@
       font-family: sans-serif;
       font-size: 1.125rem;
       color: #bbb;
-      line-height: 1.35; /* Morrison-like */
+      line-height: 1.35;
       background-color: #fff;
       margin: 0;
       padding: 0;
@@ -19,7 +19,7 @@
       position: absolute;
       top: 1.25em;
       left: 1.25em;
-      color: #dedede;   /* MEL in light grey */
+      color: #dedede;   
       font-family: serif;
       font-size: 1.125rem;
       font-weight: bold;
@@ -33,14 +33,24 @@
       padding: 4rem 2rem 2rem;
     }
 
-    /* Headers styled same size as body, lighter weight */
-    .container h1,
+    /* Page title larger */
+    .container h1 {
+      font-size: 2rem;       /* larger than body text */
+      font-weight: 400;
+      color: #999;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    /* Section headers bold and same size as body text */
     .container h2 {
       font-size: 1.125rem;
-      font-weight: 400;   /* same as body */
-      color: #999;        /* slightly lighter than body */
+      font-weight: bold;     /* bold for emphasis */
+      color: #999;
       margin-top: 2rem;
       margin-bottom: 0.5em;
+      line-height: 1.2;
       break-after: avoid;
     }
 
