@@ -35,12 +35,12 @@
 
     /* Page title */
     .container h1 {
-      font-size: 2rem;          /* larger than body text */
-      font-weight: 700;
+      font-size: 2rem;
+      font-weight: 700;        /* semi-bold */
       color: #999;
       margin-top: 0;
       margin-bottom: 0;
-      padding-bottom: 0.5em;    /* space below title */
+      padding-bottom: 0.5em;
       line-height: 1.2;
     }
 
@@ -49,22 +49,27 @@
       font-size: 1.125rem;
       font-weight: bold;
       color: #999;
-      margin-top: 2em;          /* space above header */
+      margin-top: 2em;
       margin-bottom: 0;
-      padding-bottom: 0.2em;    /* tight space below */
+      padding-bottom: 0.2em;
       line-height: 1.2;
-      break-inside: avoid;  /* prevents h2 from splitting across columns */
+      break-inside: avoid;     /* prevent splitting across columns */
+    }
+
+    /* Force header to new column if needed */
+    .container h2.force-column {
+      break-before: column;
     }
 
     /* Two-column layout */
     .two-columns {
       column-count: 2;
-      column-gap: 2.5rem;       /* clean column separation */
+      column-gap: 2.5rem;
     }
 
     @media (max-width: 768px) {
       .two-columns {
-        column-count: 1;        /* single column on mobile */
+        column-count: 1;
         column-gap: 0;
       }
     }
@@ -74,16 +79,16 @@
     .container ul,
     .container ol {
       margin-top: 0;
-      margin-bottom: 1em;       /* space between paragraphs/lists */
+      margin-bottom: 1em;
     }
 
     .container ul,
     .container ol {
-      padding-left: 1.25em;     /* standard indent for lists */
+      padding-left: 1.25em;
     }
 
     .container li {
-      margin-bottom: 0.5em;     /* space between list items */
+      margin-bottom: 0.5em;
     }
 
     footer {
@@ -145,7 +150,7 @@
       <p>We will not accept returns if the item indicates signs of use. In such cases, the item will be returned to the purchaser. For accepted returns, refunds will be made as soon as possible to the debited account, excluding delivery costs.</p>
       <p>Please note, we cannot refund postage costs and the cost of returned goods is at your expense. Please make sure the items are securely packed, as the parcel is your responsibility until the goods reach us. We are not responsible for goods being lost or damaged in transit.</p>
 
-      <h2>Warranty</h2>
+      <h2 class="force-column">Warranty</h2>
       <p>MEL Studio provides a limited warranty against defects in materials and workmanship for a period of 1 year from the date of delivery.</p>
       <p>Before submitting a claim, please carefully review the terms and conditions below:</p>
       <ul>
