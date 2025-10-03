@@ -33,37 +33,56 @@
       padding: 4rem 2rem 2rem;
     }
 
-    /* Page title larger */
+    /* Page title */
     .container h1 {
-  font-size: 2rem;
-  font-weight: 400;
-  color: #999;
-  margin-top: 0;
-  margin-bottom: 0.5em; /* keeps some space below title */
-  line-height: 1.2;
-}
+      font-size: 2rem;          /* larger than body text */
+      font-weight: 400;
+      color: #999;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 0.5em;    /* space below title */
+      line-height: 1.2;
+    }
 
-
-    /* Section headers bold and same size as body text */
+    /* Section headers */
     .container h2 {
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: #999;
-  margin-top: 2rem;      /* keeps space above headers */
-  margin-bottom: 0.1em;  /* minimal space below, tight with the text */
-  line-height: 1.2;
-}
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: #999;
+      margin-top: 2em;          /* space above header */
+      margin-bottom: 0;
+      padding-bottom: 0.2em;    /* tight space below */
+      line-height: 1.2;
+    }
 
-
+    /* Two-column layout */
     .two-columns {
       column-count: 2;
-      column-gap: 2rem;
+      column-gap: 2.5rem;       /* clean column separation */
     }
 
     @media (max-width: 768px) {
       .two-columns {
-        column-count: 1;
+        column-count: 1;        /* single column on mobile */
+        column-gap: 0;
       }
+    }
+
+    /* Paragraphs and lists */
+    .container p,
+    .container ul,
+    .container ol {
+      margin-top: 0;
+      margin-bottom: 1em;       /* space between paragraphs/lists */
+    }
+
+    .container ul,
+    .container ol {
+      padding-left: 1.25em;     /* standard indent for lists */
+    }
+
+    .container li {
+      margin-bottom: 0.5em;     /* space between list items */
     }
 
     footer {
