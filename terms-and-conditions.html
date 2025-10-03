@@ -35,24 +35,25 @@
 
     /* Page title larger */
     .container h1 {
-      font-size: 2rem;       /* larger than body text */
-      font-weight: 400;
-      color: #999;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
+  font-size: 2rem;
+  font-weight: 400;
+  color: #999;
+  margin-top: 0;
+  margin-bottom: 0.5em; /* keeps some space below title */
+  line-height: 1.2;
+}
+
 
     /* Section headers bold and same size as body text */
     .container h2 {
-      font-size: 1.125rem;
-      font-weight: bold;     /* bold for emphasis */
-      color: #999;
-      margin-top: 2rem;
-      margin-bottom: 0.5em;
-      line-height: 1.2;
-      break-after: avoid;
-    }
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #999;
+  margin-top: 2rem;      /* keeps space above headers */
+  margin-bottom: 0.2em;  /* minimal space below, tight with the text */
+  line-height: 1.2;
+}
+
 
     .two-columns {
       column-count: 2;
