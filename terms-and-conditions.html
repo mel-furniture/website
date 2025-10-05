@@ -15,11 +15,12 @@
       padding: 0;
     }
 
+    /* Top-left overlay label */
     #overlayText2 {
-      position: absolute;
+      position: fixed;
       top: 1.25em;
-      left: 1.25em;
-      color: #dedede;   
+      left: 2rem; /* matches desktop container padding */
+      color: #dedede;
       font-family: serif;
       font-size: 1.125rem;
       font-weight: bold;
@@ -27,6 +28,7 @@
       z-index: 10;
     }
 
+    /* Main content container */
     .container {
       max-width: 960px;
       margin: 0 auto;
@@ -36,7 +38,7 @@
     /* Page title */
     .container h1 {
       font-size: 2rem;
-      font-weight: 700; /* semi-bold */
+      font-weight: 700;
       color: #999;
       margin-top: 0;
       margin-bottom: 0;
@@ -53,10 +55,10 @@
       margin-bottom: 0;
       padding-bottom: 0.2em;
       line-height: 1.2;
-      break-inside: avoid; /* prevent splitting across columns */
+      break-inside: avoid;
     }
 
-    /* Force header to new column if needed */
+    /* Force header to start new column */
     .container h2.force-column {
       break-before: column;
     }
@@ -65,17 +67,6 @@
     .two-columns {
       column-count: 2;
       column-gap: 2.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .two-columns {
-        column-count: 1;
-        column-gap: 0;
-      }
-
-      .container {
-        padding: 2rem 1rem 1.5rem; /* tighter margins on mobile */
-      }
     }
 
     /* Paragraphs and lists */
@@ -95,6 +86,7 @@
       margin-bottom: 0.5em;
     }
 
+    /* Footer styling */
     footer {
       background: #dedede;
       color: #fff;
@@ -125,10 +117,29 @@
       color: #fff;
     }
 
-    /* Link styling in content */
+    /* Links inside the main content */
     .container a {
       color: #bbb;
       text-decoration: underline;
+    }
+
+    /* --- MOBILE STYLES --- */
+    @media (max-width: 768px) {
+      /* Align MEL label with mobile padding */
+      #overlayText2 {
+        left: 1rem; /* matches container padding */
+      }
+
+      /* Single column layout */
+      .two-columns {
+        column-count: 1;
+        column-gap: 0;
+      }
+
+      /* Narrower side margins on mobile */
+      .container {
+        padding: 2rem 1rem 1.5rem;
+      }
     }
   </style>
 </head>
