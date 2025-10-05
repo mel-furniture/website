@@ -3,157 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEL | Terms and Conditions</title>
+  <title>MEL Furniture — Terms and Conditions</title>
   <style>
-    /* ==== Base Reset ==== */
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      color: #bbb;
+      line-height: 1.35;
+      background-color: #fff;
       margin: 0;
       padding: 0;
     }
 
-    html, body {
-      height: 100%;
-      font-family: sans-serif;
-      background-color: #111;
-      color: #bbb;
-      font-size: 1.125rem;
-      line-height: 1.3;
-    }
-
-    /* ==== Layout ==== */
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    header {
+    /* Top-left overlay label */
+    #overlayText2 {
       position: fixed;
-      top: 1.5rem;
-      left: 1.5rem;
+      top: 1.25em;   /* equal to left spacing */
+      left: 1.25em;
+      color: #dedede;
+      font-family: serif;
+      font-size: 1.125rem;
       font-weight: bold;
-      color: #bbb;
+      letter-spacing: 0.075em;
       z-index: 10;
     }
 
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 6rem;
-      padding-bottom: 4rem;
+    /* Main content container */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2rem; /* push content slightly lower under MEL */
     }
 
-    .content {
-      max-width: 800px;
-      column-count: 2;
-      column-gap: 3rem;
-      margin: 0 3rem;
+    /* Page title */
+    .container h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #999;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 0.5em;
+      line-height: 1.2;
     }
 
-    /* ==== Headings ==== */
-    .content h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #bbb;
-      margin-top: 2em;
-      margin-bottom: 0.4em;
-      break-after: avoid;
-    }
-
-    .content h2 {
+    /* Section headers */
+    .container h2 {
       font-size: 1.125rem;
       font-weight: bold;
-      color: #bbb;
+      color: #999;
       margin-top: 2em;
-      margin-bottom: 0.2em;
-      break-after: avoid;
+      margin-bottom: 0;
+      padding-bottom: 0.2em;
+      line-height: 1.2;
+      break-inside: avoid;
     }
 
-    /* ==== Paragraphs ==== */
-    .content p {
-      margin-bottom: 0.8em;
+    /* Force header to start new column */
+    .container h2.force-column {
+      break-before: column;
     }
 
-    /* ==== Footer ==== */
+    /* Two-column layout */
+    .two-columns {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+
+    /* Paragraphs and lists */
+    .container p,
+    .container ul,
+    .container ol {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    .container ul,
+    .container ol {
+      padding-left: 1.25em;
+    }
+
+    .container li {
+      margin-bottom: 0.5em;
+    }
+
+    /* Footer styling */
     footer {
-      width: 100%;
-      background-color: #111;
-      padding: 2rem 3rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid #333;
-      flex-wrap: wrap;
-    }
-
-    footer p {
-      color: #bbb;
-      font-size: 0.875rem;
-      margin: 0.25em 0;
+      background: #dedede;
+      color: #fff;
+      padding: 30px 20px;
       text-align: left;
-      width: 100%;
+      flex-shrink: 0;
+      margin: 0;
+      box-sizing: border-box;
     }
 
-    /* ==== Responsive ==== */
+    footer .footer-links {
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      display: inline;
+    }
+
+    footer .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    footer .footer-links a:first-child {
+      margin-left: 0;
+    }
+
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* Links inside the main content */
+    .container a {
+      color: #bbb;
+      text-decoration: underline;
+    }
+
+    /* --- MOBILE STYLES --- */
     @media (max-width: 768px) {
-      .content {
+      #overlayText2 {
+        top: 1.25em;  /* same as desktop */
+        left: 1.25em; /* consistent spacing */
+      }
+
+      .two-columns {
         column-count: 1;
-        margin: 0 1.5rem;
+        column-gap: 0;
       }
 
-      header {
-        top: 1.5rem;
-        left: 1.5rem;
-      }
-
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        text-align: left;
-      }
-
-      footer p {
-        text-align: left;
-        width: 100%;
+      .container {
+        padding: 5rem 1rem 1.5rem; /* same top spacing as desktop, narrower sides */
       }
     }
   </style>
 </head>
 <body>
+  <div id="overlayText2">MEL</div>
 
-  <header>MEL</header>
-
-  <main>
-    <div class="content">
-      <h1>Terms and Conditions</h1>
-      <p>All products are designed and produced by MEL Studio. Each piece is handmade and may contain slight variations that add to the uniqueness of the item.</p>
-
-      <h2>Warranty</h2>
-      <p>All products include a limited one-year warranty covering defects in materials or craftsmanship under normal use. Natural materials like wood may change slightly over time, which is not considered a defect.</p>
+  <div class="container">
+    <h1>Terms and Conditions</h1>
+    <div class="two-columns">
+      <p>All orders placed with MEL Studio are subject to the following terms and conditions. By purchasing from us, you agree to these terms.</p>
 
       <h2>Orders</h2>
-      <p>Orders are subject to availability. Production lead times may vary depending on the complexity of the item and current production schedule.</p>
+      <p>Orders are not processed directly through our website. Your order will either be placed via email exchange or by phone. Once your order is placed, you will receive an email confirmation, and again when your order is dispatched.</p>
+      <p>Orders are typically processed within 5 business days and shipped with tracking within the contiguous 48 states of the U.S. On some occasions, it may take longer and we apologize for any inconvenience caused. Delivery dates are estimates only and MEL is not liable for delays outside our control.</p>
+      <p>If you would like to place an order from outside the U.S., please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a> and we will do our best to help you.</p>
+      <p>If your order is missing, or shows as successfully delivered but you have not received the goods, please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a>. Please note that MEL does not accept responsibility for orders that show as successfully delivered.</p>
 
-      <h2>Returns</h2>
-      <p>Returns are accepted only for defective or damaged products within 14 days of delivery. Custom or made-to-order pieces are non-refundable.</p>
+      <h2>Returns & Refunds</h2>
+      <p>If you are unhappy with your product, please notify us within 3 days of receiving your order. In the event of receiving damaged or faulty goods, please contact us at <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</p>
+      <p>You will receive a refund if:<br>
+      – Goods are returned to us within 14 days of receipt of delivery.<br>
+      – Goods are returned in saleable condition with their original packaging.</p>
+      <p>We will not accept returns if the item indicates signs of use. In such cases, the item will be returned to the purchaser. For accepted returns, refunds will be made as soon as possible to the debited account, excluding delivery costs.</p>
+      <p>Please note, we cannot refund postage costs and the cost of returned goods is at your expense. Please make sure the items are securely packed, as the parcel is your responsibility until the goods reach us. We are not responsible for goods being lost or damaged in transit.</p>
 
-      <h2>Care</h2>
-      <p>Use a soft, damp cloth to clean surfaces. Avoid harsh chemicals or abrasive materials that could damage the finish.</p>
+      <h2 class="force-column">Warranty</h2>
+      <p>MEL Studio provides a limited warranty against defects in materials and workmanship for a period of 1 year from the date of delivery.</p>
+      <p>Before submitting a claim, please carefully review the terms and conditions below:</p>
+      <ul>
+        <li>If MEL deems a product defective in materials or workmanship, we will repair or replace the product at no cost to you.</li>
+        <li>Original purchasers must notify MEL in writing of any claims within the warranty period.</li>
+        <li>Claims should be submitted by email to <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</li>
+      </ul>
+      <p>MEL warranties do not apply to:</p>
+      <ul>
+        <li>Normal wear and tear</li>
+        <li>Customer’s own or third-party materials</li>
+        <li>Effects of extreme temperature or unusual environmental conditions</li>
+        <li>Changes in surface finishes due to aging or light exposure</li>
+        <li>Furniture intended for outdoor use exposed to temperatures below 32°F</li>
+        <li>Misuse, inadequate maintenance, or mistreatment of products</li>
+      </ul>
+      <p>MEL is not responsible for direct or indirect damage resulting from misuse, mistreatment, or insufficient care.</p>
 
-      <h2>Liability</h2>
-      <p>MEL Studio is not liable for indirect, incidental, or consequential damages arising from product use.</p>
+      <h2>Privacy Policy</h2>
+      <p>MEL respects your privacy rights. When you purchase items from our shop, you may be asked to provide contact details and payment information. This information is used solely to process and fulfill your order, communicate with you about your purchase, and manage customer service inquiries. MEL does not sell, rent, or trade your personal information to third parties. We take appropriate measures to keep your data secure and confidential.</p>
+
+      <h2>Governing Law</h2>
+      <p>These terms are governed by the laws of the State of Minnesota, USA.</p>
+
+      <h2>Changes to Terms</h2>
+      <p>We may update these Terms and Conditions from time to time. Continued use of our website or purchase of our products constitutes acceptance of any revised terms.</p>
     </div>
-  </main>
+  </div>
 
   <footer>
-    <p>© MEL Studio</p>
-    <p>Product Info</p>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/terms-and-conditions.html">Terms & Conditions</a>
+      <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+      <a href="assets/mel2025radius_table_spec_sheet_care_guide.pdf" target="_blank">Product Info</a>
+    </div>
   </footer>
-
 </body>
 </html>
