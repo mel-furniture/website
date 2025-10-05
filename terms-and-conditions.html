@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEL Furniture — Terms and Conditions</title>
   <style>
-    /* Base styles */
     body {
       font-family: sans-serif;
       font-size: 1.125rem;
@@ -16,12 +15,12 @@
       padding: 0;
     }
 
-    /* MEL header */
+    /* Top-left MEL text */
     #overlayText2 {
-      position: fixed;
-      top: 1.25rem;
-      left: 1.25rem;
-      color: #dedede;
+      position: fixed;        /* fixed so it stays on top */
+      top: 1.25em;
+      left: 1.25em;
+      color: #dedede;   
       font-family: serif;
       font-size: 1.125rem;
       font-weight: bold;
@@ -29,28 +28,24 @@
       z-index: 10;
     }
 
-    /* Container and columns */
     .container {
       max-width: 960px;
       margin: 0 auto;
       padding: 4rem 2rem 2rem;
     }
 
-    .two-columns {
-      column-count: 2;
-      column-gap: 2.5rem;
-    }
-
-    /* Headings */
+    /* Page title */
     .container h1 {
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 700;        
       color: #999;
       margin-top: 0;
-      margin-bottom: 0.5em;
+      margin-bottom: 0;
+      padding-bottom: 0.5em;
       line-height: 1.2;
     }
 
+    /* Section headers */
     .container h2 {
       font-size: 1.125rem;
       font-weight: bold;
@@ -64,6 +59,12 @@
 
     .container h2.force-column {
       break-before: column;
+    }
+
+    /* Two-column layout */
+    .two-columns {
+      column-count: 2;
+      column-gap: 2.5rem;
     }
 
     /* Paragraphs and lists */
@@ -83,7 +84,7 @@
       margin-bottom: 0.5em;
     }
 
-    /* Links in content */
+    /* Link styling in content */
     .container a {
       color: #bbb;
       text-decoration: underline;
@@ -104,42 +105,47 @@
       font-family: sans-serif;
       font-size: 1.125rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      flex-wrap: wrap; /* allow links to wrap */
+      gap: 0;
     }
 
     footer .footer-links a {
       color: #bbb;
       text-decoration: none;
+      margin-left: 15px;
+      white-space: nowrap; /* prevent breaking inside links */
+    }
+
+    footer .footer-links a:first-child {
+      margin-left: 0;
     }
 
     footer .footer-links a:hover {
       color: #fff;
     }
 
-    /* Responsive adjustments */
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       .two-columns {
         column-count: 1;
         column-gap: 0;
       }
+
       .container {
         padding-left: 1rem;
         padding-right: 1rem;
       }
-      #overlayText2 {
-        top: 1.25rem;
-        left: 1.25rem;
-      }
-      footer .footer-links {
-        flex-direction: column;
-        align-items: flex-start;
+
+      /* Footer links: flush left if wrapped */
+      footer .footer-links a {
+        margin-left: 0;  /* wrapped links align left */
+        margin-right: 1rem; /* optional spacing if room */
+        margin-bottom: 0.5rem; /* space between wrapped lines */
       }
     }
   </style>
 </head>
 <body>
-
   <div id="overlayText2">MEL</div>
 
   <div class="container">
@@ -194,11 +200,10 @@
   <footer>
     <div class="footer-links">
       <a href="/about.html">About</a>
-      <a href="/terms-and-conditions.html">Privacy Policy</a>
+      <a href="/terms-and-conditions.html">Terms & Conditions</a>
       <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
       <a href="assets/mel2025radius_table_spec_sheet_care_guide.pdf" target="_blank">Product Info</a>
     </div>
   </footer>
-
 </body>
 </html>
