@@ -18,8 +18,8 @@
     /* Top-left overlay label */
     #overlayText2 {
       position: fixed;
-      top: 1.25em;
-      left: 2rem; /* matches desktop container padding */
+      top: 1.25em;   /* equal to left spacing */
+      left: 1.25em;
       color: #dedede;
       font-family: serif;
       font-size: 1.125rem;
@@ -32,7 +32,7 @@
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 4rem 2rem 2rem;
+      padding: 5rem 2rem 2rem; /* push content slightly lower under MEL */
     }
 
     /* Page title */
@@ -125,20 +125,18 @@
 
     /* --- MOBILE STYLES --- */
     @media (max-width: 768px) {
-      /* Align MEL label with mobile padding */
       #overlayText2 {
-        left: 1rem; /* matches container padding */
+        top: 1.25em;  /* same as desktop */
+        left: 1.25em; /* consistent spacing */
       }
 
-      /* Single column layout */
       .two-columns {
         column-count: 1;
         column-gap: 0;
       }
 
-      /* Narrower side margins on mobile */
       .container {
-        padding: 2rem 1rem 1.5rem;
+        padding: 5rem 1rem 1.5rem; /* same top spacing as desktop, narrower sides */
       }
     }
   </style>
