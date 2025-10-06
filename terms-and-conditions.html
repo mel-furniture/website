@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEL Furniture — Terms and Conditions</title>
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
       font-family: sans-serif;
       font-size: 1.125rem;
       color: #bfbdbd;
       line-height: 1.35;
       background-color: #fff;
-      margin: 0;
-      padding: 0;
     }
 
     /* Top-left MEL text */
@@ -29,6 +35,7 @@
     }
 
     .container {
+      flex: 1; /* ensures container expands to fill space above footer */
       max-width: 960px;
       margin: 0 auto;
       padding: 4rem 2rem 2rem;
@@ -92,11 +99,11 @@
 
     /* Footer */
     footer {
-      background: #ebebeb; /* lighter for better contrast */
+      background: #ebebeb;
       color: #fff;
       padding: 30px 20px;
       text-align: left;
-      flex-shrink: 0;
+      flex-shrink: 0; /* prevents footer from compressing */
       margin: 0;
       box-sizing: border-box;
     }
@@ -158,6 +165,7 @@
   <div class="container">
     <h1>Terms and Conditions</h1>
     <div class="two-columns">
+      <!-- (Your original text content remains unchanged below this line) -->
       <p>All orders placed with MEL Studio are subject to the following terms and conditions. By purchasing from us, you agree to these terms.</p>
 
       <h2>Orders</h2>
