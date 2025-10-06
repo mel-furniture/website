@@ -18,7 +18,7 @@
       font-size: 1.125rem;
       color: #bfbdbd;
       line-height: 1.35;
-      background-color: #fff; /* correct white background */
+      background-color: #fff;
     }
 
     /* Top-left MEL text */
@@ -39,7 +39,7 @@
       flex: 1;
       max-width: 960px;
       margin: 0 auto;
-      padding: 4rem 2rem 2rem; /* matches original T&C spacing */
+      padding: 4rem 2rem 2rem;
       box-sizing: border-box;
     }
 
@@ -54,25 +54,31 @@
       line-height: 1.2;
     }
 
-    /* Two-column layout */
-    .two-columns {
-      column-count: 2;
-      column-gap: 2.5rem;
-      column-fill: auto;
+    /* Flex layout for text + image */
+    .content-row {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .text-column {
+      flex: 1;
+    }
+
+    .image-column {
+      flex: 0 0 40%;
+    }
+
+    .image-column img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
     }
 
     .container p {
       margin-top: 0;
       margin-bottom: 1em;
-    }
-
-    /* Image styling */
-    .container img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      display: block;
-      margin-top: 0.5em;
     }
 
     /* Footer */
@@ -111,9 +117,13 @@
 
     /* Mobile adjustments */
     @media (max-width: 768px) {
-      .two-columns {
-        column-count: 1;
-        column-gap: 0;
+      .content-row {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .image-column {
+        flex: 1 0 100%;
       }
 
       .container {
@@ -140,16 +150,20 @@
 
   <div class="container">
     <h1>About</h1>
-    <div class="two-columns">
-      <p>
-        MEL is a design studio, founded in 2025 by Michael Legan. With an emphasis on well-made furniture, available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation, and that inhabit a space where standardized industrial processes overlap with singular object design. 
-      </p>
+    <div class="content-row">
+      <div class="text-column">
+        <p>
+          MEL is a design studio, founded in 2025 by Michael Legan. With an emphasis on well-made furniture, available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation, and that inhabit a space where standardized industrial processes overlap with singular object design.
+        </p>
 
-      <p>
-        "I first learned about woodworking in my neighbor’s garage as a kid and spent endless hours experimenting with techniques and rudimentary designs. Nearly 20 years later, after over a decade composing for the commercial music industry, I started to revisit carpentry with more intention through custom furniture and building projects for myself and friends. Carpentry and installation also began to figure more prominently into my personal music practice, which solidified my desire to work at the intersection of physical environments, objects, and space. In 2019, I designed a system for translating individuals’ movement into sound—and presented it via public programs at the Walker Art Center and Minneapolis Institute of Art—and in the fall of 2024, I completed a series of cast concrete, large-scale, public sound sculptures for Franconia Sculpture Park in Shafer, Minnesota. In 2025, I officially launched MEL."  
-      </p>
+        <p>
+          "I first learned about woodworking in my neighbor’s garage as a kid and spent endless hours experimenting with techniques and rudimentary designs. Nearly 20 years later, after over a decade composing for the commercial music industry, I started to revisit carpentry with more intention through custom furniture and building projects for myself and friends. Carpentry and installation also began to figure more prominently into my personal music practice, which solidified my desire to work at the intersection of physical environments, objects, and space. In 2019, I designed a system for translating individuals’ movement into sound—and presented it via public programs at the Walker Art Center and Minneapolis Institute of Art—and in the fall of 2024, I completed a series of cast concrete, large-scale, public sound sculptures for Franconia Sculpture Park in Shafer, Minnesota. In 2025, I officially launched MEL."
+        </p>
+      </div>
 
-      <img src="images/about_photo/IMG_8515.jpg" alt="MEL Furniture studio photo">
+      <div class="image-column">
+        <img src="images/about_photo/IMG_8515.jpg" alt="MEL Furniture studio photo">
+      </div>
     </div>
   </div>
 
