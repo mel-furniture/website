@@ -21,7 +21,6 @@
       background-color: #fff;
     }
 
-    /* Top-left MEL text */
     #overlayText2 {
       position: fixed;
       top: 2rem;
@@ -36,24 +35,46 @@
 
     .container {
       flex: 1;
-      max-width: 960px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 4rem 2rem 2rem; /* restored 4rem top padding for proper spacing */
+      padding: 4rem 2rem 2rem;
       box-sizing: border-box;
+      gap: 3rem;
     }
 
-    .container h1 {
+    .text-column {
+      flex: 1 1 50%;
+    }
+
+    .text-column h1 {
       font-size: 2rem;
-      font-weight: 700;        
+      font-weight: 700;
       color: #bfbdbd;
       margin-top: 0;
       margin-bottom: 1.5em;
       line-height: 1.2;
     }
 
-    .container p {
+    .text-column p {
       margin-top: 0;
       margin-bottom: 1em;
+    }
+
+    .image-column {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .image-column img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
     }
 
     footer {
@@ -88,9 +109,19 @@
       color: #fff;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .container {
+        flex-direction: column;
         padding: 3rem 1rem 2rem;
+      }
+
+      .image-column {
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .image-column img {
+        max-width: 100%;
       }
 
       #overlayText2 {
@@ -111,10 +142,16 @@
   <div id="overlayText2">MEL</div>
 
   <div class="container">
-    <h1>MEL Furniture</h1>
-    <p>MEL is interested in inhabiting a space where standardized industrial processes overlap with singular object design. For Radius Table, this is expressed primarily via its signature bend—a curve determined by a standard press-brake die available at most metal fabrication shops.</p>
+    <div class="text-column">
+      <h1>MEL Furniture</h1>
+      <p>MEL is interested in inhabiting a space where standardized industrial processes overlap with singular object design. For Radius Table, this is expressed primarily via its signature bend—a curve determined by a standard press-brake die available at most metal fabrication shops.</p>
 
-    <p>MEL is a design studio, founded in 2025 by Michael Legan. With an emphasis on well-made furniture, available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation.</p>
+      <p>MEL is a design studio, founded in 2025 by Michael Legan. With an emphasis on well-made furniture, available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation.</p>
+    </div>
+
+    <div class="image-column">
+      <img src="images/about_photo/IMG_8515.jpg" alt="MEL Furniture studio photo">
+    </div>
   </div>
 
   <footer>
