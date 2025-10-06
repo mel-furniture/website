@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEL Furniture — About</title>
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
       font-family: sans-serif;
       font-size: 1.125rem;
       color: #bfbdbd;
       line-height: 1.35;
       background-color: #fff;
-      margin: 0;
-      padding: 0;
     }
 
     /* Top-left MEL text */
@@ -29,9 +35,11 @@
     }
 
     .container {
+      flex: 1 0 auto;
       max-width: 960px;
       margin: 0 auto;
       padding: 4rem 2rem 2rem;
+      box-sizing: border-box;
     }
 
     /* Page title */
@@ -44,6 +52,7 @@
       line-height: 1.2;
     }
 
+    /* Paragraphs */
     .container p {
       margin-top: 0;
       margin-bottom: 1em;
@@ -51,7 +60,7 @@
 
     /* Footer */
     footer {
-      background: #e5e5e5; /* slightly lighter than before */
+      background: #e5e5e5; /* slightly lighter gray for better contrast */
       color: #fff;
       padding: 30px 20px;
       text-align: left;
