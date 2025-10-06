@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEL Furniture</title>
+  <title>About</title>
   <style>
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
+      background-color: #dedede;
     }
 
     body {
@@ -18,13 +19,14 @@
       font-size: 1.125rem;
       color: #bfbdbd;
       line-height: 1.35;
-      background-color: #fff;
+      background-color: #ffffff;
     }
 
+    /* fixed MEL text top-left */
     #overlayText2 {
       position: fixed;
-      top: 2rem;
-      left: 2rem;
+      top: 40px;
+      left: 40px;
       color: #bfbdbd;
       font-family: serif;
       font-size: 1.125rem;
@@ -33,16 +35,18 @@
       z-index: 10;
     }
 
+    /* container matches T&C layout spacing */
     .container {
       flex: 1;
       display: flex;
-      align-items: flex-start;
+      flex-direction: row;
       justify-content: space-between;
+      align-items: flex-start;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 4rem 2rem 2rem;
+      padding: 90px 40px 40px; /* identical to your T&C spacing */
       box-sizing: border-box;
-      gap: 3rem;
+      gap: 60px;
     }
 
     .text-column {
@@ -80,7 +84,7 @@
     footer {
       background: #ebebeb;
       color: #fff;
-      padding: 30px 20px;
+      padding: 30px 40px;
       text-align: left;
       flex-shrink: 0;
       box-sizing: border-box;
@@ -91,7 +95,6 @@
       font-size: 1.125rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0;
     }
 
     footer .footer-links a {
@@ -112,7 +115,7 @@
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
-        padding: 3rem 1rem 2rem;
+        padding: 80px 20px 40px;
       }
 
       .image-column {
@@ -126,8 +129,12 @@
 
       #overlayText2 {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: 20px;
+        left: 20px;
+      }
+
+      footer {
+        padding: 30px 20px;
       }
 
       footer .footer-links a {
