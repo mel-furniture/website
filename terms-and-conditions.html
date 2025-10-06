@@ -18,8 +18,8 @@
     /* Top-left MEL text */
     #overlayText2 {
       position: fixed;
-      top: 1.25em;
-      left: 1.25em;
+      top: 2rem;
+      left: 2rem;
       color: #bfbdbd;
       font-family: serif;
       font-size: 1.125rem;
@@ -92,7 +92,7 @@
 
     /* Footer */
     footer {
-      background: #dedede;
+      background: #e6e6e6; /* lighter for better contrast */
       color: #fff;
       padding: 30px 20px;
       text-align: left;
@@ -136,9 +136,11 @@
         padding-right: 1rem;
       }
 
-      /* Make MEL logo not fixed on mobile */
+      /* Make MEL logo not fixed and match mobile margins */
       #overlayText2 {
         position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
 
       /* Footer links: flush left if wrapped */
