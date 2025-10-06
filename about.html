@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEL Furniture</title>
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
       font-family: sans-serif;
       font-size: 1.125rem;
       color: #bfbdbd;
       line-height: 1.35;
       background-color: #fff;
-      margin: 0;
-      padding: 0;
     }
 
     /* Top-left MEL text */
@@ -29,12 +35,13 @@
     }
 
     .container {
+      flex: 1;
       max-width: 960px;
       margin: 0 auto;
-      padding: 4rem 2rem 2rem;
+      padding: 2rem 2rem 2rem; /* reduced top padding */
+      box-sizing: border-box;
     }
 
-    /* Page title */
     .container h1 {
       font-size: 2rem;
       font-weight: 700;        
@@ -44,20 +51,17 @@
       line-height: 1.2;
     }
 
-    /* Paragraphs */
     .container p {
       margin-top: 0;
       margin-bottom: 1em;
     }
 
-    /* Footer */
     footer {
       background: #ebebeb;
       color: #fff;
       padding: 30px 20px;
       text-align: left;
       flex-shrink: 0;
-      margin: 0;
       box-sizing: border-box;
     }
 
@@ -84,7 +88,6 @@
       color: #fff;
     }
 
-    /* Mobile adjustments */
     @media (max-width: 768px) {
       .container {
         padding-left: 1rem;
