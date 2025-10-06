@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEL Furniture — Terms and Conditions</title>
+  <title>MEL Furniture — About</title>
   <style>
     body {
       font-family: sans-serif;
@@ -18,8 +18,8 @@
     /* Top-left MEL text */
     #overlayText2 {
       position: fixed;
-      top: 2rem;
-      left: 2rem;
+      top: 1.25em;
+      left: 1.25em;
       color: #bfbdbd;
       font-family: serif;
       font-size: 1.125rem;
@@ -37,62 +37,21 @@
     /* Page title */
     .container h1 {
       font-size: 2rem;
-      font-weight: 700;        
+      font-weight: 700;
       color: #bfbdbd;
       margin-top: 0;
-      margin-bottom: 0;
-      padding-bottom: 0.5em;
+      margin-bottom: 1.5rem;
       line-height: 1.2;
     }
 
-    /* Section headers */
-    .container h2 {
-      font-size: 1.125rem;
-      font-weight: bold;
-      color: #bfbdbd;
-      margin-top: 2em;
-      margin-bottom: 0;
-      padding-bottom: 0.2em;
-      line-height: 1.2;
-      break-inside: avoid;
-    }
-
-    .container h2.force-column {
-      break-before: column;
-    }
-
-    /* Two-column layout */
-    .two-columns {
-      column-count: 2;
-      column-gap: 2.5rem;
-    }
-
-    /* Paragraphs and lists */
-    .container p,
-    .container ul,
-    .container ol {
+    .container p {
       margin-top: 0;
       margin-bottom: 1em;
     }
 
-    .container ul,
-    .container ol {
-      padding-left: 1.25em;
-    }
-
-    .container li {
-      margin-bottom: 0.5em;
-    }
-
-    /* Link styling in content */
-    .container a {
-      color: #bfbdbd;
-      text-decoration: underline;
-    }
-
     /* Footer */
     footer {
-      background: #ebebeb; /* lighter for better contrast */
+      background: #e5e5e5; /* slightly lighter than before */
       color: #fff;
       padding: 30px 20px;
       text-align: left;
@@ -126,24 +85,17 @@
 
     /* Mobile adjustments */
     @media (max-width: 768px) {
-      .two-columns {
-        column-count: 1;
-        column-gap: 0;
-      }
-
       .container {
         padding-left: 1rem;
         padding-right: 1rem;
       }
 
-      /* Make MEL logo not fixed and match mobile margins */
       #overlayText2 {
-        position: absolute;
+        position: absolute; /* not fixed on mobile */
         top: 1rem;
         left: 1rem;
       }
 
-      /* Footer links: flush left if wrapped */
       footer .footer-links a {
         margin-left: 0;
         margin-right: 1rem;
@@ -156,52 +108,10 @@
   <div id="overlayText2">MEL</div>
 
   <div class="container">
-    <h1>Terms and Conditions</h1>
-    <div class="two-columns">
-      <p>All orders placed with MEL Studio are subject to the following terms and conditions. By purchasing from us, you agree to these terms.</p>
+    <h1>About</h1>
+    <p>MEL is interested in inhabiting a space where standardized industrial processes overlap with singular object design. For Radius Table, this is expressed primarily via its signature bend—a curve determined by a standard press-brake die available at most metal fabrication shops.</p>
 
-      <h2>Orders</h2>
-      <p>Orders are not processed directly through our website. Your order will either be placed via email exchange or by phone. Once your order is placed, you will receive an email confirmation, and again when your order is dispatched.</p>
-      <p>Orders are typically processed within 5 business days and shipped with tracking within the contiguous 48 states of the U.S. On some occasions, it may take longer and we apologize for any inconvenience caused. Delivery dates are estimates only and MEL is not liable for delays outside our control.</p>
-      <p>If you would like to place an order from outside the U.S., please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a> and we will do our best to help you.</p>
-      <p>If your order is missing, or shows as successfully delivered but you have not received the goods, please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a>. Please note that MEL does not accept responsibility for orders that show as successfully delivered.</p>
-
-      <h2>Returns & Refunds</h2>
-      <p>If you are unhappy with your product, please notify us within 3 days of receiving your order. In the event of receiving damaged or faulty goods, please contact us at <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</p>
-      <p>You will receive a refund if:<br>
-      – Goods are returned to us within 14 days of receipt of delivery.<br>
-      – Goods are returned in saleable condition with their original packaging.</p>
-      <p>We will not accept returns if the item indicates signs of use. In such cases, the item will be returned to the purchaser. For accepted returns, refunds will be made as soon as possible to the debited account, excluding delivery costs.</p>
-      <p>Please note, we cannot refund postage costs and the cost of returned goods is at your expense. Please make sure the items are securely packed, as the parcel is your responsibility until the goods reach us. We are not responsible for goods being lost or damaged in transit.</p>
-
-      <h2 class="force-column">Warranty</h2>
-      <p>MEL Studio provides a limited warranty against defects in materials and workmanship for a period of 1 year from the date of delivery.</p>
-      <p>Before submitting a claim, please carefully review the terms and conditions below:</p>
-      <ul>
-        <li>If MEL deems a product defective in materials or workmanship, we will repair or replace the product at no cost to you.</li>
-        <li>Original purchasers must notify MEL in writing of any claims within the warranty period.</li>
-        <li>Claims should be submitted by email to <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</li>
-      </ul>
-      <p>MEL warranties do not apply to:</p>
-      <ul>
-        <li>Normal wear and tear</li>
-        <li>Customer’s own or third-party materials</li>
-        <li>Effects of extreme temperature or unusual environmental conditions</li>
-        <li>Changes in surface finishes due to aging or light exposure</li>
-        <li>Furniture intended for outdoor use exposed to temperatures below 32°F</li>
-        <li>Misuse, inadequate maintenance, or mistreatment of products</li>
-      </ul>
-      <p>MEL is not responsible for direct or indirect damage resulting from misuse, mistreatment, or insufficient care.</p>
-
-      <h2>Privacy Policy</h2>
-      <p>MEL respects your privacy rights. When you purchase items from our shop, you may be asked to provide contact details and payment information. This information is used solely to process and fulfill your order, communicate with you about your purchase, and manage customer service inquiries. MEL does not sell, rent, or trade your personal information to third parties. We take appropriate measures to keep your data secure and confidential.</p>
-
-      <h2>Governing Law</h2>
-      <p>These terms are governed by the laws of the State of Minnesota, USA.</p>
-
-      <h2>Changes to Terms</h2>
-      <p>We may update these Terms and Conditions from time to time. Continued use of our website or purchase of our products constitutes acceptance of any revised terms.</p>
-    </div>
+    <p>MEL is a design studio, founded in 2025 by Michael Legan. With an emphasis on well-made furniture, available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation.</p>
   </div>
 
   <footer>
