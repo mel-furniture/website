@@ -8,7 +8,7 @@
     body {
       font-family: sans-serif;
       font-size: 1.125rem;
-      color: #bbb;
+      color: #bfbdbd;
       line-height: 1.35;
       background-color: #fff;
       margin: 0;
@@ -17,10 +17,10 @@
 
     /* Top-left MEL text */
     #overlayText2 {
-      position: fixed;        /* fixed so it stays on top */
+      position: fixed;
       top: 1.25em;
       left: 1.25em;
-      color: #dedede;   
+      color: #bfbdbd;
       font-family: serif;
       font-size: 1.125rem;
       font-weight: bold;
@@ -38,7 +38,7 @@
     .container h1 {
       font-size: 2rem;
       font-weight: 700;        
-      color: #999;
+      color: #bfbdbd;
       margin-top: 0;
       margin-bottom: 0;
       padding-bottom: 0.5em;
@@ -49,7 +49,7 @@
     .container h2 {
       font-size: 1.125rem;
       font-weight: bold;
-      color: #999;
+      color: #bfbdbd;
       margin-top: 2em;
       margin-bottom: 0;
       padding-bottom: 0.2em;
@@ -86,7 +86,7 @@
 
     /* Link styling in content */
     .container a {
-      color: #bbb;
+      color: #bfbdbd;
       text-decoration: underline;
     }
 
@@ -105,15 +105,15 @@
       font-family: sans-serif;
       font-size: 1.125rem;
       display: flex;
-      flex-wrap: wrap; /* allow links to wrap */
+      flex-wrap: wrap;
       gap: 0;
     }
 
     footer .footer-links a {
-      color: #bbb;
+      color: #bfbdbd;
       text-decoration: none;
       margin-left: 15px;
-      white-space: nowrap; /* prevent breaking inside links */
+      white-space: nowrap;
     }
 
     footer .footer-links a:first-child {
@@ -136,11 +136,16 @@
         padding-right: 1rem;
       }
 
+      /* Make MEL logo not fixed on mobile */
+      #overlayText2 {
+        position: absolute;
+      }
+
       /* Footer links: flush left if wrapped */
       footer .footer-links a {
-        margin-left: 0;  /* wrapped links align left */
-        margin-right: 1rem; /* optional spacing if room */
-        margin-bottom: 0.5rem; /* space between wrapped lines */
+        margin-left: 0;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
       }
     }
   </style>
