@@ -6,12 +6,12 @@
 <title>Downloads</title>
 <style>
   html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-color: #fff;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
   }
@@ -25,7 +25,7 @@
     font-family: serif;
     font-size: 1.125rem;
     font-weight: bold;
-    letter-spacing: 0.075em; 
+    letter-spacing: 0.075em;
     z-index: 10;
   }
 
@@ -39,27 +39,26 @@
   /* Product section */
   .product-card {
     color: #bbb;
-    background-color: #fff;
     font-size: 1.125rem;
     line-height: 1.35;
-    margin-bottom: 3rem; /* consistent vertical spacing between product cards */
+    margin-bottom: 3rem;
   }
 
   .product-title {
     font-size: 1.25rem;
     font-weight: bold;
     margin-top: 0;
-    margin-bottom: 0.25em; /* spacing between header and dimensions */
+    margin-bottom: 0.25em;
   }
 
   .product-dimensions {
     margin-top: 0;
-    margin-bottom: 1em; /* spacing between dimensions and links */
+    margin-bottom: 1em;
   }
 
   .product-links {
     margin-top: 0;
-    margin-bottom: 1em; /* spacing after links before divider */
+    margin-bottom: 1em;
   }
 
   .product-links a {
@@ -83,17 +82,20 @@
     width: 100%;
   }
 
-  /* Footer matches Information page */
+  /* Footer matching Information page */
   footer {
     background: #ebebeb;
     color: #fff;
-    padding: 30px 2rem;
+    padding: 30px 20px;
     flex-shrink: 0;
+    box-sizing: border-box;
+  }
+
+  footer .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    box-sizing: border-box;
+    align-items: center;
   }
 
   footer .footer-links {
@@ -119,9 +121,11 @@
     color: #fff;
   }
 
-  footer .copyright {
+  footer .footer-links + div {
+    font-family: sans-serif;
     font-size: 1.125rem;
     color: #bfbdbd;
+    margin-top: 0;
   }
 
   /* Mobile adjustments */
@@ -132,21 +136,28 @@
     }
 
     #overlayText2 {
-      position: absolute;
       top: 1rem;
       left: 1rem;
     }
 
-    footer {
+    footer .footer-container {
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.5rem;
+    }
+
+    footer .footer-links {
+      margin-bottom: 0.5rem;
+      width: 100%;
     }
 
     footer .footer-links a {
       margin-left: 0;
       margin-right: 1rem;
       margin-bottom: 0.5rem;
+    }
+
+    footer .footer-links + div {
+      margin-top: 0.5rem;
     }
   }
 </style>
@@ -167,18 +178,22 @@
       <div class="divider"></div>
     </div>
 
-    <!-- Add more product cards here following the same structure -->
+    <!-- Additional product cards can go here -->
   </div>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-links">
-      <a href="/information.html">Information</a>
-      <a href="/terms-and-conditions.html">Terms & Conditions</a>
-      <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
-      <a href="/downloads.html">Downloads</a>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/information.html">Information</a>
+        <a href="/terms-and-conditions.html">Terms & Conditions</a>
+        <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+        <a href="/downloads.html">Downloads</a>
+      </div>
+      <div>
+        &copy; MEL Furniture LLC
+      </div>
     </div>
-    <div class="copyright">© MEL Furniture LLC</div>
   </footer>
 
 </body>
