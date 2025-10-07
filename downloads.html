@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MEL Furniture Product</title>
+<title>Downloads</title>
 <style>
   html, body {
     margin: 0;
@@ -18,10 +18,10 @@
 
   /* MEL logo */
   #overlayText2 {
-    position: absolute;
-    top: 1.25em;
-    left: 1.25em;
-    color: #dedede;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    color: #bfbdbd;
     font-family: serif;
     font-size: 1.125rem;
     font-weight: bold;
@@ -32,7 +32,10 @@
   /* Main content wrapper */
   .content {
     flex: 1;
-    padding: 6em 1.25em 2em;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem; /* desktop padding like Information page */
+    box-sizing: border-box;
   }
 
   /* Product section */
@@ -81,24 +84,32 @@
     width: 100%;
   }
 
-  /* Footer matches homepage */
+  /* Footer matches Information page */
   footer {
-    background: #dedede;
+    background: #ebebeb;
     color: #fff;
-    padding: 30px 20px;
-    text-align: left;
+    padding: 30px 2rem;
     flex-shrink: 0;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
   }
 
   footer .footer-links {
+    font-family: sans-serif;
     font-size: 1.125rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
   }
 
   footer .footer-links a {
-    color: #bbb;
+    color: #bfbdbd;
     text-decoration: none;
     margin-left: 15px;
+    white-space: nowrap;
   }
 
   footer .footer-links a:first-child {
@@ -107,9 +118,38 @@
 
   footer .footer-links a:hover {
     color: #fff;
-    text-decoration: underline;
   }
 
+  footer .copyright {
+    font-size: 1.125rem;
+    color: #bfbdbd;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    #overlayText2 {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    footer .footer-links a {
+      margin-left: 0;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
 </style>
 </head>
 <body>
@@ -133,11 +173,12 @@
   <!-- Footer -->
   <footer>
     <div class="footer-links">
-      <a href="/about.html">About</a>
+      <a href="/information.html">Information</a>
       <a href="/terms-and-conditions.html">Terms & Conditions</a>
       <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
       <a href="assets/mel2025radius_table_spec_sheet_care_guide.pdf" target="_blank">Product Info</a>
     </div>
+    <div class="copyright">© MEL Furniture LLC</div>
   </footer>
 
 </body>
