@@ -39,7 +39,7 @@
       flex: 1;
       max-width: 960px;
       margin: 0 auto;
-      padding: 4rem 2rem 2rem; /* matches About page spacing */
+      padding: 4rem 2rem 2rem;
       box-sizing: border-box;
     }
 
@@ -99,15 +99,20 @@
       text-decoration: underline;
     }
 
-    /* Footer */
+    /* Footer matching Information/Downloads pages */
     footer {
       background: #ebebeb;
       color: #fff;
       padding: 30px 20px;
-      text-align: left;
       flex-shrink: 0;
-      margin: 0;
       box-sizing: border-box;
+    }
+
+    footer .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     footer .footer-links {
@@ -146,9 +151,18 @@
       }
 
       #overlayText2 {
-        position: absolute;
         top: 1rem;
         left: 1rem;
+      }
+
+      footer .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      footer .footer-links {
+        margin-bottom: 0.5rem;
+        width: 100%;
       }
 
       footer .footer-links a {
@@ -212,11 +226,16 @@
   </div>
 
   <footer>
-    <div class="footer-links">
-      <a href="/information.html">Information</a>
-      <a href="/terms-and-conditions.html">Terms & Conditions</a>
-      <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
-      <a href="/downloads.html">Downloads</a>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/information.html">Information</a>
+        <a href="/terms-and-conditions.html">Terms & Conditions</a>
+        <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+        <a href="/downloads.html">Downloads</a>
+      </div>
+      <div>
+        &copy; MEL Furniture LLC
+      </div>
     </div>
   </footer>
 </body>
