@@ -54,7 +54,7 @@
       line-height: 1.2;
     }
 
-    /* Flex layout for text + image */
+    /* Flex layout for text + right column */
     .content-row {
       display: flex;
       gap: 2.5rem;
@@ -65,15 +65,16 @@
       flex: 1;
     }
 
-    .image-column {
+    .right-column {
       flex: 0 0 40%;
     }
 
-    .image-column img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      display: block;
+    .right-column h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #bfbdbd;
+      margin-top: 0;
+      margin-bottom: 0.5em;
     }
 
     .container p {
@@ -122,7 +123,7 @@
         gap: 1.5rem;
       }
 
-      .image-column {
+      .right-column {
         flex: 1 0 100%;
       }
 
@@ -155,11 +156,14 @@
         <p>
           MEL is a design studio founded in 2025 by Michael Legan. With an emphasis on well-made furniture available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation, and that exist where standardized industrial processes overlap with singular object design.
         </p>
-
       </div>
 
-      <div class="image-column">
-        <img src="images/about_photo/IMG_8515.jpg" alt="MEL Furniture studio photo">
+      <div class="right-column">
+        <h2>Professionals & Trade Discount</h2>
+        <p>
+          Interior designers, architects and other professionals might be eligible for various trade discounts. For further information, CAD files, lead time, and more, please contact us at
+          <a href="mailto:office@mel.furniture" style="color: #bfbdbd; text-decoration: none;">office@mel.furniture</a>.
+        </p>
       </div>
     </div>
   </div>
