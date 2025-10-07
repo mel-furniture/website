@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Downloads</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* MEL logo */
+  #overlayText2 {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    color: #bfbdbd;
+    font-family: serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: 0.075em; 
+    z-index: 10;
+  }
+
+  /* Main content wrapper */
+  .content {
+    flex: 1;
+    padding: 6rem 2rem 2rem;
+    box-sizing: border-box;
+  }
+
+  /* Product section */
+  .product-card {
+    color: #bbb;
+    background-color: #fff;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    margin-bottom: 3rem; /* consistent vertical spacing between product cards */
+  }
+
+  .product-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.25em; /* spacing between header and dimensions */
+  }
+
+  .product-dimensions {
+    margin-top: 0;
+    margin-bottom: 1em; /* spacing between dimensions and links */
+  }
+
+  .product-links {
+    margin-top: 0;
+    margin-bottom: 1em; /* spacing after links before divider */
+  }
+
+  .product-links a {
+    border: 1px solid #dedede;
+    padding: 0.4em 0.75em;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 0.5em;
+    color: #bbb;
+    transition: background-color 0.2s ease;
+  }
+
+  .product-links a:hover {
+    background-color: #dedede;
+    text-decoration: none;
+  }
+
+  .divider {
+    border-bottom: 1px solid #dedede;
+    margin: 1.25em 0;
+    width: 100%;
+  }
+
+  /* Footer matches Information page */
+  footer {
+    background: #ebebeb;
+    color: #fff;
+    padding: 30px 2rem;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  footer .footer-links {
+    font-family: sans-serif;
+    font-size: 1.125rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  footer .footer-links a {
+    color: #bfbdbd;
+    text-decoration: none;
+    margin-left: 15px;
+    white-space: nowrap;
+  }
+
+  footer .footer-links a:first-child {
+    margin-left: 0;
+  }
+
+  footer .footer-links a:hover {
+    color: #fff;
+  }
+
+  footer .copyright {
+    font-size: 1.125rem;
+    color: #bfbdbd;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    #overlayText2 {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    footer .footer-links a {
+      margin-left: 0;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- MEL logo -->
+  <div id="overlayText2">MEL</div>
+
+  <div class="content">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="product-title">Radius Table</div>
+      <div class="product-dimensions">Dimensions: 36" x 36" x 30"</div>
+      <div class="product-links">
+        <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">Product Specification Sheet</a>
+      </div>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Add more product cards here following the same structure -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="/information.html">Information</a>
+      <a href="/terms-and-conditions.html">Terms & Conditions</a>
+      <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+      <a href="/downloads.html">Downloads</a>
+    </div>
+    <div class="copyright">© MEL Furniture LLC</div>
+  </footer>
+
+</body>
+</html>
