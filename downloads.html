@@ -32,32 +32,34 @@
   /* Main content wrapper */
   .content {
     flex: 1;
-    padding: 6rem 2rem 2rem; /* desktop padding like Information page */
+    padding: 6rem 2rem 2rem;
     box-sizing: border-box;
   }
 
   /* Product section */
   .product-card {
-    color: #bbb; /* all text inside card is #bbb */
+    color: #bbb;
     background-color: #fff;
-    padding: 1.25em 0;
     font-size: 1.125rem;
-    line-height: 1.5;
+    line-height: 1.35;
+    margin-bottom: 3rem; /* consistent vertical spacing between product cards */
   }
 
   .product-title {
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0.5em; /* spacing between header and dimensions */
   }
 
   .product-dimensions {
-    margin-bottom: 1em;
+    margin-top: 0;
+    margin-bottom: 1em; /* spacing between dimensions and links */
   }
 
-  /* Links styled */
   .product-links {
-    margin-bottom: 1em;
+    margin-top: 0;
+    margin-bottom: 1em; /* spacing after links before divider */
   }
 
   .product-links a {
@@ -66,7 +68,7 @@
     border-radius: 4px;
     text-decoration: none;
     margin-right: 0.5em;
-    color: #bbb; /* links same color as text */
+    color: #bbb;
     transition: background-color 0.2s ease;
   }
 
@@ -75,7 +77,6 @@
     text-decoration: none;
   }
 
-  /* Divider line (lighter than text) */
   .divider {
     border-bottom: 1px solid #dedede;
     margin: 1.25em 0;
@@ -156,7 +157,7 @@
   <div id="overlayText2">MEL</div>
 
   <div class="content">
-    <!-- Product -->
+    <!-- Product 1 -->
     <div class="product-card">
       <div class="product-title">Radius Table</div>
       <div class="product-dimensions">Dimensions: 36" x 36" x 30"</div>
@@ -166,6 +167,19 @@
       </div>
       <div class="divider"></div>
     </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-title">Square Table</div>
+      <div class="product-dimensions">Dimensions: 40" x 40" x 30"</div>
+      <div class="product-links">
+        <a href="#">Info Sheet</a>
+        <a href="#">Spec Sheet</a>
+      </div>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Add more product cards here following the same structure -->
   </div>
 
   <!-- Footer -->
