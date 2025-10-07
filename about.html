@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
+  <title>MEL Furniture — About</title>
   <style>
     html, body {
       height: 100%;
@@ -54,32 +54,33 @@
       line-height: 1.2;
     }
 
-    /* Flex layout for two columns */
-    .content-row {
-      display: flex;
-      gap: 2.5rem;
-      align-items: flex-start;
+    /* Section headers */
+    .container h2 {
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: #bfbdbd;
+      margin-top: 2em;
+      margin-bottom: 0;
+      padding-bottom: 0.2em;
+      line-height: 1.2;
+      break-inside: avoid;
     }
 
-    .text-column {
-      flex: 1;
+    /* Two-column layout */
+    .two-columns {
+      column-count: 2;
+      column-gap: 2.5rem;
     }
 
-    .right-column {
-      flex: 0 0 40%;
-    }
-
-    .right-column p, .text-column p {
+    /* Paragraphs and links */
+    .container p {
       margin-top: 0;
       margin-bottom: 1em;
     }
 
-    .trade-section h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
+    .container a {
       color: #bfbdbd;
-      margin-top: 2rem;
-      margin-bottom: 0.5em;
+      text-decoration: underline;
     }
 
     /* Footer */
@@ -118,13 +119,9 @@
 
     /* Mobile adjustments */
     @media (max-width: 768px) {
-      .content-row {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .right-column {
-        flex: 1 0 100%;
+      .two-columns {
+        column-count: 1;
+        column-gap: 0;
       }
 
       .container {
@@ -151,24 +148,16 @@
 
   <div class="container">
     <h1>About</h1>
-    <div class="content-row">
-      <div class="text-column">
-        <p>
-          MEL is a design studio founded in 2025 by Michael Legan. With an emphasis on well-made furniture available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation, and that exist where standardized industrial processes overlap with singular object design.
-        </p>
+    <div class="two-columns">
+      <p>
+        MEL is a design studio founded in 2025 by Michael Legan. With an emphasis on well-made furniture available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation, and that exist where standardized industrial processes overlap with singular object design.
+      </p>
 
-        <div class="trade-section">
-          <h2>Professionals & Trade Discount</h2>
-          <p>
-            Interior designers, architects and other professionals might be eligible for various trade discounts. For further information, CAD files, lead time, and more, please contact us at
-            <a href="mailto:office@mel.furniture" style="color: #bfbdbd; text-decoration: none;">office@mel.furniture</a>.
-          </p>
-        </div>
-      </div>
-
-      <div class="right-column">
-        <!-- Empty for now -->
-      </div>
+      <h2>Professionals & Trade Discount</h2>
+      <p>
+        Interior designers, architects and other professionals might be eligible for various trade discounts. For further information, CAD files, lead time, and more, please contact us at
+        <a href="mailto:office@mel.furniture">office@mel.furniture</a>.
+      </p>
     </div>
   </div>
 
