@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Downloads</title>
+<title>MEL Furniture Product</title>
 <style>
   html, body {
     margin: 0;
@@ -18,43 +18,40 @@
 
   /* MEL logo */
   #overlayText2 {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    color: #bfbdbd;
+    position: absolute;
+    top: 1.25em;
+    left: 1.25em;
+    color: #dedede;
     font-family: serif;
     font-size: 1.125rem;
     font-weight: bold;
-    letter-spacing: 0.075em;
+    letter-spacing: 0.075em; 
     z-index: 10;
   }
 
   /* Main content wrapper */
   .content {
     flex: 1;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 4rem 2rem 2rem;
-    box-sizing: border-box;
+    padding: 6em 1.25em 2em;
   }
 
   /* Product section */
   .product-card {
-    color: #bfbdbd;
+    color: #bbb; /* all text inside card is #bbb */
     background-color: #fff;
-    padding: 0;
+    padding: 1.25em 0;
     font-size: 1.125rem;
-    line-height: 1.35;
+    line-height: 1.5;
   }
 
   .product-title {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.5em; /* matches vertical spacing from Information page headers */
+    margin-bottom: 0.5em;
   }
 
   .product-dimensions {
-    margin-bottom: 1em; /* matches paragraph spacing */
+    margin-bottom: 1em;
   }
 
   /* Links styled */
@@ -63,54 +60,45 @@
   }
 
   .product-links a {
-    border: 1px solid #bfbdbd;
+    border: 1px solid #dedede;
     padding: 0.4em 0.75em;
     border-radius: 4px;
     text-decoration: none;
     margin-right: 0.5em;
-    color: #bfbdbd;
+    color: #bbb; /* links same color as text */
     transition: background-color 0.2s ease;
   }
 
   .product-links a:hover {
-    background-color: #bfbdbd;
-    color: #fff;
+    background-color: #dedede;
     text-decoration: none;
   }
 
-  /* Divider line */
+  /* Divider line (lighter than text) */
   .divider {
     border-bottom: 1px solid #dedede;
-    margin: 1em 0;
+    margin: 1.25em 0;
     width: 100%;
   }
 
-  /* Footer matching Information page */
+  /* Footer matches homepage */
   footer {
-    background: #ebebeb;
+    background: #dedede;
     color: #fff;
-    padding: 30px 2rem;
+    padding: 30px 20px;
+    text-align: left;
     flex-shrink: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    width: 100%;
   }
 
   footer .footer-links {
-    font-family: sans-serif;
     font-size: 1.125rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
   }
 
   footer .footer-links a {
-    color: #bfbdbd;
+    color: #bbb;
     text-decoration: none;
     margin-left: 15px;
-    white-space: nowrap;
   }
 
   footer .footer-links a:first-child {
@@ -119,38 +107,9 @@
 
   footer .footer-links a:hover {
     color: #fff;
+    text-decoration: underline;
   }
 
-  footer .copyright {
-    font-size: 1.125rem;
-    color: #bfbdbd;
-  }
-
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    .content {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-
-    #overlayText2 {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-    }
-
-    footer {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    footer .footer-links a {
-      margin-left: 0;
-      margin-right: 1rem;
-      margin-bottom: 0.5rem;
-    }
-  }
 </style>
 </head>
 <body>
@@ -174,12 +133,11 @@
   <!-- Footer -->
   <footer>
     <div class="footer-links">
-      <a href="/information.html">Information</a>
+      <a href="/about.html">About</a>
       <a href="/terms-and-conditions.html">Terms & Conditions</a>
       <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
       <a href="assets/mel2025radius_table_spec_sheet_care_guide.pdf" target="_blank">Product Info</a>
     </div>
-    <div class="copyright">© MEL Furniture LLC</div>
   </footer>
 
 </body>
