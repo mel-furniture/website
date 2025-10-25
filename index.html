@@ -10,10 +10,12 @@
       padding: 0;
       height: 100%;
       background-color: #dedede;
-      overflow: hidden;
       box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
+    /* Main full-screen image section */
     #image {
       position: relative;
       width: 100vw;
@@ -34,37 +36,115 @@
       -webkit-user-drag: none;
     }
 
+    /* Lower-left contact text */
     #overlayText {
-  position: absolute;
-  bottom: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
+      position: absolute;
+      bottom: 1.25em;
+      left: 1.25em;
+      color: white;
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      z-index: 10;
+      white-space: normal;
+      box-sizing: border-box;
+    }
 
     #overlayText a {
       color: white;
       text-decoration: underline;
     }
 
+    /* Top-left MEL text */
     #overlayText2 {
-  position: absolute;
-  top: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: serif;
-  font-size: 1.125rem;
-  font-weight: bold;
-  letter-spacing: 0.075em; 
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
+      position: absolute;
+      top: 1.25em;
+      left: 1.25em;
+      color: white;
+      font-family: serif;
+      font-size: 1.125rem;
+      font-weight: bold;
+      letter-spacing: 0.075em; 
+      z-index: 10;
+      white-space: normal;
+      box-sizing: border-box;
+    }
 
+    /* Footer styling (copied from information page) */
+    footer {
+      background: #ebebeb;
+      padding: 30px 20px;
+      text-align: left;
+      flex-shrink: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    footer .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    footer .footer-links {
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    footer .footer-links a {
+      color: #bfbdbd;
+      text-decoration: none;
+      margin-left: 15px;
+      white-space: nowrap;
+    }
+
+    footer .footer-links a:first-child {
+      margin-left: 0;
+    }
+
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+
+    footer .footer-links + div {
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      color: #bfbdbd;
+      margin-top: 0;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      #overlayText2 {
+        top: 1rem;
+        left: 1rem;
+      }
+
+      footer .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      footer .footer-links {
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+
+      footer .footer-links a {
+        margin-left: 0;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      footer .footer-links + div {
+        margin-top: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -72,57 +152,64 @@
     <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
 
     <div id="overlayText">
-  Inquiries and purchase information: <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">office@mel.furniture</a>
-</div>
-
-    <div id="overlayText2">
-      MEL
+      Inquiries and purchase information:
+      <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">
+        office@mel.furniture
+      </a>
     </div>
+
+    <div id="overlayText2">MEL</div>
   </div>
 
-   <script>
-  const images = [
-    { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
-    { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
-  ];
+  <!-- Footer section appears below the image -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/information.html">Information</a>
+        <a href="/terms-and-conditions.html">Terms & Conditions</a>
+        <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+        <a href="/downloads.html">Downloads</a>
+      </div>
+      <div>
+        &copy; MEL Furniture LLC
+      </div>
+    </div>
+  </footer>
 
-  let index = 0;
-  const mainImage = document.getElementById('mainImage');
+  <script>
+    const images = [
+      { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
+      { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
+    ];
 
-  function updateImage() {
-    mainImage.src = images[index].src;
-    mainImage.alt = images[index].alt;
-  }
+    let index = 0;
+    const mainImage = document.getElementById('mainImage');
 
-  function nextImage() {
-    index = (index + 1) % images.length;
+    function updateImage() {
+      mainImage.src = images[index].src;
+      mainImage.alt = images[index].alt;
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      updateImage();
+    }
+
+    // Start slideshow
+    let slideshowInterval = setInterval(nextImage, 5000);
+    let idleTimeout = null;
+
+    document.body.addEventListener('click', () => {
+      nextImage();
+      clearInterval(slideshowInterval);
+      slideshowInterval = null;
+      clearTimeout(idleTimeout);
+      idleTimeout = setTimeout(() => {
+        slideshowInterval = setInterval(nextImage, 5000);
+      }, 15000);
+    });
+
     updateImage();
-  }
-
-  // Start the slideshow
-  let slideshowInterval = setInterval(nextImage, 5000);
-  let idleTimeout = null;
-
-  document.body.addEventListener('click', () => {
-    // Advance immediately on click
-    nextImage();
-
-    // Stop the slideshow
-    clearInterval(slideshowInterval);
-    slideshowInterval = null;
-
-    // Clear any previous idle timer
-    clearTimeout(idleTimeout);
-
-    // Resume slideshow after 20 seconds of no interaction
-    idleTimeout = setTimeout(() => {
-      slideshowInterval = setInterval(nextImage, 5000);
-    }, 15000);
-  });
-
-  // Initialize with the first image
-  updateImage();
-</script>
-  
+  </script>
 </body>
 </html>
