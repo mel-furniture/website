@@ -62,28 +62,24 @@
       z-index: 10;
     }
 
-    /* Footer (copied exactly from Information page) */
+    /* FOOTER */
     footer {
       background: #ebebeb;
       padding: 30px 20px;
       text-align: left;
-      flex-shrink: 0;
-      margin: 0;
       box-sizing: border-box;
     }
 
     footer .footer-container {
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
       align-items: center;
       max-width: 960px;
       margin: 0 auto;
+      flex-wrap: wrap;
     }
 
     footer .footer-links {
-      font-family: sans-serif;
-      font-size: 1.125rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0;
@@ -104,11 +100,10 @@
       color: #fff;
     }
 
-    footer .footer-links + div {
+    footer .footer-copy {
       font-family: sans-serif;
       font-size: 1.125rem;
       color: #bfbdbd;
-      margin-top: 0;
     }
 
     @media (max-width: 768px) {
@@ -134,7 +129,7 @@
         margin-bottom: 0.5rem;
       }
 
-      footer .footer-links + div {
+      footer .footer-copy {
         margin-top: 0.5rem;
       }
     }
@@ -152,7 +147,7 @@
     <div id="overlayText2">MEL</div>
   </div>
 
-  <!-- Footer sits below hero, only visible when you scroll down -->
+  <!-- Footer sits below hero, visible on scroll -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -161,7 +156,7 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>
+      <div class="footer-copy">
         &copy; MEL Furniture LLC
       </div>
     </div>
