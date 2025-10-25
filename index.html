@@ -13,6 +13,16 @@
       box-sizing: border-box;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      color: #bfbdbd;
+      line-height: 1.35;
+      background-color: #dedede;
+    }
+
     /* HERO IMAGE SECTION */
     #image {
       position: relative;
@@ -20,6 +30,7 @@
       height: 100svh; /* full viewport */
       background-color: #dedede;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     #image img {
@@ -49,7 +60,7 @@
       text-decoration: underline;
     }
 
-    /* Fixed MEL text like on Information page */
+    /* Fixed MEL text */
     #overlayText2 {
       position: fixed;
       top: 2rem;
@@ -68,6 +79,7 @@
       padding: 30px 20px;
       text-align: left;
       box-sizing: border-box;
+      flex-shrink: 0;
     }
 
     footer .footer-container {
@@ -83,6 +95,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0;
+      font-family: sans-serif;
+      font-size: 1.125rem;
     }
 
     footer .footer-links a {
@@ -106,6 +120,7 @@
       color: #bfbdbd;
     }
 
+    /* MOBILE ADJUSTMENTS */
     @media (max-width: 768px) {
       #overlayText2 {
         position: absolute;
@@ -147,7 +162,7 @@
     <div id="overlayText2">MEL</div>
   </div>
 
-  <!-- Footer sits below hero, visible on scroll -->
+  <!-- Footer below hero -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
