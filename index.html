@@ -10,14 +10,37 @@
       padding: 0;
       height: 100%;
       background-color: #dedede;
+      overflow-x: hidden;
       box-sizing: border-box;
+      font-family: sans-serif;
     }
 
-    /* Image container fills viewport */
+    body {
+      display: flex;
+      flex-direction: column;
+      color: #bfbdbd;
+      line-height: 1.35;
+      background-color: #fff;
+    }
+
+    /* Top-left MEL text */
+    #overlayText2 {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      color: #bfbdbd;
+      font-family: serif;
+      font-size: 1.125rem;
+      font-weight: bold;
+      letter-spacing: 0.075em;
+      z-index: 10;
+    }
+
+    /* Main image container */
     #image {
       position: relative;
       width: 100vw;
-      height: 100vh;
+      height: 100svh;
       background-color: #dedede;
       overflow: hidden;
     }
@@ -27,27 +50,14 @@
       top: 0;
       left: 0;
       width: 100vw;
-      height: 100vh;
+      height: 100svh;
       object-fit: cover;
       object-position: center;
       user-select: none;
       -webkit-user-drag: none;
     }
 
-    /* Top-left MEL */
-    #overlayText2 {
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
-      color: white;
-      font-family: serif;
-      font-size: 1.125rem;
-      font-weight: bold;
-      letter-spacing: 0.075em;
-      z-index: 10;
-    }
-
-    /* Bottom-left inquiries */
+    /* Bottom-left overlay */
     #overlayText {
       position: absolute;
       bottom: 2rem;
@@ -57,6 +67,7 @@
       font-size: 1.125rem;
       z-index: 10;
       white-space: normal;
+      box-sizing: border-box;
     }
 
     #overlayText a {
@@ -64,11 +75,13 @@
       text-decoration: underline;
     }
 
-    /* Footer styling exactly as Information page */
+    /* Footer */
     footer {
       background: #ebebeb;
       padding: 30px 20px;
       text-align: left;
+      flex-shrink: 0;
+      margin: 0;
       box-sizing: border-box;
     }
 
@@ -76,7 +89,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start; /* matches info page */
     }
 
     footer .footer-links {
@@ -109,33 +122,29 @@
       margin-top: 0;
     }
 
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       #overlayText2 {
         top: 1rem;
         left: 1rem;
       }
-
       #overlayText {
         bottom: 1rem;
         left: 1rem;
       }
-
       footer .footer-container {
         flex-direction: column;
         align-items: flex-start;
       }
-
       footer .footer-links {
         margin-bottom: 0.5rem;
         width: 100%;
       }
-
       footer .footer-links a {
         margin-left: 0;
         margin-right: 1rem;
         margin-bottom: 0.5rem;
       }
-
       footer .footer-links + div {
         margin-top: 0.5rem;
       }
@@ -143,16 +152,12 @@
   </style>
 </head>
 <body>
+  <div id="overlayText2">MEL</div>
+
   <div id="image">
     <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
-
-    <div id="overlayText2">MEL</div>
-
     <div id="overlayText">
-      Inquiries and purchase information: 
-      <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">
-        office@mel.furniture
-      </a>
+      Inquiries and purchase information: <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">office@mel.furniture</a>
     </div>
   </div>
 
@@ -189,7 +194,7 @@
       updateImage();
     }
 
-    // Start the slideshow
+    // Start slideshow
     let slideshowInterval = setInterval(nextImage, 5000);
     let idleTimeout = null;
 
