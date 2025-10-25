@@ -76,18 +76,23 @@
     /* FOOTER */
     footer {
       background: #ebebeb;
-      padding: 30px 20px;
+      padding: 30px 0;
       text-align: left;
       box-sizing: border-box;
       flex-shrink: 0;
+    }
+
+    footer .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
     }
 
     footer .footer-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 960px;
-      margin: 0 auto;
       flex-wrap: wrap;
     }
 
@@ -164,15 +169,17 @@
 
   <!-- Footer below hero -->
   <footer>
-    <div class="footer-container">
-      <div class="footer-links">
-        <a href="/information.html">Information</a>
-        <a href="/terms-and-conditions.html">Terms & Conditions</a>
-        <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
-        <a href="/downloads.html">Downloads</a>
-      </div>
-      <div class="footer-copy">
-        &copy; MEL Furniture LLC
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="/information.html">Information</a>
+          <a href="/terms-and-conditions.html">Terms & Conditions</a>
+          <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+          <a href="/downloads.html">Downloads</a>
+        </div>
+        <div class="footer-copy">
+          &copy; MEL Furniture LLC
+        </div>
       </div>
     </div>
   </footer>
