@@ -9,33 +9,12 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      background-color: #dedede;
       box-sizing: border-box;
       font-family: sans-serif;
-      color: #bfbdbd;
     }
 
-    /* Image container */
-    #image {
-      position: relative;
-      width: 100vw;
-      height: 100svh; /* full viewport height */
-      overflow: hidden;
-      background-color: #000; /* fallback if image doesn't load */
-    }
-
-    #image img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    /* Top-left MEL text (like information page) */
+    /* MEL top-left overlay */
     #overlayText2 {
       position: fixed;
       top: 2rem;
@@ -48,7 +27,31 @@
       z-index: 10;
     }
 
-    /* Bottom-left inquiry text, spacing matches top-left MEL */
+    /* Image container */
+    #image {
+      position: relative;
+      width: 100%;
+      height: 100svh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; /* bottom-align overlay text */
+      background-color: #dedede;
+    }
+
+    #image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100svh;
+      object-fit: cover;
+      object-position: center;
+      user-select: none;
+      -webkit-user-drag: none;
+      z-index: 1;
+    }
+
     #overlayText {
       position: absolute;
       bottom: 2rem;
@@ -63,7 +66,7 @@
       text-decoration: underline;
     }
 
-    /* Footer matching information page exactly */
+    /* Footer identical to information page */
     footer {
       background: #ebebeb;
       padding: 30px 20px;
@@ -113,7 +116,6 @@
     /* Mobile adjustments */
     @media (max-width: 768px) {
       #overlayText2 {
-        position: absolute;
         top: 1rem;
         left: 1rem;
       }
@@ -146,12 +148,13 @@
   </style>
 </head>
 <body>
+
+  <div id="overlayText2">MEL</div>
+
   <div id="image">
     <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
-    <div id="overlayText2">MEL</div>
     <div id="overlayText">
-      Inquiries and purchase information: 
-      <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">office@mel.furniture</a>
+      Inquiries and purchase information: <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">office@mel.furniture</a>
     </div>
   </div>
 
@@ -188,7 +191,6 @@
       updateImage();
     }
 
-    // Start the slideshow
     let slideshowInterval = setInterval(nextImage, 5000);
     let idleTimeout = null;
 
