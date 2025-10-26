@@ -8,17 +8,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      color: #bfbdbd;
-      line-height: 1.35;
-      background-color: #fff;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
+      background-color: #dedede;
     }
 
     /* Top-left MEL text */
@@ -34,28 +24,7 @@
       z-index: 10;
     }
 
-    /* Image container */
-    #image {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      background-color: #dedede;
-    }
-
-    #image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    /* Bottom-left overlay text */
+    /* Bottom-left inquiry text */
     #overlayText {
       position: absolute;
       bottom: 2rem;
@@ -64,7 +33,6 @@
       font-family: sans-serif;
       font-size: 1.125rem;
       z-index: 10;
-      white-space: normal;
     }
 
     #overlayText a {
@@ -72,13 +40,27 @@
       text-decoration: underline;
     }
 
-    /* Footer */
+    /* Image container */
+    #image {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* Footer exactly like information page */
     footer {
       background: #ebebeb;
       padding: 30px 20px;
       text-align: left;
-      flex-shrink: 0;
-      margin: 0;
       box-sizing: border-box;
     }
 
@@ -119,7 +101,6 @@
       margin-top: 0;
     }
 
-    /* Mobile adjustments */
     @media (max-width: 768px) {
       #overlayText2 {
         top: 1rem;
