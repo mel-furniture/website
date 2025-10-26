@@ -8,13 +8,20 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      background-color: #dedede;
       box-sizing: border-box;
       font-family: sans-serif;
+      font-size: 1.125rem;
+      color: #bfbdbd;
+      line-height: 1.35;
+      background-color: #fff;
     }
 
-    /* MEL top-left overlay */
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top-left MEL text */
     #overlayText2 {
       position: fixed;
       top: 2rem;
@@ -31,34 +38,33 @@
     #image {
       position: relative;
       width: 100%;
-      height: 100svh;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end; /* bottom-align overlay text */
+      justify-content: flex-end;
       background-color: #dedede;
     }
 
     #image img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100svh;
+      height: auto;
       object-fit: cover;
       object-position: center;
+      display: block;
       user-select: none;
       -webkit-user-drag: none;
-      z-index: 1;
     }
 
+    /* Bottom-left overlay text */
     #overlayText {
       position: absolute;
       bottom: 2rem;
       left: 2rem;
       color: white;
+      font-family: sans-serif;
       font-size: 1.125rem;
       z-index: 10;
+      white-space: normal;
     }
 
     #overlayText a {
@@ -66,7 +72,7 @@
       text-decoration: underline;
     }
 
-    /* Footer identical to information page */
+    /* Footer */
     footer {
       background: #ebebeb;
       padding: 30px 20px;
@@ -148,7 +154,6 @@
   </style>
 </head>
 <body>
-
   <div id="overlayText2">MEL</div>
 
   <div id="image">
