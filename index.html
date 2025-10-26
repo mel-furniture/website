@@ -10,37 +10,22 @@
       padding: 0;
       height: 100%;
       background-color: #dedede;
-      overflow-x: hidden;
       box-sizing: border-box;
-      font-family: sans-serif;
     }
 
     body {
-      display: flex;
-      flex-direction: column;
+      font-family: sans-serif;
+      font-size: 1.125rem;
       color: #bfbdbd;
       line-height: 1.35;
-      background-color: #fff;
+      display: block; /* natural flow */
     }
 
-    /* Top-left MEL text */
-    #overlayText2 {
-      position: fixed;
-      top: 2rem;
-      left: 2rem;
-      color: #bfbdbd;
-      font-family: serif;
-      font-size: 1.125rem;
-      font-weight: bold;
-      letter-spacing: 0.075em;
-      z-index: 10;
-    }
-
-    /* Main image container */
+    /* Fullscreen image container */
     #image {
       position: relative;
       width: 100vw;
-      height: 100svh;
+      height: 100svh; /* full viewport height */
       background-color: #dedede;
       overflow: hidden;
     }
@@ -57,17 +42,28 @@
       -webkit-user-drag: none;
     }
 
-    /* Bottom-left overlay */
+    /* Top-left MEL text */
+    #overlayText2 {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      color: #bfbdbd;
+      font-family: serif;
+      font-size: 1.125rem;
+      font-weight: bold;
+      letter-spacing: 0.075em;
+      z-index: 10;
+    }
+
+    /* Bottom-left inquiry text */
     #overlayText {
       position: absolute;
-      bottom: 2rem;
+      bottom: 2rem; /* same spacing as top MEL */
       left: 2rem;
       color: white;
       font-family: sans-serif;
       font-size: 1.125rem;
       z-index: 10;
-      white-space: normal;
-      box-sizing: border-box;
     }
 
     #overlayText a {
@@ -75,12 +71,16 @@
       text-decoration: underline;
     }
 
-    /* Footer */
+    /* Slideshow styling */
+    .container-placeholder {
+      height: 200px; /* just a small spacer before footer if needed */
+    }
+
+    /* Footer (exact copy from Information page) */
     footer {
       background: #ebebeb;
       padding: 30px 20px;
       text-align: left;
-      flex-shrink: 0;
       margin: 0;
       box-sizing: border-box;
     }
@@ -89,7 +89,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      align-items: flex-start; /* matches info page */
+      align-items: center;
     }
 
     footer .footer-links {
@@ -128,23 +128,28 @@
         top: 1rem;
         left: 1rem;
       }
+
       #overlayText {
         bottom: 1rem;
         left: 1rem;
       }
+
       footer .footer-container {
         flex-direction: column;
         align-items: flex-start;
       }
+
       footer .footer-links {
         margin-bottom: 0.5rem;
         width: 100%;
       }
+
       footer .footer-links a {
         margin-left: 0;
         margin-right: 1rem;
         margin-bottom: 0.5rem;
       }
+
       footer .footer-links + div {
         margin-top: 0.5rem;
       }
@@ -152,14 +157,18 @@
   </style>
 </head>
 <body>
-  <div id="overlayText2">MEL</div>
-
   <div id="image">
     <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
+
+    <div id="overlayText2">MEL</div>
     <div id="overlayText">
-      Inquiries and purchase information: <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">office@mel.furniture</a>
+      Inquiries and purchase information: 
+      <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">office@mel.furniture</a>
     </div>
   </div>
+
+  <!-- Small placeholder to make page scrollable so footer is revealed naturally -->
+  <div class="container-placeholder"></div>
 
   <footer>
     <div class="footer-container">
@@ -194,15 +203,22 @@
       updateImage();
     }
 
-    // Start slideshow
+    // Start the slideshow
     let slideshowInterval = setInterval(nextImage, 5000);
     let idleTimeout = null;
 
     document.body.addEventListener('click', () => {
+      // Advance immediately on click
       nextImage();
+
+      // Stop the slideshow
       clearInterval(slideshowInterval);
       slideshowInterval = null;
+
+      // Clear any previous idle timer
       clearTimeout(idleTimeout);
+
+      // Resume slideshow after 15 seconds of no interaction
       idleTimeout = setTimeout(() => {
         slideshowInterval = setInterval(nextImage, 5000);
       }, 15000);
