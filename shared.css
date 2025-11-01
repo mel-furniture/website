@@ -1,47 +1,88 @@
-/* ================================
-   Base Typography — Global
-================================ */
-
-/* Use border-box everywhere for consistency */
-*, *::before, *::after {
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
+/* ===== GLOBAL ===== */
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.35;
-  color: #bfbdbd;
-  background-color: #fff;
+/* ===== LAYOUT CONTAINER ===== */
+.page-wrap {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
-/* Headings — unified across the site */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1rem;
-  font-family: serif;
-  color: #000;
+/* ===== LEFT SIDE: IMAGE ===== */
+.left {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.left img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== RIGHT SIDE ===== */
+.right {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== FOOTER TEXT ON IMAGE ===== */
+.footer-text {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 2;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-text .strong {
   font-weight: 600;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.125rem; }
-h6 { font-size: 1rem; }
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .page-wrap {
+    flex-direction: column;
+  }
 
-/* Links — unified */
-a {
-  color: #bfbdbd;
-  text-decoration: none;
-}
+  .left,
+  .right {
+    width: 100%;
+  }
 
-a:hover {
-  color: #fff;
+  .right {
+    padding: 1.25rem;
+  }
+
+  .footer-text {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    gap: 0.8rem;
+  }
 }
