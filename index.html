@@ -45,35 +45,33 @@
       -webkit-user-drag: none;
     }
 
-    #overlayText {
-      position: absolute;
-      bottom: 1.25em;
-      left: 1.25em;
-      color: white;
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      z-index: 10;
-      white-space: normal;
-      box-sizing: border-box;
-    }
-
+    #overlayText { /* Email bottom-left */
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  z-index: 10;
+  white-space: normal;
+}
     #overlayText a {
       color: white;
       text-decoration: underline;
     }
 
     /* MEL top-left matching information page */
-    #overlayText2 {
-      position: fixed;
-      top: 2rem;
-      left: 2rem;
-      color: #bfbdbd;
-      font-family: serif;
-      font-size: 1.125rem;
-      font-weight: bold;
-      letter-spacing: 0.075em; 
-      z-index: 10;
-    }
+    #overlayText2 { /* MEL top-left */
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  color: #bfbdbd;
+  font-family: serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: 0.075em;
+  z-index: 10;
+}
 
     /* Footer */
     footer {
@@ -123,11 +121,17 @@
     }
 
     /* Mobile adjustments */
-    @media (max-width: 768px) {
-      #overlayText2 {
-        top: 1rem;
-        left: 1rem;
-      }
+   @media (max-width: 768px) {
+  #overlayText2 {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  #overlayText {
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
 
       footer .footer-container {
         flex-direction: column;
