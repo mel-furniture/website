@@ -1,225 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEL Furniture</title>
-  <style>
-    /* Reset & base */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      box-sizing: border-box;
-      overflow-x: hidden;
-      background-color: #fff;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEL</title>
 
-    body {
-      font-family: sans-serif;
-      font-size: 1.125rem; /* match information page */
-      color: #bfbdbd;
-      line-height: 1.35;
-    }
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="shared.css" />
+  </head>
 
-    /* Image container */
-    #image {
-      position: relative;
-      width: 100vw;
-      height: 100svh;
-      background-color: #dedede;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
+  <body>
+    <div class="page-wrap">
+      
+      <!-- LEFT SIDE -->
+      <div class="left">
+        <img src="your-image-here.jpg" alt="hero image" />
 
-    #image img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100svh;
-      object-fit: cover;
-      object-position: center;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    /* Overlays */
-    #overlayText2 { /* MEL logo top-left */
-      position: fixed;
-      top: 2rem;
-      left: 2rem;
-      color: #bfbdbd;
-      font-family: serif;
-      font-size: 1.125rem; /* match information page */
-      font-weight: bold;
-      letter-spacing: 0.075em;
-      z-index: 10;
-    }
-
-    #overlayText { /* Email bottom-left */
-      position: absolute;
-      bottom: 2rem;
-      left: 2rem;
-      color: white;
-      font-family: sans-serif;
-      font-size: 1.125rem; /* match information page */
-      z-index: 10;
-      white-space: normal;
-    }
-
-    #overlayText a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background: #ebebeb;
-      padding: 30px 20px;
-      text-align: left;
-      flex-shrink: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    footer .footer-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    footer .footer-links {
-      font-family: sans-serif;
-      font-size: 1.125rem; /* match information page */
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-    }
-
-    footer .footer-links a {
-      color: #bfbdbd;
-      text-decoration: none;
-      margin-left: 15px;
-      white-space: nowrap;
-    }
-
-    footer .footer-links a:first-child {
-      margin-left: 0;
-    }
-
-    footer .footer-links a:hover {
-      color: #fff;
-    }
-
-    footer .footer-links + div {
-      font-family: sans-serif;
-      font-size: 1.125rem; /* match information page */
-      color: #bfbdbd;
-      margin-top: 0;
-      white-space: nowrap;
-    }
-
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      #overlayText2 {
-        top: 1rem;
-        left: 1rem;
-      }
-
-      #overlayText {
-        bottom: 1rem;
-        left: 1rem;
-      }
-
-      footer .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      footer .footer-links {
-        width: 100%;
-        margin-bottom: 1rem; /* add space below links */
-      }
-
-      footer .footer-links a {
-        margin-left: 0;
-        margin-right: 1rem;
-        margin-bottom: 0.5rem;
-      }
-
-      footer .footer-links + div {
-        margin-top: 0; /* reset any top margin */
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Top-left MEL logo -->
-  <div id="overlayText2">MEL</div>
-
-  <!-- Main image and overlay email -->
-  <div id="image">
-    <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
-    <div id="overlayText">
-      Inquiries and purchase information: 
-      <a href="mailto:office@mel.furniture?subject=Purchase%20Information%20Request">office@mel.furniture</a>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-links">
-        <a href="/information.html">Information</a>
-        <a href="/terms-and-conditions.html">Terms & Conditions</a>
-        <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
-        <a href="/downloads.html">Downloads</a>
+        <!-- FOOTER TEXT -->
+        <div class="footer-text">
+          <span class="strong">MEL</span>
+          <span>INQUIRIES@MELSTUDIO.COM</span>
+        </div>
       </div>
-      <div>
-        &copy; MEL Furniture LLC
+
+      <!-- RIGHT SIDE -->
+      <div class="right">
+        <p>
+          <!-- whatever content you want here -->
+          Lorem ipsum placeholder text.
+        </p>
       </div>
     </div>
-  </footer>
-
-  <!-- Slideshow JS -->
-  <script>
-    const images = [
-      { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
-      { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
-    ];
-
-    let index = 0;
-    const mainImage = document.getElementById('mainImage');
-
-    function updateImage() {
-      mainImage.src = images[index].src;
-      mainImage.alt = images[index].alt;
-    }
-
-    function nextImage() {
-      index = (index + 1) % images.length;
-      updateImage();
-    }
-
-    // Start slideshow
-    let slideshowInterval = setInterval(nextImage, 5000);
-    let idleTimeout = null;
-
-    document.body.addEventListener('click', () => {
-      nextImage();
-      clearInterval(slideshowInterval);
-      slideshowInterval = null;
-      clearTimeout(idleTimeout);
-      idleTimeout = setTimeout(() => {
-        slideshowInterval = setInterval(nextImage, 5000);
-      }, 15000);
-    });
-
-    updateImage();
-  </script>
-
-</body>
+  </body>
 </html>
