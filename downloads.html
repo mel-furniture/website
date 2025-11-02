@@ -4,19 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads | MEL</title>
+
   <!-- LINK SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
-  <style>
-    /* Page-specific styles for Downloads */
 
+  <style>
+    /* Page-specific styles for Downloads page */
+
+    /* Main content wrapper */
     .content {
       flex: 1;
       max-width: 960px;
+      margin: 0 auto;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
-      margin-left: 0; /* left-aligned content */
     }
 
+    /* Product card */
     .product-card {
       color: #bbb;
       font-size: 1.125rem;
@@ -56,10 +60,14 @@
       text-decoration: none;
     }
 
+    /* Divider full width */
     .divider {
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
-      width: 100%;
+      width: 100vw;           /* full viewport width */
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     /* Mobile adjustments */
@@ -67,6 +75,13 @@
       .content {
         padding-left: 1rem;
         padding-right: 1rem;
+      }
+
+      /* MEL logo on mobile */
+      #overlayText2 {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
     }
   </style>
@@ -90,7 +105,7 @@
     <!-- Additional product cards can go here -->
   </div>
 
-  <!-- Footer handled by shared.css -->
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -99,9 +114,7 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>
-        &copy; MEL Furniture LLC
-      </div>
+      <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
 
