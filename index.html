@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEL Furniture</title>
 
-  <!-- LINK SHARED CSS -->
+  <!-- SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
 
-  <!-- Page-specific styles -->
   <style>
-    /* Image container */
+    /* ===== PAGE-SPECIFIC STYLES ===== */
+
+    /* Full-screen image container */
     #image {
       position: relative;
       width: 100vw;
@@ -48,7 +49,7 @@
       text-decoration: underline;
     }
 
-    /* Mobile adjustments */
+    /* Mobile adjustments for overlayText only */
     @media (max-width: 768px) {
       #overlayText {
         bottom: 1rem;
@@ -59,10 +60,10 @@
 </head>
 <body>
 
-  <!-- MEL logo -->
+  <!-- MEL logo (from shared.css) -->
   <div id="overlayText2">MEL</div>
 
-  <!-- Main image and overlay email -->
+  <!-- Fullscreen slideshow -->
   <div id="image">
     <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
     <div id="overlayText">
@@ -71,7 +72,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer (from shared.css) -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
