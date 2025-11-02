@@ -5,81 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Information | MEL</title>
 
-  <!-- ✅ SHARED -->
+  <!-- LINK SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
 
+  <!-- Page-specific styles -->
   <style>
-    /* ===== PAGE-SPECIFIC STYLES ONLY ===== */
-
-    /* Main container */
-    .container {
-      flex: 1;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 4rem 2rem 2rem;
-      box-sizing: border-box;
-    }
-
-    /* Page title */
-    .container h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #bfbdbd;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-bottom: 0.5em;
-      line-height: 1.2;
-    }
-
-    /* Section headers */
-    .container h2 {
-      font-size: 1.125rem;
-      font-weight: bold;
-      color: #bfbdbd;
-      margin-top: 2em;
-      margin-bottom: 0;
-      padding-bottom: 0.2em;
-      line-height: 1.2;
-      break-inside: avoid;
-    }
-
-    /* Two-column text layout */
     .two-columns {
       column-count: 2;
       column-gap: 2.5rem;
     }
 
-    /* Paragraphs + links */
-    .container p {
-      margin-top: 0;
-      margin-bottom: 1em;
-    }
-
-    .container a {
-      color: #bfbdbd;
-      text-decoration: underline;
-    }
-
-    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
-
       .two-columns {
         column-count: 1;
         column-gap: 0;
-      }
-
-      .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ MEL text (from shared.css) -->
+  <!-- MEL logo -->
   <div id="overlayText2">MEL</div>
 
+  <!-- Main content wrapper -->
   <div class="container">
     <h1>Information</h1>
 
@@ -96,7 +45,7 @@
     </div>
   </div>
 
-  <!-- ✅ Footer (from shared.css) -->
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
