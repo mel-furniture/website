@@ -43,7 +43,7 @@ footer .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: center; /* vertical centering on desktop */
 }
 
 footer .footer-links {
@@ -76,82 +76,21 @@ footer .footer-links + div {
   margin-top: 0;
 }
 
-/* ===== CONTENT WRAPPERS ===== */
-.container,
-.content {
-  flex: 1;
-  max-width: 960px;
-  margin: 0;
-  padding: 4rem 2rem 2rem;
-  box-sizing: border-box;
-}
-
-/* ===== DOWNLOADS PAGE SPECIFIC ===== */
-.product-card {
-  color: #bbb;
-  font-size: 1.125rem;
-  line-height: 1.35;
-  margin-bottom: 3rem;
-}
-
-.product-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0.25em;
-}
-
-.product-dimensions {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.product-links {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.product-links a {
-  border: 1px solid #dedede;
-  padding: 0.4em 0.75em;
-  border-radius: 4px;
-  text-decoration: none;
-  margin-right: 0.5em;
-  color: #bbb;
-  transition: background-color 0.2s ease;
-}
-
-.product-links a:hover {
-  background-color: #dedede;
-  text-decoration: none;
-}
-
-/* Divider line full width */
-.divider {
-  position: relative;
-  left: 0;
-  width: 100vw;
-  border-bottom: 1px solid #dedede;
-  margin: 1.25em 0;
-  margin-left: calc(-1 * 2rem); /* offset container padding on desktop */
-}
-
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   #overlayText2 {
-    position: absolute;
     top: 1rem;
     left: 1rem;
   }
 
   footer .footer-container {
-    flex-direction: column;       /* stack items vertically */
-    align-items: flex-start;      /* keep left alignment */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   footer .footer-links {
-    width: auto;                  /* prevent stretching */
-    margin-bottom: 1rem;          
+    width: auto;
+    margin-bottom: 1rem;
   }
 
   footer .footer-links a {
@@ -162,15 +101,5 @@ footer .footer-links + div {
 
   footer .footer-links + div {
     margin-top: 0;
-  }
-
-  .container,
-  .content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .divider {
-    margin-left: calc(-1 * 1rem); /* offset container padding on mobile */
   }
 }
