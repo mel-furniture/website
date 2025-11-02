@@ -4,29 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads | MEL</title>
-
   <!-- LINK SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
 
   <style>
-    /* Page-specific styles for downloads */
-
-    /* Main content wrapper fills width */
+    /* Page-specific styles */
     .content {
       flex: 1;
-      width: 100%;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
+      max-width: 960px;
+      margin: 0 auto;
     }
 
-    /* Product card text width limited for readability */
     .product-card {
-      max-width: 960px;  /* text width */
-      padding-right: 2rem; /* optional spacing */
-      margin-bottom: 3rem;
       color: #bbb;
       font-size: 1.125rem;
       line-height: 1.35;
+      margin-bottom: 0; /* remove bottom margin to separate divider manually */
     }
 
     .product-title {
@@ -61,11 +56,16 @@
       text-decoration: none;
     }
 
-    /* Divider goes full width */
+    /* Divider full width */
     .divider {
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
-      width: 100%;  /* full width of screen */
+      width: 100vw; /* full viewport width */
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
 
     /* Mobile adjustments */
@@ -75,14 +75,8 @@
         padding-right: 1rem;
       }
 
-      #overlayText2 {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-      }
-
-      .product-card {
-        padding-right: 0; /* no extra right padding on mobile */
+      .product-links a {
+        margin-bottom: 0.5rem;
       }
     }
   </style>
@@ -100,12 +94,23 @@
       <div class="product-links">
         <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">Product Specification Sheet</a>
       </div>
-      <div class="divider"></div>
     </div>
+    <div class="divider"></div>
 
-    <!-- Additional product cards go here -->
+    <!-- Product 2 example -->
+    <div class="product-card">
+      <div class="product-title">Side Table</div>
+      <div class="product-dimensions">Dimensions: 12 in. × 12 in. × 20 in.</div>
+      <div class="product-links">
+        <a href="/assets/mel_side_table_spec.pdf">Product Specification Sheet</a>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- Add more products as needed -->
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -114,9 +119,7 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>
-        &copy; MEL Furniture LLC
-      </div>
+      <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
 
