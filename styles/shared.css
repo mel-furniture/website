@@ -6,7 +6,7 @@ html, body {
   height: 100%;
   box-sizing: border-box;
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* base size for body text */
   color: #bfbdbd;
   line-height: 1.35;
   background-color: #fff;
@@ -19,7 +19,7 @@ html, body {
   left: 2rem;
   color: #bfbdbd;
   font-family: serif;
-  font-size: 1.125rem;
+  font-size: 1rem; /* slightly smaller to match Information page */
   font-weight: bold;
   letter-spacing: 0.075em;
   z-index: 10;
@@ -39,12 +39,12 @@ footer .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center; /* vertical alignment on desktop */
+  align-items: center; /* desktop vertical alignment */
 }
 
 footer .footer-links {
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem; /* matches Information page */
   display: flex;
   flex-wrap: wrap;
   gap: 0;
@@ -67,7 +67,7 @@ footer .footer-links a:hover {
 
 footer .footer-links + div {
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem; /* matches Information page */
   color: #bfbdbd;
   margin-top: 0;
 }
@@ -98,6 +98,6 @@ footer .footer-links + div {
 
   footer .footer-links + div {
     margin-top: 0.5rem;
-    text-align: left; /* keeps copyright aligned with links */
+    text-align: left;
   }
 }
