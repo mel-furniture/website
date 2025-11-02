@@ -6,21 +6,24 @@
   <title>Downloads | MEL</title>
   <!-- LINK SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
-
   <style>
-    /* Page-specific styles */
+    /* Page-specific styles for Downloads page */
+
+    /* Main content wrapper */
     .content {
       flex: 1;
-      padding: 4rem 2rem 2rem; /* top, sides, bottom */
+      padding: 4rem 2rem 2rem;
       box-sizing: border-box;
-      width: 100%; /* full width */
+      max-width: 960px;
+      margin-left: 0; /* keep left-aligned */
     }
 
+    /* Product section */
     .product-card {
       color: #bbb;
       font-size: 1.125rem;
       line-height: 1.35;
-      margin-bottom: 0; /* remove bottom margin to separate divider manually */
+      margin-bottom: 3rem;
     }
 
     .product-title {
@@ -55,11 +58,13 @@
       text-decoration: none;
     }
 
-    /* Divider full width */
+    /* Full-width divider line */
     .divider {
+      position: relative;
+      left: 0;
+      width: 100vw;             /* full viewport width */
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
-      width: 100%; /* full width of content */
     }
 
     /* Mobile adjustments */
@@ -69,8 +74,16 @@
         padding-right: 1rem;
       }
 
-      .product-links a {
-        margin-bottom: 0.5rem;
+      .divider {
+        margin-left: -1rem;     /* offset content padding */
+        margin-right: -1rem;
+      }
+
+      /* MEL logo on mobile */
+      #overlayText2 {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
     }
   </style>
@@ -88,20 +101,10 @@
       <div class="product-links">
         <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">Product Specification Sheet</a>
       </div>
+      <div class="divider"></div>
     </div>
-    <div class="divider"></div>
 
-    <!-- Product 2 example -->
-    <div class="product-card">
-      <div class="product-title">Side Table</div>
-      <div class="product-dimensions">Dimensions: 12 in. × 12 in. × 20 in.</div>
-      <div class="product-links">
-        <a href="/assets/mel_side_table_spec.pdf">Product Specification Sheet</a>
-      </div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- Add more products as needed -->
+    <!-- Additional product cards can go here -->
   </div>
 
   <!-- Footer -->
@@ -113,7 +116,9 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>&copy; MEL Furniture LLC</div>
+      <div>
+        &copy; MEL Furniture LLC
+      </div>
     </div>
   </footer>
 
