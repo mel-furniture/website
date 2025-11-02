@@ -14,10 +14,10 @@
     /* Main content wrapper */
     .content {
       flex: 1;
-      max-width: 960px;
-      margin: 0;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
+      max-width: 960px;
+      margin: 0;
     }
 
     /* Product section */
@@ -60,16 +60,7 @@
       text-decoration: none;
     }
 
-    /* Divider line full width */
-    .divider {
-      width: 100vw;
-      border-bottom: 1px solid #dedede;
-      margin: 1.25em 0;
-      position: relative;
-      left: -2rem; /* offset the content padding on desktop */
-    }
-
-    /* Mobile adjustments */
+    /* Two-column layout optional for description */
     @media (max-width: 768px) {
       .content {
         padding-left: 1rem;
@@ -80,10 +71,6 @@
         position: absolute;
         top: 1rem;
         left: 1rem;
-      }
-
-      .divider {
-        left: -1rem; /* offset the mobile padding */
       }
     }
   </style>
@@ -107,7 +94,7 @@
     <!-- Additional product cards can go here -->
   </div>
 
-  <!-- Footer handled by shared.css -->
+  <!-- Footer handled entirely by shared.css -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -116,9 +103,7 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>
-        &copy; MEL Furniture LLC
-      </div>
+      <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
 
