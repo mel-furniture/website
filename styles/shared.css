@@ -44,7 +44,7 @@ footer .footer-container {
 
 footer .footer-links {
   font-family: sans-serif;
-  font-size: 1.125rem; /* matches Information page */
+  font-size: 1.125rem; /* desktop size */
   display: flex;
   flex-wrap: wrap;
   gap: 0;
@@ -67,7 +67,7 @@ footer .footer-links a:hover {
 
 footer .footer-links + div {
   font-family: sans-serif;
-  font-size: 1.125rem; /* matches Information page */
+  font-size: 1.125rem; /* desktop size */
   color: #bfbdbd;
   margin-top: 0;
 }
@@ -75,7 +75,7 @@ footer .footer-links + div {
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   #overlayText2 {
-    position: absolute; /* exactly like Information page */
+    position: absolute;
     top: 1rem;
     left: 1rem;
   }
@@ -88,7 +88,7 @@ footer .footer-links + div {
   footer .footer-links {
     margin-bottom: 0.5rem;
     width: 100%;
-    font-size: 1.125rem; /* mobile font same as desktop Information page */
+    font-size: 1rem; /* match Information page mobile size */
   }
 
   footer .footer-links a {
@@ -99,6 +99,6 @@ footer .footer-links + div {
 
   footer .footer-links + div {
     margin-top: 0.5rem;
-    font-size: 1.125rem;
+    font-size: 1rem; /* match Information page mobile size */
   }
 }
