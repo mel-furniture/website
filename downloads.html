@@ -4,20 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads | MEL</title>
-
   <!-- LINK SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
-
   <style>
-    /* Page-specific adjustments for downloads */
+    /* Page-specific styles for Downloads page */
+
+    /* Main content wrapper */
     .content {
       flex: 1;
+      max-width: 960px;
+      margin: 0 auto;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
-      max-width: 100%; /* override centering from shared.css */
-      margin: 0;       /* remove auto centering */
     }
 
+    /* Product section */
     .product-card {
       color: #bbb;
       font-size: 1.125rem;
@@ -60,8 +61,15 @@
     .divider {
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
-      width: 100vw; /* full width */
-      margin-left: calc(-1 * 2rem); /* offset the padding */
+      width: 100%;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
     }
   </style>
 </head>
@@ -81,10 +89,10 @@
       <div class="divider"></div>
     </div>
 
-    <!-- Add more product cards below as needed -->
+    <!-- Additional product cards can go here -->
   </div>
 
-  <!-- Footer -->
+  <!-- Footer handled by shared.css -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
