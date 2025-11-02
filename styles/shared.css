@@ -43,7 +43,7 @@ footer .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center; /* vertical centering on desktop */
+  align-items: center;
 }
 
 footer .footer-links {
@@ -76,15 +76,17 @@ footer .footer-links + div {
   margin-top: 0;
 }
 
-/* ===== CONTENT & DOWNLOADS PAGE STYLES ===== */
+/* ===== CONTENT WRAPPERS ===== */
+.container,
 .content {
   flex: 1;
-  padding: 4rem 2rem 2rem;
-  box-sizing: border-box;
   max-width: 960px;
   margin: 0;
+  padding: 4rem 2rem 2rem;
+  box-sizing: border-box;
 }
 
+/* ===== DOWNLOADS PAGE SPECIFIC ===== */
 .product-card {
   color: #bbb;
   font-size: 1.125rem;
@@ -149,7 +151,7 @@ footer .footer-links + div {
 
   footer .footer-links {
     width: auto;                  /* prevent stretching */
-    margin-bottom: 1rem;          /* spacing like when you said it was correct */
+    margin-bottom: 1rem;          
   }
 
   footer .footer-links a {
@@ -159,9 +161,10 @@ footer .footer-links + div {
   }
 
   footer .footer-links + div {
-    margin-top: 0;                /* consistent spacing with desktop */
+    margin-top: 0;
   }
 
+  .container,
   .content {
     padding-left: 1rem;
     padding-right: 1rem;
