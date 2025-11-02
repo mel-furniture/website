@@ -18,7 +18,7 @@ body {
 
 /* ===== MEL LOGO TOP LEFT ===== */
 #overlayText2 {
-  position: fixed;
+  position: fixed; /* fixed on desktop */
   top: 2rem;
   left: 2rem;
   color: #bfbdbd;
@@ -78,12 +78,10 @@ footer .footer-links + div {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  /* MEL logo scrolls with content on mobile */
   #overlayText2 {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 1rem 0 0 1rem; /* optional spacing */
+    position: absolute; /* scrolls with content */
+    top: 1rem;
+    left: 1rem;
   }
 
   footer .footer-container {
