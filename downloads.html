@@ -5,47 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads | MEL</title>
 
-  <!-- LINK SHARED CSS -->
+  <!-- SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
+
+  <style>
+    /* Page-specific styles for Downloads page */
+    .content {
+      flex: 1;
+      padding: 4rem 2rem 2rem;
+      box-sizing: border-box;
+      max-width: 960px;
+      margin: 0;
+    }
+
+    .product-card {
+      color: #bbb;
+      font-size: 1.125rem;
+      line-height: 1.35;
+      margin-bottom: 3rem;
+    }
+
+    .product-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0.25em;
+    }
+
+    .product-dimensions {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    .product-links {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    .product-links a {
+      border: 1px solid #dedede;
+      padding: 0.4em 0.75em;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-right: 0.5em;
+      color: #bbb;
+      transition: background-color 0.2s ease;
+    }
+
+    .product-links a:hover {
+      background-color: #dedede;
+      text-decoration: none;
+    }
+
+    /* Divider full width */
+    .divider {
+      position: relative;
+      left: 0;
+      width: 100vw;
+      border-bottom: 1px solid #dedede;
+      margin: 1.25em 0;
+      margin-left: calc(-1 * 2rem); /* offset container padding */
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .divider {
+        margin-left: calc(-1 * 1rem);
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- MEL logo -->
   <div id="overlayText2">MEL</div>
 
-  <!-- Main content wrapper -->
   <div class="content">
-
-    <!-- PRODUCT CARDS CONTAINER -->
-    <div class="product-list">
-
-      <!-- Example Product -->
-      <div class="product-card">
-        <div class="product-title">Radius Table</div>
-        <div class="product-dimensions">Dimensions: 18.31 in. × 14.09 in. × 19.50 in.</div>
-        <div class="product-links">
-          <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">Product Specification Sheet</a>
-        </div>
-        <div class="divider"></div>
+    <div class="product-card">
+      <div class="product-title">Radius Table</div>
+      <div class="product-dimensions">Dimensions: 18.31 in. × 14.09 in. × 19.50 in.</div>
+      <div class="product-links">
+        <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">Product Specification Sheet</a>
       </div>
-
-      <!-- Copy this block to add more products -->
-      <div class="product-card">
-        <div class="product-title">Square Stool</div>
-        <div class="product-dimensions">Dimensions: 12 in. × 12 in. × 18 in.</div>
-        <div class="product-links">
-          <a href="/assets/mel2025square_stool_spec_sheet.pdf">Product Specification Sheet</a>
-        </div>
-        <div class="divider"></div>
-      </div>
-
-      <!-- Add more products here -->
-
+      <div class="divider"></div>
     </div>
-
   </div>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -57,6 +104,5 @@
       <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
-
 </body>
 </html>
