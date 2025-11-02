@@ -14,10 +14,10 @@
     /* Main content wrapper */
     .content {
       flex: 1;
+      max-width: 960px;
+      margin: 0;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
-      max-width: 960px; /* keeps content readable on large screens */
-      margin: 0;
     }
 
     /* Product section */
@@ -60,13 +60,13 @@
       text-decoration: none;
     }
 
-    /* Divider line goes full viewport width */
+    /* Divider line full width */
     .divider {
       width: 100vw;
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
       position: relative;
-      left: 0;
+      left: -2rem; /* offset the content padding on desktop */
     }
 
     /* Mobile adjustments */
@@ -76,11 +76,14 @@
         padding-right: 1rem;
       }
 
-      /* MEL logo on mobile */
       #overlayText2 {
         position: absolute;
         top: 1rem;
         left: 1rem;
+      }
+
+      .divider {
+        left: -1rem; /* offset the mobile padding */
       }
     }
   </style>
@@ -104,7 +107,7 @@
     <!-- Additional product cards can go here -->
   </div>
 
-  <!-- Footer (handled by shared.css) -->
+  <!-- Footer handled by shared.css -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
