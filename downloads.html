@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads | MEL</title>
 
-  <!-- Shared global styles (correct path) -->
+  <!-- LINK SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
 
   <style>
-    /* Main content wrapper */
+    /* Page-specific adjustments for downloads */
     .content {
       flex: 1;
-      max-width: 960px;
-      margin: 0 auto;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
+      max-width: 100%; /* override centering from shared.css */
+      margin: 0;       /* remove auto centering */
     }
 
-    /* Product section */
     .product-card {
       color: #bbb;
       font-size: 1.125rem;
@@ -61,43 +60,31 @@
     .divider {
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
-      width: 100%;
-    }
-
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      .content {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
+      width: 100vw; /* full width */
+      margin-left: calc(-1 * 2rem); /* offset the padding */
     }
   </style>
 </head>
 <body>
 
-  <!-- MEL logo handled by shared.css -->
+  <!-- MEL logo -->
   <div id="overlayText2">MEL</div>
 
   <div class="content">
-
+    <!-- Product 1 -->
     <div class="product-card">
       <div class="product-title">Radius Table</div>
-      <div class="product-dimensions">
-        Dimensions: 18.31 in. × 14.09 in. × 19.50 in.
-      </div>
+      <div class="product-dimensions">Dimensions: 18.31 in. × 14.09 in. × 19.50 in.</div>
       <div class="product-links">
-        <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">
-          Product Specification Sheet
-        </a>
+        <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">Product Specification Sheet</a>
       </div>
       <div class="divider"></div>
     </div>
 
-    <!-- More products go here -->
-
+    <!-- Add more product cards below as needed -->
   </div>
 
-  <!-- Footer controlled by shared.css -->
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
