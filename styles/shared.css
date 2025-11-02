@@ -76,16 +76,14 @@ footer .footer-links + div {
   margin-top: 0;
 }
 
-/* ===== DIVIDER ===== */
+/* ===== DIVIDERS ===== */
 .divider {
-  position: relative;
-  left: 0;
-  width: 100vw;
   border-bottom: 1px solid #dedede;
+  width: 100vw; /* full width */
   margin: 1.25em 0;
+  margin-left: calc(-1 * 2rem); /* offset container padding on desktop */
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   #overlayText2 {
     position: absolute;
@@ -113,17 +111,8 @@ footer .footer-links + div {
     margin-top: 0;                /* consistent spacing with desktop */
   }
 
-  /* Divider offsets for mobile padding */
+  /* Divider adjustment for mobile padding */
   .divider {
     margin-left: calc(-1 * 1rem);
-    margin-right: calc(-1 * 1rem);
-  }
-}
-
-/* ===== DESKTOP DIVIDER FIX ===== */
-@media (min-width: 769px) {
-  .divider {
-    margin-left: calc(-1 * 2rem); /* offset container padding on desktop */
-    margin-right: calc(-1 * 2rem);
   }
 }
