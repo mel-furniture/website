@@ -1,6 +1,14 @@
-/* ===== SHARED ELEMENTS ===== */
+/* ===== RESET ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
 
-/* Top-left MEL text */
+/* ===== MEL LOGO TOP LEFT ===== */
 #overlayText2 {
   position: fixed;
   top: 2rem;
@@ -13,7 +21,7 @@
   z-index: 10;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
   background: #ebebeb;
   padding: 30px 20px;
@@ -26,8 +34,8 @@ footer {
 footer .footer-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 footer .footer-links {
@@ -58,9 +66,10 @@ footer .footer-links + div {
   font-size: 1.125rem;
   color: #bfbdbd;
   margin-top: 0;
+  white-space: nowrap;
 }
 
-/* Mobile adjustments */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   #overlayText2 {
     top: 1rem;
@@ -73,8 +82,8 @@ footer .footer-links + div {
   }
 
   footer .footer-links {
-    margin-bottom: 0.5rem;
     width: 100%;
+    margin-bottom: 1rem;
   }
 
   footer .footer-links a {
@@ -84,6 +93,6 @@ footer .footer-links + div {
   }
 
   footer .footer-links + div {
-    margin-top: 0.5rem;
+    margin-top: 0;
   }
 }
