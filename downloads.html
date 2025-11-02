@@ -9,23 +9,24 @@
   <link rel="stylesheet" href="styles/shared.css" />
 
   <style>
-    /* Page-specific styles for Downloads page */
+    /* Page-specific styles for downloads */
 
-    /* Main content wrapper */
+    /* Main content wrapper fills width */
     .content {
       flex: 1;
-      max-width: 960px;
-      margin: 0 auto;
+      width: 100%;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
     }
 
-    /* Product card */
+    /* Product card text width limited for readability */
     .product-card {
+      max-width: 960px;  /* text width */
+      padding-right: 2rem; /* optional spacing */
+      margin-bottom: 3rem;
       color: #bbb;
       font-size: 1.125rem;
       line-height: 1.35;
-      margin-bottom: 3rem;
     }
 
     .product-title {
@@ -60,14 +61,11 @@
       text-decoration: none;
     }
 
-    /* Divider full width */
+    /* Divider goes full width */
     .divider {
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
-      width: 100vw;           /* full viewport width */
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+      width: 100%;  /* full width of screen */
     }
 
     /* Mobile adjustments */
@@ -77,11 +75,14 @@
         padding-right: 1rem;
       }
 
-      /* MEL logo on mobile */
       #overlayText2 {
         position: absolute;
         top: 1rem;
         left: 1rem;
+      }
+
+      .product-card {
+        padding-right: 0; /* no extra right padding on mobile */
       }
     }
   </style>
@@ -102,10 +103,9 @@
       <div class="divider"></div>
     </div>
 
-    <!-- Additional product cards can go here -->
+    <!-- Additional product cards go here -->
   </div>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -114,7 +114,9 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>&copy; MEL Furniture LLC</div>
+      <div>
+        &copy; MEL Furniture LLC
+      </div>
     </div>
   </footer>
 
