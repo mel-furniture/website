@@ -5,8 +5,8 @@ html, body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background-color: #fff;
   font-family: sans-serif; /* consistent base font */
+  background-color: #fff;
 }
 
 /* ===== MEL LOGO TOP LEFT ===== */
@@ -35,13 +35,13 @@ footer {
 footer .footer-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 footer .footer-links {
   font-family: sans-serif;
-  font-size: 1rem; /* smaller to match Information page */
+  font-size: 1.125rem; /* match Information page */
   display: flex;
   flex-wrap: wrap;
   gap: 0;
@@ -64,7 +64,7 @@ footer .footer-links a:hover {
 
 footer .footer-links + div {
   font-family: sans-serif;
-  font-size: 1rem; /* match Information page */
+  font-size: 1.125rem; /* match Information page */
   color: #bfbdbd;
   margin-top: 0;
   white-space: nowrap;
