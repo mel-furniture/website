@@ -19,7 +19,7 @@ html, body {
   left: 2rem;
   color: #bfbdbd;
   font-family: serif;
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* match Information page */
   font-weight: bold;
   letter-spacing: 0.075em;
   z-index: 10;
@@ -46,7 +46,7 @@ footer .footer-container {
 
 footer .footer-links {
   font-family: sans-serif;
-  font-size: 0.875rem; /* smaller than body for perfect match */
+  font-size: 1.125rem; /* match Information page */
   line-height: 1.35;
   display: flex;
   flex-wrap: wrap;
@@ -73,7 +73,7 @@ footer .footer-links a:hover {
 
 footer .footer-links + div {
   font-family: sans-serif;
-  font-size: 0.875rem; /* matches links */
+  font-size: 1.125rem; /* match Information page */
   line-height: 1.35;
   color: #bfbdbd;
   margin-top: 0;
