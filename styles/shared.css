@@ -76,6 +76,15 @@ footer .footer-links + div {
   margin-top: 0;
 }
 
+/* ===== DIVIDER ===== */
+.divider {
+  position: relative;
+  left: 0;
+  width: 100vw;
+  border-bottom: 1px solid #dedede;
+  margin: 1.25em 0;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   #overlayText2 {
@@ -102,5 +111,19 @@ footer .footer-links + div {
 
   footer .footer-links + div {
     margin-top: 0;                /* consistent spacing with desktop */
+  }
+
+  /* Divider offsets for mobile padding */
+  .divider {
+    margin-left: calc(-1 * 1rem);
+    margin-right: calc(-1 * 1rem);
+  }
+}
+
+/* ===== DESKTOP DIVIDER FIX ===== */
+@media (min-width: 769px) {
+  .divider {
+    margin-left: calc(-1 * 2rem); /* offset container padding on desktop */
+    margin-right: calc(-1 * 2rem);
   }
 }
