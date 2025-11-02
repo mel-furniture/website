@@ -92,6 +92,7 @@ footer .footer-links + div {
   footer .footer-links {
     width: auto; /* prevent stretching */
     margin-bottom: 0.5rem; /* spacing like Information page */
+    gap: 0.5rem; /* small gap to prevent crowding on very narrow screens */
   }
 
   footer .footer-links a {
@@ -102,5 +103,53 @@ footer .footer-links + div {
 
   footer .footer-links + div {
     margin-top: 0.5rem; /* spacing like Information page */
+  }
+}
+
+/* ===== IMAGE PAGE FALLBACK ===== */
+#image {
+  position: relative;
+  width: 100vw;
+  height: 100svh; /* preferred for mobile UI */
+  overflow: hidden;
+  flex-shrink: 0;
+  height: 100vh; /* fallback for older browsers */
+}
+
+#image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+  -webkit-user-drag: none;
+  height: 100vh; /* fallback */
+}
+
+/* ===== OVERLAY EMAIL ===== */
+#overlayText {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  z-index: 10;
+  white-space: normal;
+  max-width: 90vw; /* prevent overflow on small screens */
+}
+
+#overlayText a {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #overlayText {
+    bottom: 1rem;
+    left: 1rem;
   }
 }
