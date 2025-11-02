@@ -9,16 +9,18 @@
   <link rel="stylesheet" href="styles/shared.css" />
 
   <style>
-    /* ===== Page-specific Downloads styles ===== */
+    /* Page-specific styles for Downloads page */
 
+    /* Main content wrapper */
     .content {
       flex: 1;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
-      max-width: 960px;
+      max-width: 960px; /* keeps content readable on large screens */
       margin: 0;
     }
 
+    /* Product section */
     .product-card {
       color: #bbb;
       font-size: 1.125rem;
@@ -58,12 +60,13 @@
       text-decoration: none;
     }
 
-    /* Divider line goes full width */
+    /* Divider line goes full viewport width */
     .divider {
+      width: 100vw;
       border-bottom: 1px solid #dedede;
       margin: 1.25em 0;
-      width: calc(100% + 4rem); /* container padding left + right = 2rem + 2rem */
-      margin-left: -2rem;       /* offset container padding */
+      position: relative;
+      left: 0;
     }
 
     /* Mobile adjustments */
@@ -73,16 +76,18 @@
         padding-right: 1rem;
       }
 
-      .divider {
-        width: calc(100% + 2rem); /* mobile padding: 1rem + 1rem */
-        margin-left: -1rem;
+      /* MEL logo on mobile */
+      #overlayText2 {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- MEL logo (handled by shared.css) -->
+  <!-- MEL logo -->
   <div id="overlayText2">MEL</div>
 
   <div class="content">
@@ -96,7 +101,7 @@
       <div class="divider"></div>
     </div>
 
-    <!-- Add more product cards here -->
+    <!-- Additional product cards can go here -->
   </div>
 
   <!-- Footer (handled by shared.css) -->
