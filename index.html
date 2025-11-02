@@ -8,16 +8,15 @@
   <!-- LINK SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
 
+  <!-- Page-specific styles -->
   <style>
-    /* Page-specific styles for the image page */
-
     /* Image container */
     #image {
       position: relative;
       width: 100vw;
       height: 100svh;
       overflow: hidden;
-      flex-shrink: 0
+      flex-shrink: 0;
     }
 
     #image img {
@@ -49,7 +48,7 @@
       text-decoration: underline;
     }
 
-    /* Mobile adjustments for overlayText only */
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       #overlayText {
         bottom: 1rem;
@@ -60,7 +59,7 @@
 </head>
 <body>
 
-  <!-- Top-left MEL logo is handled in shared.css -->
+  <!-- MEL logo -->
   <div id="overlayText2">MEL</div>
 
   <!-- Main image and overlay email -->
@@ -72,7 +71,7 @@
     </div>
   </div>
 
-  <!-- Footer is handled in shared.css -->
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
