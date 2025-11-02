@@ -73,7 +73,7 @@ footer .footer-links + div {
   font-family: sans-serif;
   font-size: 1.125rem; /* matches Information page */
   color: #bfbdbd;
-  margin-top: 0; /* matches Information page */
+  margin-top: 0; /* desktop correct */
 }
 
 /* ===== MOBILE ===== */
@@ -91,17 +91,17 @@ footer .footer-links + div {
 
   footer .footer-links {
     width: auto; /* prevent stretching */
-    margin-bottom: 0; /* reset to match Information page */
-    gap: 0; /* remove extra spacing */
+    margin-bottom: 0.5rem; /* spacing like correct version */
+    gap: 0; /* no extra spacing */
   }
 
   footer .footer-links a {
     margin-left: 0;
     margin-right: 1rem;
-    margin-bottom: 0; /* reset to match Information page */
+    margin-bottom: 0.5rem; /* spacing like correct version */
   }
 
   footer .footer-links + div {
-    margin-top: 0; /* reset to match Information page */
+    margin-top: 0.75rem; /* small spacing so copyright isn’t too tight or too loose */
   }
 }
