@@ -1,0 +1,106 @@
+/* ===== RESET ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  color: #bfbdbd;
+  line-height: 1.35;
+}
+
+/* ===== MEL LOGO TOP LEFT ===== */
+#overlayText2 {
+  position: fixed; /* fixed on desktop */
+  top: 2rem;
+  left: 2rem;
+  color: #ffffff;
+  font-family: serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: 0.075em;
+  z-index: 10;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #ebebeb;
+  padding: 30px 20px;
+  text-align: left;
+  flex-shrink: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center; /* vertical centering on desktop */
+}
+
+footer .footer-links {
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+footer .footer-links a {
+  color: #bfbdbd;
+  text-decoration: none;
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+footer .footer-links a:first-child {
+  margin-left: 0;
+}
+
+footer .footer-links a:hover {
+  color: #fff;
+}
+
+footer .footer-links + div {
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  color: #bfbdbd;
+  margin-top: 0;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  #overlayText2 {
+    position: absolute; /* scrolls with content */
+    top: 1rem;
+    left: 1rem;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .footer-links {
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  footer .footer-links a {
+    margin-left: 0;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  footer .footer-links + div {
+    margin-top: 0;
+  }
+}
