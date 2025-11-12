@@ -34,6 +34,18 @@ body {
   text-decoration: none;
 }
 
+/* ===== MEL LINK COLOR ===== */
+
+/* Default gray (already set, just reaffirming for clarity) */
+#overlayText2 a {
+  color: #bdbdbd;
+}
+
+/* White only on the homepage */
+body.home #overlayText2 a {
+  color: #ffffff;
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #ebebeb;
