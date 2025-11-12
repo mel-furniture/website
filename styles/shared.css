@@ -29,6 +29,11 @@ body {
   z-index: 10;
 }
 
+#overlayText2 a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #ebebeb;
