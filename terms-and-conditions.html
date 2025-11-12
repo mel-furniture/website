@@ -4,41 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms and Conditions | MEL</title>
+
+  <!-- SHARED CSS -->
+  <link rel="stylesheet" href="styles/shared.css" />
+
+  <!-- Page-specific styles -->
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      color: #bfbdbd;
-      line-height: 1.35;
-      background-color: #fff;
-    }
-
-    /* Top-left MEL text */
-    #overlayText2 {
-      position: fixed;
-      top: 2rem;
-      left: 2rem;
-      color: #bfbdbd;
-      font-family: serif;
-      font-size: 1.125rem;
-      font-weight: bold;
-      letter-spacing: 0.075em;
-      z-index: 10;
-    }
-
     /* Main container */
     .container {
       flex: 1;
       max-width: 960px;
-      margin: 0 auto;
+      margin: 0 auto; /* center on large screens */
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
     }
@@ -93,104 +69,33 @@
       margin-bottom: 0.5em;
     }
 
-    /* Link styling in content */
+    /* Links in content */
     .container a {
       color: #bfbdbd;
       text-decoration: underline;
     }
 
-    /* Footer matching Information page */
-    footer {
-      background: #ebebeb;
-      padding: 30px 20px;
-      text-align: left;
-      flex-shrink: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    footer .footer-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    footer .footer-links {
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-    }
-
-    footer .footer-links a {
-      color: #bfbdbd;
-      text-decoration: none;
-      margin-left: 15px;
-      white-space: nowrap;
-    }
-
-    footer .footer-links a:first-child {
-      margin-left: 0;
-    }
-
-    footer .footer-links a:hover {
-      color: #fff;
-    }
-
-    footer .footer-links + div {
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      color: #bfbdbd;
-      margin-top: 0;
-    }
-
-    /* Mobile adjustments */
+    /* Mobile adjustments for page-specific layout */
     @media (max-width: 768px) {
-      .two-columns {
-        column-count: 1;
-        column-gap: 0;
-      }
-
       .container {
         padding-left: 1rem;
         padding-right: 1rem;
       }
 
-      #overlayText2 {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-      }
-
-      footer .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      footer .footer-links {
-        margin-bottom: 0.5rem;
-        width: 100%;
-      }
-
-      footer .footer-links a {
-        margin-left: 0;
-        margin-right: 1rem;
-        margin-bottom: 0.5rem;
-      }
-
-      footer .footer-links + div {
-        margin-top: 0.5rem;
+      .two-columns {
+        column-count: 1;
+        column-gap: 0;
       }
     }
   </style>
 </head>
 <body>
+  <!-- MEL logo -->
   <div id="overlayText2">MEL</div>
 
   <div class="container">
     <h1>Terms and Conditions</h1>
+
     <div class="two-columns">
       <p>All orders placed with MEL Studio are subject to the following terms and conditions. By purchasing from us, you agree to these terms.</p>
 
@@ -238,6 +143,7 @@
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -246,9 +152,7 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>
-        &copy; MEL Furniture LLC
-      </div>
+      <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
 </body>

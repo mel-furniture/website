@@ -4,46 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Information | MEL</title>
+
+  <!-- SHARED CSS -->
+  <link rel="stylesheet" href="styles/shared.css" />
+
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      color: #bfbdbd;
-      line-height: 1.35;
-      background-color: #fff;
-    }
-
-    /* Top-left MEL text */
-    #overlayText2 {
-      position: fixed;
-      top: 2rem;
-      left: 2rem;
-      color: #bfbdbd;
-      font-family: serif;
-      font-size: 1.125rem;
-      font-weight: bold;
-      letter-spacing: 0.075em;
-      z-index: 10;
-    }
-
-    /* Main container */
+    /* Page-specific styles for Information page */
     .container {
       flex: 1;
       max-width: 960px;
-      margin: 0 auto;
+      margin: 0 auto; /* keeps it centered */
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
     }
 
-    /* Page title */
     .container h1 {
       font-size: 2rem;
       font-weight: 700;
@@ -54,7 +28,6 @@
       line-height: 1.2;
     }
 
-    /* Section headers */
     .container h2 {
       font-size: 1.125rem;
       font-weight: bold;
@@ -66,13 +39,11 @@
       break-inside: avoid;
     }
 
-    /* Two-column layout */
     .two-columns {
       column-count: 2;
       column-gap: 2.5rem;
     }
 
-    /* Paragraphs and links */
     .container p {
       margin-top: 0;
       margin-bottom: 1em;
@@ -83,89 +54,15 @@
       text-decoration: underline;
     }
 
-    /* Footer */
-    footer {
-      background: #ebebeb;
-      padding: 30px 20px;
-      text-align: left;
-      flex-shrink: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    footer .footer-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    footer .footer-links {
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-    }
-
-    footer .footer-links a {
-      color: #bfbdbd;
-      text-decoration: none;
-      margin-left: 15px;
-      white-space: nowrap;
-    }
-
-    footer .footer-links a:first-child {
-      margin-left: 0;
-    }
-
-    footer .footer-links a:hover {
-      color: #fff;
-    }
-
-    footer .footer-links + div {
-      font-family: sans-serif;
-      font-size: 1.125rem;
-      color: #bfbdbd;
-      margin-top: 0;
-    }
-
-    /* Mobile adjustments */
     @media (max-width: 768px) {
-      .two-columns {
-        column-count: 1;
-        column-gap: 0;
-      }
-
       .container {
         padding-left: 1rem;
         padding-right: 1rem;
       }
 
-      #overlayText2 {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-      }
-
-      footer .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      footer .footer-links {
-        margin-bottom: 0.5rem;
-        width: 100%;
-      }
-
-      footer .footer-links a {
-        margin-left: 0;
-        margin-right: 1rem;
-        margin-bottom: 0.5rem;
-      }
-
-      footer .footer-links + div {
-        margin-top: 0.5rem;
+      .two-columns {
+        column-count: 1;
+        column-gap: 0;
       }
     }
   </style>
@@ -175,6 +72,7 @@
 
   <div class="container">
     <h1>Information</h1>
+
     <div class="two-columns">
       <p>
         MEL is a design studio founded in 2025 by Michael Legan. With an emphasis on well-made furniture available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation, and that exist where standardized industrial processes overlap with singular object design.
@@ -183,7 +81,15 @@
       <h2>Professionals & Trade Discount</h2>
       <p>
         Interior designers, architects, and other professionals may be eligible for various trade discounts. For details, CAD files, lead times, and more, please send a message to
-        <a href="mailto:office@mel.furniture">office@mel.furniture</a>.
+        <a href="mailto:office@mel.furniture?
+subject=Purchase%20Information%20Request&
+body=%0A
+Thank%20you%20for%20visiting!%20MEL%20Radius%20Table%20is%20now%20in%20stock%20and%20available%20for%20purchase%20directly%20through%20MEL.%20Retail%20price%20is%20%24600%20USD%20(plus%20tax%20for%20Minnesota%20residents).%20We%20are%20happy%20to%20include%20free%20shipping%20within%20the%20United%20States,%20excluding%20Alaska%20and%20Hawaii.%0A%0A
+Please%20complete%20the%20information%20below,%20and%20we%20will%20email%20you%20an%20invoice%20containing%20a%20secure%20payment%20link%20and%20applicable%20shipping%20details.%0A%0A%0A
+Product%20Inquiry:%20_%20_%20_%20_%20_%20_%20_%20_%0A%0A
+Color%20/%20Finish:%20_%20_%20_%20_%20_%20_%20_%20_%0A%0A
+Shipping%20Address%20(if%20applicable):%20_%20_%20_%20_%20_%20_%20_%20_%0A%0A
+Memo:%20_%20_%20_%20_%20_%20_%20_%20_">office@mel.furniture</a>.
       </p>
     </div>
   </div>
@@ -196,9 +102,7 @@
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
       </div>
-      <div>
-        &copy; MEL Furniture LLC
-      </div>
+      <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
 </body>

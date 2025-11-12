@@ -4,22 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEL Furniture</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #dedede;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
 
+  <!-- SHARED CSS -->
+  <link rel="stylesheet" href="styles/shared.css" />
+
+  <style>
+    /* ===== PAGE-SPECIFIC STYLES ===== */
+
+    /* Full-screen image container */
     #image {
       position: relative;
       width: 100vw;
       height: 100svh;
-      background-color: #dedede;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     #image img {
@@ -34,45 +32,43 @@
       -webkit-user-drag: none;
     }
 
+    /* Bottom-left overlay email */
     #overlayText {
-  position: absolute;
-  bottom: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      color: white;
+      font-family: sans-serif;
+      font-size: 1.125rem;
+      z-index: 10;
+      white-space: normal;
+    }
 
     #overlayText a {
       color: white;
       text-decoration: underline;
     }
 
-    #overlayText2 {
-  position: absolute;
-  top: 1.25em;
-  left: 1.25em;
-  color: white;
-  font-family: serif;
-  font-size: 1.125rem;
-  font-weight: bold;
-  letter-spacing: 0.075em; 
-  z-index: 10;
-  white-space: normal;
-  box-sizing: border-box;
-}
-
+    /* Mobile adjustments for overlayText only */
+    @media (max-width: 768px) {
+      #overlayText {
+        bottom: 1rem;
+        left: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- MEL logo (from shared.css) -->
+  <div id="overlayText2">MEL</div>
+
+  <!-- Fullscreen slideshow -->
   <div id="image">
     <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
-
     <div id="overlayText">
-  Inquiries and purchase information: <a href="mailto:office@mel.furniture?
+      Inquiries and purchase information: 
+      <a href="mailto:office@mel.furniture?
 subject=Purchase%20Information%20Request&
 body=%0A
 Thank%20you%20for%20visiting!%20MEL%20Radius%20Table%20is%20now%20in%20stock%20and%20available%20for%20purchase%20directly%20through%20MEL.%20Retail%20price%20is%20%24600%20USD%20(plus%20tax%20for%20Minnesota%20residents).%0A%0A
@@ -81,56 +77,58 @@ Product%20Inquiry:%20_ _ _ _ _ _ _ _%0A%0A
 Color%20/%20Finish:%20_ _ _ _ _ _ _ _%0A%0A
 Shipping%20Address:%20_ _ _ _ _ _ _ _%0A%0A
 Memo:%20_ _ _ _ _ _ _ _">office@mel.furniture</a>
-  </div>
-
-    <div id="overlayText2">
-      MEL
     </div>
   </div>
 
-   <script>
-  const images = [
-    { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
-    { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
-  ];
+  <!-- Footer (from shared.css) -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/information.html">Information</a>
+        <a href="/terms-and-conditions.html">Terms & Conditions</a>
+        <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
+        <a href="/downloads.html">Downloads</a>
+      </div>
+      <div>&copy; MEL Furniture LLC</div>
+    </div>
+  </footer>
 
-  let index = 0;
-  const mainImage = document.getElementById('mainImage');
+  <!-- Slideshow JS -->
+  <script>
+    const images = [
+      { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
+      { src: 'images/photo2.jpg?v=9', alt: "Close-up of MEL's Radius Table in brown on its side" }
+    ];
 
-  function updateImage() {
-    mainImage.src = images[index].src;
-    mainImage.alt = images[index].alt;
-  }
+    let index = 0;
+    const mainImage = document.getElementById('mainImage');
 
-  function nextImage() {
-    index = (index + 1) % images.length;
+    function updateImage() {
+      mainImage.src = images[index].src;
+      mainImage.alt = images[index].alt;
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      updateImage();
+    }
+
+    // Start slideshow
+    let slideshowInterval = setInterval(nextImage, 5000);
+    let idleTimeout = null;
+
+    document.body.addEventListener('click', () => {
+      nextImage();
+      clearInterval(slideshowInterval);
+      slideshowInterval = null;
+      clearTimeout(idleTimeout);
+      idleTimeout = setTimeout(() => {
+        slideshowInterval = setInterval(nextImage, 5000);
+      }, 15000);
+    });
+
     updateImage();
-  }
+  </script>
 
-  // Start the slideshow
-  let slideshowInterval = setInterval(nextImage, 5000);
-  let idleTimeout = null;
-
-  document.body.addEventListener('click', () => {
-    // Advance immediately on click
-    nextImage();
-
-    // Stop the slideshow
-    clearInterval(slideshowInterval);
-    slideshowInterval = null;
-
-    // Clear any previous idle timer
-    clearTimeout(idleTimeout);
-
-    // Resume slideshow after 20 seconds of no interaction
-    idleTimeout = setTimeout(() => {
-      slideshowInterval = setInterval(nextImage, 5000);
-    }, 15000);
-  });
-
-  // Initialize with the first image
-  updateImage();
-</script>
-  
 </body>
 </html>
