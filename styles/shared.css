@@ -16,12 +16,17 @@ body {
   line-height: 1.35;
 }
 
+/* ===== HEADINGS ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+}
+
 /* ===== MEL LOGO TOP LEFT ===== */
 #overlayText2 {
   position: fixed; /* fixed on desktop */
   top: 2rem;
   left: 2rem;
-  color: #000; /* MEL default black */
+  color: #000;
   font-family: serif;
   font-size: 1.125rem;
   font-weight: bold;
@@ -30,16 +35,16 @@ body {
 }
 
 #overlayText2 a {
-  color: #000; /* default black */
+  color: #000; /* default black for all pages */
   text-decoration: none;
 }
 
 /* White MEL on homepage only */
 body.home #overlayText2 a {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
-/* Hover for MEL link */
+/* Hover for MEL link (all pages) */
 #overlayText2 a:hover {
   color: #808080;
 }
@@ -71,7 +76,7 @@ footer .footer-links {
 }
 
 footer .footer-links a {
-  color: #000; /* default black */
+  color: #000;
   text-decoration: none;
   margin-left: 15px;
   white-space: nowrap;
@@ -119,14 +124,5 @@ footer .footer-links + div {
 
   footer .footer-links + div {
     margin-top: 0;
-  }
-
-  /* Ensure hover works on mobile */
-  #overlayText2 a:hover {
-    color: #808080;
-  }
-
-  footer .footer-links a:hover {
-    color: #808080;
   }
 }
