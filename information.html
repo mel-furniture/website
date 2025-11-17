@@ -89,7 +89,7 @@
       <h2>Professionals & Trade Discount</h2>
       <p>
         Interior designers, architects, and other professionals may be eligible for various trade discounts. For details, CAD files, lead times, and more, please send a message to
-        <a href="mailto:office@mel.furniture">office@mel.furniture</a>.
+        <span id="email"></span>.
       </p>
     </div>
   </div>
@@ -105,5 +105,17 @@
       <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
+
+  <!-- Email obfuscation script (ONLY CHANGE MADE) -->
+  <script>
+    const user = "office";
+    const domain = "mel.furniture";
+    const email = user + "@" + domain;
+    const link = document.createElement("a");
+    link.href = "mailto:" + email;
+    link.textContent = email;
+    document.getElementById("email").appendChild(link);
+  </script>
+
 </body>
 </html>
