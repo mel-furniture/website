@@ -98,7 +98,7 @@
   
   <!-- MEL logo -->
   <div id="overlayText2">
-  <a href="https://www.mel.furniture">MEL</a>
+    <a href="https://www.mel.furniture">MEL</a>
   </div>
 
   <div class="container">
@@ -110,11 +110,11 @@
       <h2>Orders</h2>
       <p>Orders are not processed directly through our website. Your order will either be placed via email exchange or by phone. Once your order is placed, you will receive an email confirmation, and again when your order is dispatched.</p>
       <p>Orders are typically processed within 5 business days and shipped with tracking within the contiguous 48 states of the U.S. On some occasions, it may take longer and we apologize for any inconvenience caused. Delivery dates are estimates only and MEL is not liable for delays outside our control.</p>
-      <p>If you would like to place an order from outside the U.S., please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a> and we will do our best to help you.</p>
-      <p>If your order is missing, or shows as successfully delivered but you have not received the goods, please contact <a href="mailto:office@mel.furniture">office@mel.furniture</a>. Please note that MEL does not accept responsibility for orders that show as successfully delivered.</p>
+      <p>If you would like to place an order from outside the U.S., please contact <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a> and we will do our best to help you.</p>
+      <p>If your order is missing, or shows as successfully delivered but you have not received the goods, please contact <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a>. Please note that MEL does not accept responsibility for orders that show as successfully delivered.</p>
 
       <h2>Returns & Refunds</h2>
-      <p>If you are unhappy with your product, please notify us within 3 days of receiving your order. In the event of receiving damaged or faulty goods, please contact us at <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</p>
+      <p>If you are unhappy with your product, please notify us within 3 days of receiving your order. In the event of receiving damaged or faulty goods, please contact us at <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a>.</p>
       <p>You will receive a refund if:<br>
       – Goods are returned to us within 14 days of receipt of delivery.<br>
       – Goods are returned in saleable condition with their original packaging.</p>
@@ -127,7 +127,7 @@
       <ul>
         <li>If MEL deems a product defective in materials or workmanship, we will repair or replace the product at no cost to you.</li>
         <li>Original purchasers must notify MEL in writing of any claims within the warranty period.</li>
-        <li>Claims should be submitted by email to <a href="mailto:office@mel.furniture">office@mel.furniture</a>.</li>
+        <li>Claims should be submitted by email to <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a>.</li>
       </ul>
       <p>MEL warranties do not apply to:</p>
       <ul>
@@ -163,5 +163,16 @@
       <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
+
+  <!-- Email obfuscation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.email-link').forEach(function(link) {
+        const user = link.getAttribute('data-user');
+        const domain = link.getAttribute('data-domain');
+        link.href = 'mailto:' + user + '@' + domain;
+      });
+    });
+  </script>
 </body>
 </html>

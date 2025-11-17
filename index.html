@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="styles/shared.css" />
 
   <style>
-    /* ===== PAGE-SPECIFIC STYLES ===== */
-
-    /* Full-screen image container */
     #image {
       position: relative;
       width: 100%;
@@ -32,7 +29,6 @@
       -webkit-user-drag: none;
     }
 
-    /* Bottom-left overlay email */
     #overlayText {
       position: absolute;
       bottom: 2rem;
@@ -49,7 +45,6 @@
       text-decoration: underline;
     }
 
-    /* Mobile adjustments for overlayText only */
     @media (max-width: 768px) {
       #overlayText {
         bottom: 1rem;
@@ -60,29 +55,24 @@
 </head>
 <body class="home">
 
-  <!-- MEL logo (from shared.css) -->
   <div id="overlayText2">
-  <a href="https://www.mel.furniture">MEL</a>
-</div>
+    <a href="https://www.mel.furniture">MEL</a>
+  </div>
 
-  <!-- Fullscreen slideshow -->
   <div id="image">
     <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
     <div id="overlayText">
       Inquiries and purchase information: 
-      <a href="mailto:office@mel.furniture?
-subject=Purchase%20Information%20Request&
-body=%0A
-Thank%20you%20for%20visiting!%20MEL%20Radius%20Table%20is%20now%20in%20stock%20and%20available%20for%20purchase%20directly%20through%20MEL.%20Retail%20price%20is%20%24600%20USD%20(plus%20tax%20for%20Minnesota%20residents).%0A%0A
-Please%20complete%20the%20information%20below,%20and%20we%20will%20email%20you%20back%20an%20invoice%20containing%20a%20secure%20payment%20link%20and%20shipping%20details%20(if%20applicable).%0A%0A
-Product%20Inquiry:%20_ _ _ _ _ _ _ _%0A%0A
-Color%20/%20Finish:%20_ _ _ _ _ _ _ _%0A%0A
-Shipping%20Address:%20_ _ _ _ _ _ _ _%0A%0A
-Memo:%20_ _ _ _ _ _ _ _">office@mel.furniture</a>
+      <a href="#" 
+         class="email-link" 
+         data-user="office" 
+         data-domain="mel.furniture"
+         data-params="subject=Purchase%20Information%20Request&body=%0AThank%20you%20for%20visiting!%20MEL%20Radius%20Table%20is%20now%20in%20stock%20and%20available%20for%20purchase%20directly%20through%20MEL.%20Retail%20price%20is%20%24600%20USD%20(plus%20tax%20for%20Minnesota%20residents).%0A%0APlease%20complete%20the%20information%20below,%20and%20we%20will%20email%20you%20back%20an%20invoice%20containing%20a%20secure%20payment%20link%20and%20shipping%20details%20(if%20applicable).%0A%0AProduct%20Inquiry:%20_ _ _ _ _%0AColor%20/%20Finish:%20_ _ _ _ _%0AShipping%20Address:%20_ _ _ _ _%0AMemo:%20_ _ _ _ _">
+        office@mel.furniture
+      </a>
     </div>
   </div>
 
-  <!-- Footer (from shared.css) -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -95,7 +85,7 @@ Memo:%20_ _ _ _ _ _ _ _">office@mel.furniture</a>
     </div>
   </footer>
 
-  <!-- Slideshow JS -->
+  <!-- Slideshow -->
   <script>
     const images = [
       { src: 'images/photo1.jpg?v=9', alt: "View of MEL's Radius Table in white outside amongst long grass" },
@@ -115,7 +105,6 @@ Memo:%20_ _ _ _ _ _ _ _">office@mel.furniture</a>
       updateImage();
     }
 
-    // Start slideshow
     let slideshowInterval = setInterval(nextImage, 5000);
     let idleTimeout = null;
 
@@ -130,6 +119,18 @@ Memo:%20_ _ _ _ _ _ _ _">office@mel.furniture</a>
     });
 
     updateImage();
+  </script>
+
+  <!-- Email obfuscation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.email-link').forEach(function(link) {
+        const user = link.dataset.user;
+        const domain = link.dataset.domain;
+        const params = link.dataset.params ? '?' + link.dataset.params : '';
+        link.href = 'mailto:' + user + '@' + domain + params;
+      });
+    });
   </script>
 
 </body>

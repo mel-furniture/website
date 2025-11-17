@@ -9,11 +9,10 @@
   <link rel="stylesheet" href="styles/shared.css" />
 
   <style>
-    /* Page-specific styles for Information page */
     .container {
       flex: 1;
       max-width: 960px;
-      margin: 0 auto; /* keeps it centered */
+      margin: 0 auto;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
     }
@@ -54,7 +53,6 @@
       text-decoration: underline;
     }
 
-    /* Hover effect for links */
     .container a:hover {
       color: #808080;
     }
@@ -75,7 +73,7 @@
 <body>
   
   <div id="overlayText2">
-  <a href="https://www.mel.furniture">MEL</a>
+    <a href="https://www.mel.furniture">MEL</a>
   </div>
 
   <div class="container">
@@ -89,7 +87,7 @@
       <h2>Professionals & Trade Discount</h2>
       <p>
         Interior designers, architects, and other professionals may be eligible for various trade discounts. For details, CAD files, lead times, and more, please send a message to
-        <a href="mailto:office@mel.furniture">office@mel.furniture</a>.
+        <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a>.
       </p>
     </div>
   </div>
@@ -105,5 +103,16 @@
       <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
+
+  <!-- Email obfuscation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.email-link').forEach(function(link) {
+        const user = link.dataset.user;
+        const domain = link.dataset.domain;
+        link.href = 'mailto:' + user + '@' + domain;
+      });
+    });
+  </script>
 </body>
 </html>
