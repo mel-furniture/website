@@ -14,12 +14,11 @@
     .container {
       flex: 1;
       max-width: 960px;
-      margin: 0 auto; /* center on large screens */
+      margin: 0 auto;
       padding: 4rem 2rem 2rem;
       box-sizing: border-box;
     }
 
-    /* Page title */
     .container h1 {
       font-size: 2rem;
       font-weight: 700;
@@ -30,7 +29,6 @@
       line-height: 1.2;
     }
 
-    /* Section headers */
     .container h2 {
       font-size: 1.125rem;
       font-weight: bold;
@@ -46,13 +44,11 @@
       break-before: column;
     }
 
-    /* Two-column layout */
     .two-columns {
       column-count: 2;
       column-gap: 2.5rem;
     }
 
-    /* Paragraphs and lists */
     .container p,
     .container ul,
     .container ol {
@@ -69,18 +65,15 @@
       margin-bottom: 0.5em;
     }
 
-    /* Links in content */
     .container a {
       color: #000;
       text-decoration: underline;
     }
-    
-    /* Hover effect for links */
+
     .container a:hover {
       color: #808080;
     }
 
-    /* Mobile adjustments for page-specific layout */
     @media (max-width: 768px) {
       .container {
         padding-left: 1rem;
@@ -95,7 +88,7 @@
   </style>
 </head>
 <body>
-  
+
   <!-- MEL logo -->
   <div id="overlayText2">
     <a href="https://www.mel.furniture">MEL</a>
@@ -109,12 +102,12 @@
 
       <h2>Orders</h2>
       <p>Orders are not processed directly through our website. Your order will either be placed via email exchange or by phone. Once your order is placed, you will receive an email confirmation, and again when your order is dispatched.</p>
-      <p>Orders are typically processed within 5 business days and shipped with tracking within the contiguous 48 states of the U.S. On some occasions, it may take longer and we apologize for any inconvenience caused. Delivery dates are estimates only and MEL is not liable for delays outside our control.</p>
-      <p>If you would like to place an order from outside the U.S., please contact <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a> and we will do our best to help you.</p>
-      <p>If your order is missing, or shows as successfully delivered but you have not received the goods, please contact <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a>. Please note that MEL does not accept responsibility for orders that show as successfully delivered.</p>
+      <p>Orders are typically processed within 5 business days and shipped with tracking within the contiguous 48 states of the U.S. On some occasions, it may take longer. Delivery dates are estimates only and MEL is not liable for delays outside our control.</p>
+      <p>If you would like to place an order from outside the U.S., please contact <a href="#" class="email-link"></a> and we will do our best to help you.</p>
+      <p>If your order is missing, or shows as successfully delivered but you have not received the goods, please contact <a href="#" class="email-link"></a>. Please note that MEL does not accept responsibility for orders that show as successfully delivered.</p>
 
       <h2>Returns & Refunds</h2>
-      <p>If you are unhappy with your product, please notify us within 3 days of receiving your order. In the event of receiving damaged or faulty goods, please contact us at <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a>.</p>
+      <p>If you are unhappy with your product, please notify us within 3 days of receiving your order. In the event of receiving damaged or faulty goods, please contact us at <a href="#" class="email-link"></a>.</p>
       <p>You will receive a refund if:<br>
       – Goods are returned to us within 14 days of receipt of delivery.<br>
       – Goods are returned in saleable condition with their original packaging.</p>
@@ -122,26 +115,26 @@
       <p>Please note, we cannot refund postage costs and the cost of returned goods is at your expense. Please make sure the items are securely packed, as the parcel is your responsibility until the goods reach us. We are not responsible for goods being lost or damaged in transit.</p>
 
       <h2 class="force-column">Warranty</h2>
-      <p>MEL Studio provides a limited warranty against defects in materials and workmanship for a period of 1 year from the date of delivery. There are no warranties that extend beyond MEL’s 1-year warranty.</p>
-      <p>Before submitting a claim, please carefully review the terms and conditions below:</p>
+      <p>MEL Studio provides a limited warranty against defects in materials and workmanship for a period of 1 year from the date of delivery.</p>
+
       <ul>
         <li>If MEL deems a product defective in materials or workmanship, we will repair or replace the product at no cost to you.</li>
         <li>Original purchasers must notify MEL in writing of any claims within the warranty period.</li>
-        <li>Claims should be submitted by email to <a href="#" class="email-link" data-user="office" data-domain="mel.furniture">office@mel.furniture</a>.</li>
+        <li>Claims should be submitted by email to <a href="#" class="email-link"></a>.</li>
       </ul>
+
       <p>MEL warranties do not apply to:</p>
       <ul>
         <li>Normal wear and tear</li>
         <li>Customer’s own or third-party materials</li>
         <li>Effects of extreme temperature or unusual environmental conditions</li>
         <li>Changes in surface finishes due to aging or light exposure</li>
-        <li>Furniture intended for outdoor use exposed to temperatures below 32°F</li>
-        <li>Misuse, inadequate maintenance, or mistreatment of products</li>
+        <li>Outdoor use below 32°F</li>
+        <li>Misuse, inadequate maintenance, or mistreatment</li>
       </ul>
-      <p>MEL is not responsible for direct or indirect damage resulting from misuse, mistreatment, or insufficient care.</p>
 
       <h2>Privacy Policy</h2>
-      <p>MEL respects your privacy rights. When you purchase items from our shop, you may be asked to provide contact details and payment information. This information is used solely to process and fulfill your order, communicate with you about your purchase, and manage customer service inquiries. MEL does not sell, rent, or trade your personal information to third parties. We take appropriate measures to keep your data secure and confidential.</p>
+      <p>MEL respects your privacy rights. When you purchase items from our shop, you may be asked to provide contact details and payment information. This information is used solely to process and fulfill your order, communicate with you about your purchase, and manage customer service inquiries. We do not sell or share your information with third parties.</p>
 
       <h2>Governing Law</h2>
       <p>These terms are governed by the laws of the State of Minnesota, USA.</p>
@@ -164,15 +157,19 @@
     </div>
   </footer>
 
-  <!-- Email obfuscation script -->
+  <!-- Unified Email Obfuscation Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.email-link').forEach(function(link) {
-        const user = link.getAttribute('data-user');
-        const domain = link.getAttribute('data-domain');
-        link.href = 'mailto:' + user + '@' + domain;
+      const user = 'office';
+      const domain = 'mel.furniture';
+      const full = user + '@' + domain;
+
+      document.querySelectorAll('.email-link').forEach(link => {
+        link.href = 'mailto:' + full;
+        link.textContent = full;
       });
     });
   </script>
+
 </body>
 </html>
