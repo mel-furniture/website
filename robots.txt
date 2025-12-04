@@ -1,0 +1,8 @@
+# robots.txt for MEL Furniture
+# https://www.mel.furniture/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.mel.furniture/sitemap.xml

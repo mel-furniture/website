@@ -3,10 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download product specifications, care guides, and technical documentation for MEL Furniture products including the Radius Table." />
+  <meta name="keywords" content="MEL Furniture downloads, product specifications, Radius Table specs, furniture care guide, technical documentation" />
+  <meta name="author" content="Michael Legan" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mel.furniture/downloads.html" />
+  <meta property="og:title" content="Downloads | MEL Furniture" />
+  <meta property="og:description" content="Download product specifications, care guides, and technical documentation for MEL Furniture products including the Radius Table." />
+  <meta property="og:image" content="https://www.mel.furniture/images/photo1.jpg" />
+  <meta property="og:site_name" content="MEL Furniture" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.mel.furniture/downloads.html" />
+  <meta name="twitter:title" content="Downloads | MEL Furniture" />
+  <meta name="twitter:description" content="Download product specifications, care guides, and technical documentation for MEL Furniture products including the Radius Table." />
+  <meta name="twitter:image" content="https://www.mel.furniture/images/photo1.jpg" />
+  <meta name="twitter:creator" content="@mel_furniture" />
+
   <title>Downloads | MEL</title>
 
   <!-- SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://www.mel.furniture/#radius-table",
+        "name": "Radius Table",
+        "brand": {
+          "@type": "Brand",
+          "name": "MEL Furniture"
+        },
+        "manufacturer": {
+          "@type": "Organization",
+          "name": "MEL Furniture"
+        },
+        "width": {
+          "@type": "QuantitativeValue",
+          "value": "18.31",
+          "unitCode": "INH"
+        },
+        "depth": {
+          "@type": "QuantitativeValue",
+          "value": "14.09",
+          "unitCode": "INH"
+        },
+        "height": {
+          "@type": "QuantitativeValue",
+          "value": "19.50",
+          "unitCode": "INH"
+        }
+      },
+      {
+        "@type": "DigitalDocument",
+        "name": "Radius Table Product Specification Sheet & Care Guide",
+        "description": "Product specifications and care guide for the MEL Radius Table",
+        "url": "https://www.mel.furniture/assets/mel2025radius_table_spec_sheet_care_guide.pdf",
+        "encodingFormat": "application/pdf",
+        "about": {
+          "@id": "https://www.mel.furniture/#radius-table"
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     /* Page-specific styles for Downloads page */
@@ -80,30 +149,30 @@
   </style>
 </head>
 <body>
-  
-  <div id="overlayText2">
-  <a href="https://www.mel.furniture">MEL</a>
-  </div>
 
-  <div class="content">
-    <div class="product-card">
+  <header id="overlayText2">
+    <a href="https://www.mel.furniture">MEL</a>
+  </header>
+
+  <main class="content">
+    <article class="product-card">
       <div class="product-title">Radius Table</div>
       <div class="product-dimensions">Dimensions: 18.31 in. × 14.09 in. × 19.50 in.</div>
       <div class="product-links">
         <a href="/assets/mel2025radius_table_spec_sheet_care_guide.pdf">Product Specification Sheet</a>
       </div>
       <div class="divider"></div>
-    </div>
-  </div>
+    </article>
+  </main>
 
   <footer>
     <div class="footer-container">
-      <div class="footer-links">
+      <nav class="footer-links">
         <a href="/information.html">Information</a>
         <a href="/terms-and-conditions.html">Terms & Conditions</a>
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
-      </div>
+      </nav>
       <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>

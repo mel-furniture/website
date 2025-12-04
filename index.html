@@ -3,10 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MEL is a design studio founded in 2025 by Michael Legan, creating well-made furniture available to broad audiences. Discover the Radius Table and unique furniture designs." />
+  <meta name="keywords" content="MEL Furniture, designer furniture, Radius Table, modern furniture, Michael Legan, contemporary design, furniture design studio" />
+  <meta name="author" content="Michael Legan" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mel.furniture/" />
+  <meta property="og:title" content="MEL Furniture - Designer Furniture by Michael Legan" />
+  <meta property="og:description" content="MEL is a design studio founded in 2025 by Michael Legan, creating well-made furniture available to broad audiences. Discover the Radius Table and unique furniture designs." />
+  <meta property="og:image" content="https://www.mel.furniture/images/photo1.jpg" />
+  <meta property="og:site_name" content="MEL Furniture" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.mel.furniture/" />
+  <meta name="twitter:title" content="MEL Furniture - Designer Furniture by Michael Legan" />
+  <meta name="twitter:description" content="MEL is a design studio founded in 2025 by Michael Legan, creating well-made furniture available to broad audiences. Discover the Radius Table and unique furniture designs." />
+  <meta name="twitter:image" content="https://www.mel.furniture/images/photo1.jpg" />
+  <meta name="twitter:creator" content="@mel_furniture" />
+
   <title>MEL Furniture</title>
 
   <!-- SHARED CSS -->
   <link rel="stylesheet" href="styles/shared.css" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.mel.furniture/#organization",
+        "name": "MEL Furniture",
+        "legalName": "MEL Furniture LLC",
+        "url": "https://www.mel.furniture",
+        "logo": "https://www.mel.furniture/images/photo1.jpg",
+        "foundingDate": "2025",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://www.mel.furniture/#founder",
+          "name": "Michael Legan",
+          "jobTitle": "Designer and Founder"
+        },
+        "description": "MEL is a design studio founded in 2025 by Michael Legan. With an emphasis on well-made furniture available to broad audiences, MEL focuses on designing environments and objects that excite awareness of space and sensation.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US",
+          "addressRegion": "MN"
+        },
+        "email": "office@mel.furniture",
+        "sameAs": [
+          "https://www.instagram.com/mel_furniture"
+        ]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://www.mel.furniture/#radius-table",
+        "name": "Radius Table",
+        "brand": {
+          "@type": "Brand",
+          "name": "MEL Furniture"
+        },
+        "manufacturer": {
+          "@id": "https://www.mel.furniture/#organization"
+        },
+        "description": "A modern designer table combining standardized industrial processes with singular object design.",
+        "image": [
+          "https://www.mel.furniture/images/photo1.jpg",
+          "https://www.mel.furniture/images/photo2.jpg"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.mel.furniture/",
+          "priceCurrency": "USD",
+          "price": "600.00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://www.mel.furniture/#organization"
+          }
+        },
+        "width": {
+          "@type": "QuantitativeValue",
+          "value": "18.31",
+          "unitCode": "INH"
+        },
+        "depth": {
+          "@type": "QuantitativeValue",
+          "value": "14.09",
+          "unitCode": "INH"
+        },
+        "height": {
+          "@type": "QuantitativeValue",
+          "value": "19.50",
+          "unitCode": "INH"
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     #image {
@@ -55,12 +153,12 @@
 </head>
 <body class="home">
 
-  <div id="overlayText2">
+  <header id="overlayText2">
     <a href="https://www.mel.furniture">MEL</a>
-  </div>
+  </header>
 
-  <div id="image">
-    <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table sitting in long grass" />
+  <main id="image">
+    <img id="mainImage" src="images/photo1.jpg?v=9" alt="View of MEL's Radius Table in white outside amongst long grass" />
     <div id="overlayText">
       Inquiries and purchase information: 
       <a href="#" 
@@ -71,16 +169,16 @@
         office@mel.furniture
       </a>
     </div>
-  </div>
+  </main>
 
   <footer>
     <div class="footer-container">
-      <div class="footer-links">
+      <nav class="footer-links">
         <a href="/information.html">Information</a>
         <a href="/terms-and-conditions.html">Terms & Conditions</a>
         <a href="https://www.instagram.com/mel_furniture" target="_blank">Instagram</a>
         <a href="/downloads.html">Downloads</a>
-      </div>
+      </nav>
       <div>&copy; MEL Furniture LLC</div>
     </div>
   </footer>
