@@ -23,6 +23,65 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
 }
 
+.container h1 {
+  text-decoration: underline;
+  color: #000;
+  font-weight: normal;
+  font-size: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.container h2 {
+  text-decoration: underline;
+  color: #000;
+  font-weight: normal;
+  font-size: inherit;
+  margin-top: 2em;
+  margin-bottom: 0;
+  padding-bottom: 0.2em;
+  line-height: 1.2;
+  break-inside: avoid;
+}
+
+.container h2.force-column {
+  break-before: column;
+}
+
+.container p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.container .indent {
+  text-indent: 2em;
+  margin-bottom: 0.5em;
+}
+
+.container a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.container a:hover {
+  color: #808080;
+}
+
+.two-columns {
+  column-count: 2;
+  column-gap: 2.5rem;
+}
+
+.product-title {
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: inherit;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
 /* ===== MEL LOGO TOP LEFT ===== */
 #overlayText2 {
   position: fixed; /* fixed on desktop */
@@ -31,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-family: serif;
   font-size: 1.25rem;
+  font-weight: bold;
   letter-spacing: 0.075em;
   z-index: 10;
 }
@@ -38,6 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 #overlayText2 a {
   color: #000; /* default black for all pages */
   text-decoration: none;
+  font-weight: bold;
 }
 
 /* White MEL on homepage only */
@@ -128,5 +189,10 @@ footer .footer-links + div {
 
   footer .footer-links + div {
     margin-top: 0;
+  }
+
+  .two-columns {
+    column-count: 1;
+    column-gap: 0;
   }
 }
