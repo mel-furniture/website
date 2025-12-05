@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem; /* larger on desktop */
   color: #000; /* body text black */
   line-height: 1.35;
 }
@@ -28,15 +28,15 @@ h1, h2, h3, h4, h5, h6 {
   left: 2rem;
   color: #000;
   font-family: serif;
-  font-size: 1.125rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: underline;
   letter-spacing: 0.075em;
   z-index: 10;
 }
 
 #overlayText2 a {
   color: #000; /* default black for all pages */
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* White MEL on homepage only */
@@ -69,7 +69,6 @@ footer .footer-container {
 
 footer .footer-links {
   font-family: sans-serif;
-  font-size: 1.125rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0;
@@ -93,17 +92,21 @@ footer .footer-links a:hover {
 
 footer .footer-links + div {
   font-family: sans-serif;
-  font-size: 1.125rem;
   color: #000;
   margin-top: 0;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  body {
+    font-size: 1rem; /* smaller on mobile */
+  }
+
   #overlayText2 {
     position: absolute; /* scrolls with content */
     top: 1rem;
     left: 1rem;
+    font-size: 1rem;
   }
 
   footer .footer-container {
